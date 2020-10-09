@@ -77,7 +77,7 @@ export const filters = [
     id: 'category',
     label: 'Category',
     type: 'SelectSingleFilter',
-    group: 'secondary',
+    group: 'primary',
     queryParamNames: ['pub_category'],
     config: {
       // "key" is the option you see in Flex Console.
@@ -85,9 +85,9 @@ export const filters = [
       // Note: label is not added through the translation files
       // to make filter customizations a bit easier.
       options: [
-        { key: 'smoke', label: 'Smoke' },
-        { key: 'electric', label: 'Electric' },
-        { key: 'wood', label: 'Wood' },
+        { key: 'camera', label: 'Camera' },
+        { key: 'lens', label: 'Lens' },
+        { key: 'lighting', label: 'Lighting' },
         { key: 'other', label: 'Other' },
       ],
     },
