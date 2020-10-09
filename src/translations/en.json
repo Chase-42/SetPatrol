@@ -735,7 +735,7 @@
   "SectionHowItWorks.part3Title": "3. Review the host",
   "SectionHowItWorks.titleLineOne": "How SetPatrol works",
   "SectionHowItWorks.titleLineTwo": "(or how Saunatime works).",
-  "SectionLocations.listingsInLocation": "Saunas in {location}",
+  "SectionLocations.listingsInLocation": "{location}",
   "SectionLocations.title": "Browse popular categories ",
   "SelectMultipleFilter.labelSelected": "{labelText} • {count}",
   "SelectMultipleFilterPlainForm.labelSelected": "{labelText} • {count}",
