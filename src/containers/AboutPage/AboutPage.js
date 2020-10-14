@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactPlayer from 'react-player'
 import config from '../../config';
 import { twitterPageURL } from '../../util/urlHelpers';
 import { StaticPage, TopbarContainer } from '../../containers';
@@ -12,7 +13,14 @@ import {
 } from '../../components';
 
 import css from './AboutPage.css';
-import image from './about-us-1056.jpg';
+import alberto from './Alberto_01.jpg';
+import fran from './Francesco_02.jpg';
+import heloise from './Heloise_02.jpg';
+import morgane from './Morgane.jpg';
+import michele from './Michele_02.jpg';
+import chase from './Chase_02.jpg';
+import natasha from './Natasha.jpg';
+import elizabeth from './Elizabeth.jpg';
 
 const AboutPage = () => {
   const { siteTwitterHandle, siteFacebookPage } = config;
@@ -35,54 +43,69 @@ const AboutPage = () => {
         </LayoutWrapperTopbar>
 
         <LayoutWrapperMain className={css.staticPageWrapper}>
-          <h1 className={css.pageTitle}>Experience the unique Finnish home sauna.</h1>
-          <img className={css.coverImage} src={image} alt="My first ice cream." />
+          <h1 className={css.pageTitle}>About Us</h1>
 
           <div className={css.contentWrapper}>
-            <div className={css.contentSide}>
-              <p>Did you know that Finland has 3.2 million saunas - almost one sauna per person!</p>
-            </div>
 
             <div className={css.contentMain}>
-              <h2>
-                Most of the Finnish saunas are located at the homes of individuals - indeed, most
-                people in Finland live in an apartment with sauna in it. In addition, lots of people
-                have lakeside summer cottages, which also typically come with a separate sauna
-                building near the waterfront.
-              </h2>
 
               <p>
-                To truly experience a Finnish sauna, you need to look beyond the public saunas, and
-                instead visit a real home or cottage sauna. Saunatime makes this possible for
-                everyone. All our saunas are owned by individuals willing to let tourists and other
-                curious visitors to enter their sacred spaces.
-              </p>
-
-              <h3 className={css.subtitle}>Are you a sauna owner?</h3>
-
-              <p>
-                Saunatime offers you a good way to earn some extra cash! If you're not using your
-                sauna every evening, why not rent it to other people while it's free. And even if
-                you are using your sauna every evening (we understand, it's so good), why not invite
-                other people to join you when the sauna is already warm! A shared sauna experience
-                is often a more fulfilling one.
-              </p>
-
-              <h3 id="contact" className={css.subtitle}>
-                Create your own marketplace like Saunatime
-              </h3>
-              <p>
-                Saunatime is brought to you by the good folks at{' '}
-                <ExternalLink href="http://sharetribe.com">Sharetribe</ExternalLink>. Would you like
-                to create your own marketplace platform a bit like Saunatime? Or perhaps a mobile
-                app? With Sharetribe it's really easy. If you have a marketplace idea in mind, do
-                get in touch!
+                SetPatrol is an European community for filmmakers made by filmmakers. SetPatrol’s main mission is to solve problems that every filmmaker faces; the cost and availability of professional gear to rent and buy. It is our first priority to be a democratized platform for all storytellers to interact and collaborate.
               </p>
               <p>
-                You can also checkout our{' '}
-                <ExternalLink href={siteFacebookPage}>Facebook</ExternalLink> and{' '}
-                <ExternalLink href={siteTwitterPage}>Twitter</ExternalLink>.
+                SetPatrol is a marketplace where people who need high-end photography and film equipment can find people who are willing to rent it out. There is a huge problem in the film industry and SetPatrol is trying to change all that. As StoryTellers we work in a field focused on results. Clients are fixated on beautiful, dramatic and creative work. We are victims of our own success; a high demand market, quick turnarounds and forever revamped equipment.
               </p>
+              <p>
+                Our platform gives artists access to the tools they need and the financial freedom they desire in order to focus on their craft. Users can list every type of photo/video related piece of equipment, rent it directly to other professionals, and make money while they aren’t using it.
+              </p>
+
+              <ReactPlayer url='https://vimeo.com/406087884' />
+
+              <h1 className={css.pageTitle}>The Crew</h1>
+              
+              <div>
+                <img className={css.crewImage} src={alberto} alt="Alberto Innella." />
+                <h2>Alberto Innella</h2>
+                <p>CEO & Founder</p>
+              </div>
+
+              <div>
+                <img className={css.crewImage} src={fran} alt="Francesco Del Pozzo." />
+                <h2>Francesco Del Pozzo</h2>
+                <p>Director of Marketing</p>
+              </div>
+
+              <div>
+                <img className={css.crewImage} src={heloise} alt="Heloise Wilson." />
+                <h2>Heloise Wilson</h2>
+                <p>Director of Operations</p>
+              </div>
+              <div>
+                <img className={css.crewImage} src={morgane} alt="Morgane Kendregan." />
+                <h2>Morgane Kendregan</h2>
+                <p>Program Manager</p>
+              </div>
+              <div>
+                <img className={css.crewImage} src={michele} alt="Michele Di Buono." />
+                <h2>Michele Di Buono</h2>
+                <p>Art Director</p>
+              </div>
+              <div>
+                <img className={css.crewImage} src={chase} alt="Chase Collins." />
+                <h2>Chase Collins</h2>
+                <p>Head of Technology</p>
+              </div>
+              <div>
+                <img className={css.crewImage} src={natasha} alt="Natasha Nodine." />
+                <h2>Natasha Nodine</h2>
+                <p>Junior of Technology</p>
+              </div>
+              <div>
+                <img className={css.crewImage} src={elizabeth} alt="Elizabeth Karen." />
+                <h2>Elizabeth Karen</h2>
+                <p>Junior of Technology</p>
+              </div>
+
             </div>
           </div>
         </LayoutWrapperMain>
