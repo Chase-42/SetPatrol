@@ -10,11 +10,16 @@
   max-width: 100%;
   margin: 24px auto;
   text-align: justify;
+  color: #7A7A7A;
 
   @media (--viewportMedium) {
     width: calc(100% - 72px);
     margin: 72px auto;
   }
+}
+
+.aboutText p{
+  font-size: 25px;
 }
 
 .aboutVideo{

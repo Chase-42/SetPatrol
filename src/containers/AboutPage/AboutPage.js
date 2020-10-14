@@ -58,15 +58,17 @@ const AboutPage = () => {
 
             <div className={css.contentMain}>
               <h1 className={css.pageTitle}>About Us</h1>
-              <p>
-                SetPatrol is an European community for filmmakers made by filmmakers. SetPatrol’s main mission is to solve problems that every filmmaker faces; the cost and availability of professional gear to rent and buy. It is our first priority to be a democratized platform for all storytellers to interact and collaborate.
-              </p>
-              <p>
-                SetPatrol is a marketplace where people who need high-end photography and film equipment can find people who are willing to rent it out. There is a huge problem in the film industry and SetPatrol is trying to change all that. As StoryTellers we work in a field focused on results. Clients are fixated on beautiful, dramatic and creative work. We are victims of our own success; a high demand market, quick turnarounds and forever revamped equipment.
-              </p>
-              <p>
-                Our platform gives artists access to the tools they need and the financial freedom they desire in order to focus on their craft. Users can list every type of photo/video related piece of equipment, rent it directly to other professionals, and make money while they aren’t using it.
-              </p>
+              <div className={css.aboutText}>
+                <p>
+                  SetPatrol is an European community for filmmakers made by filmmakers. SetPatrol’s main mission is to solve problems that every filmmaker faces; the cost and availability of professional gear to rent and buy. It is our first priority to be a democratized platform for all storytellers to interact and collaborate.
+                </p>
+                <p>
+                  SetPatrol is a marketplace where people who need high-end photography and film equipment can find people who are willing to rent it out. There is a huge problem in the film industry and SetPatrol is trying to change all that. As StoryTellers we work in a field focused on results. Clients are fixated on beautiful, dramatic and creative work. We are victims of our own success; a high demand market, quick turnarounds and forever revamped equipment.
+                </p>
+                <p>
+                  Our platform gives artists access to the tools they need and the financial freedom they desire in order to focus on their craft. Users can list every type of photo/video related piece of equipment, rent it directly to other professionals, and make money while they aren’t using it.
+                </p>
+              </div>
               <div className={css.aboutVideo}>
               <ReactPlayer 
                 url='https://vimeo.com/406087884'
