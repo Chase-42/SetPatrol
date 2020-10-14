@@ -9,6 +9,7 @@
   width: calc(100% - 48px);
   max-width: 100%;
   margin: 24px auto;
+  text-align: justify;
 
   @media (--viewportMedium) {
     width: calc(100% - 72px);
@@ -19,6 +20,7 @@
 .aboutVideo{
   margin-top: 50px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .theCrew{

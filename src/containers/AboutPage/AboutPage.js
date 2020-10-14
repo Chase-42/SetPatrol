@@ -70,7 +70,8 @@ const AboutPage = () => {
               <div className={css.aboutVideo}>
               <ReactPlayer 
                 url='https://vimeo.com/406087884'
-                />
+                className={css.aVideo}
+                width='100%'/>
               </div>
               <h1 className={css.pageTitle}>The Crew</h1>
               
