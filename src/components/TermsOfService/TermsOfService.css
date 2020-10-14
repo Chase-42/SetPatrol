@@ -3,6 +3,7 @@
 .root {
   & p {
     @apply --marketplaceH4FontStyles;
+    margin-left: 80px;
   }
   & h2 {
     /* Adjust heading margins to work with the reduced body font size */
