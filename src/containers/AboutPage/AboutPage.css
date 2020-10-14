@@ -1,18 +1,30 @@
 @import '../../marketplace.css';
 
 .pageTitle {
-  text-align: center;
+  text-align: left;
+  color: #4951F2;
 }
 
 .staticPageWrapper {
   width: calc(100% - 48px);
-  max-width: 1056px;
+  max-width: 100%;
   margin: 24px auto;
 
   @media (--viewportMedium) {
     width: calc(100% - 72px);
     margin: 72px auto;
   }
+}
+
+.aboutVideo{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.theCrew{
+  display: inline-block;
+  padding: 50px;
+  text-align: center;
 }
 
 .coverImage {
@@ -26,10 +38,13 @@
 .crewImage {
   width: 100px;
   border-radius: 50%;
-  border: 4px solid purple;
- h2 {
-  color: blue;
+  border: 4px solid #4951F2;
+  opacity: 0.5;
 }
+
+.crewHeader {
+  color: #6ec1e4;
+  opacity: 0.75;
 }
 
 .contentWrapper {
@@ -52,10 +67,10 @@
 }
 
 .contentMain {
-  width: 90%;
-
+  width: 70%;
+  margin: auto;
   @media (--viewportMedium) {
-    max-width: 650px;
+    max-width: 100%;
   }
 }
 
