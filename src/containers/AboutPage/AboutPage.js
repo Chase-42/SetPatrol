@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
 import config from '../../config';
 import { twitterPageURL } from '../../util/urlHelpers';
 import { StaticPage, TopbarContainer } from '../../containers';
@@ -70,7 +70,8 @@ const AboutPage = () => {
                 </p>
               </div>
 
-              <ReactPlayer           
+              <ReactPlayer 
+                className={css.aboutVideo}          
                 url='https://vimeo.com/406087884'
                 width='100%'/>
 

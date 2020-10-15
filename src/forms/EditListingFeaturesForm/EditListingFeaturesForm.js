@@ -34,7 +34,7 @@ const EditListingFeaturesFormComponent = props => {
           filterConfig,
         } = formRenderProps;
 
-        if (props.category === 'camera') {
+        if (props.category === 'lighting') {
           setOptions(findOptionsForSelectFilter('amenities2', filterConfig));
         } else {
           setOptions(findOptionsForSelectFilter('amenities', filterConfig));

@@ -96,7 +96,7 @@ export const filters = [
     id: 'amenities',
     label: 'Amenities',
     type: 'SelectMultipleFilter',
-    group: 'secondary',
+    group: 'primary',
     queryParamNames: ['pub_amenities'],
     config: {
       // Optional modes: 'has_all', 'has_any'
@@ -147,7 +147,7 @@ export const filters = [
     id: 'amenities2',
     label: 'Amenities2',
     type: 'SelectMultipleFilter',
-    group: 'secondary',
+    group: 'primary',
     queryParamNames: ['pub_amenities'],
     config: {
       // Optional modes: 'has_all', 'has_any'
@@ -181,7 +181,7 @@ export const filters = [
         },
         {
           key: 'audiovisual_entertainment2',
-          label: 'Audiovisual entertainment2',
+          label: 'Audiovisual entertainment22',
         },
         {
           key: 'barbeque2',
@@ -189,7 +189,7 @@ export const filters = [
         },
         {
           key: 'own_food_allowed2',
-          label: 'Own food allowed',
+          label: 'Own food allowed2',
         },
       ],
     },

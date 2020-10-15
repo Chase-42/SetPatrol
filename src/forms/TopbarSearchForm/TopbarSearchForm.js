@@ -19,6 +19,7 @@ class TopbarSearchFormComponent extends Component {
 
   onSubmit(values) {
     this.props.onSubmit({ keywords: values.keywords, pub_category: values.keywords });
+
     // blur search input to hide software keyboard
     if (this.searchInput.current) {
       this.searchInput.current.blur();

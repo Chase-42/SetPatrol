@@ -98,7 +98,9 @@ class TopbarComponent extends Component {
   handleSubmit(values) {
     const { currentSearchParams } = this.props;
     const keywords = values.keywords;
+    console.log('hey', values.pub_category);
     const pub_category = values.pub_category;
+    console.log(pub_category);
     const { history } = this.props;
     const searchParams = {
       ...currentSearchParams,
@@ -336,10 +338,7 @@ TopbarComponent.propTypes = {
   intl: intlShape.isRequired,
 };
 
-const Topbar = compose(
-  withViewport,
-  injectIntl
-)(TopbarComponent);
+const Topbar = compose(withViewport, injectIntl)(TopbarComponent);
 
 Topbar.displayName = 'Topbar';
 
