@@ -117,7 +117,7 @@ const AboutPage = () => {
               <div className={css.theCrew}>
                 <img className={css.crewImage} src={andras} alt="András Szén." onMouseEnter={changeOpacity} onMouseLeave={changeOpacityBack} />
                 <h2 className={css.crewHeader}>András Szén</h2>
-                <p>Graphic Design Specialist</p>
+                <p>Art Director</p>
               </div>
 
               <div className={css.theCrew}>
