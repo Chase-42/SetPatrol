@@ -43,7 +43,8 @@ const EditListingFeaturesPanel = props => {
 
   const amenities = publicData && publicData.amenities;
   const initialValues = { amenities };
-
+  console.log('EditLIstingFeaturesPanel', props.listing.attributes.publicData.category);
+  const category = props.listing.attributes.publicData.category;
   return (
     <div className={classes}>
       <h1 className={css.title}>{panelTitle}</h1>
@@ -66,6 +67,7 @@ const EditListingFeaturesPanel = props => {
         updated={panelUpdated}
         updateInProgress={updateInProgress}
         fetchErrors={errors}
+        category={category}
       />
     </div>
   );
