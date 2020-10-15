@@ -1,13 +1,16 @@
 @import '../../marketplace.css';
 
 .pageTitle {
-  text-align: center;
+  text-align: left;
+  color: #4951F2;
 }
 
 .staticPageWrapper {
   width: calc(100% - 48px);
-  max-width: 1056px;
+  max-width: 100%;
   margin: 24px auto;
+  text-align: justify;
+  color: #7A7A7A;
 
   @media (--viewportMedium) {
     width: calc(100% - 72px);
@@ -15,12 +18,40 @@
   }
 }
 
+.aboutText p{
+  font-size: 25px;
+}
+
+.aboutVideo{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.theCrew{
+  display: inline-block;
+  padding: 100px;
+  text-align: center;
+}
+
+/* not needed css
 .coverImage {
   width: 100%;
   height: 528px;
   border-radius: 4px;
   object-fit: cover;
   margin: 32px 0 40px;
+}*/
+
+.crewImage {
+  width: 100px;
+  border-radius: 50%;
+  border: 4px solid #4951F2;
+  opacity: 0.5;
+}
+
+.crewHeader {
+  color: #6ec1e4;
+  opacity: 0.75;
 }
 
 .contentWrapper {
@@ -32,6 +63,7 @@
   }
 }
 
+/* not needed css
 .contentSide {
   font-style: italic;
 
@@ -41,12 +73,12 @@
     margin-top: 8px;
   }
 }
-
+*/
 .contentMain {
-  width: 90%;
-
+  width: 70%;
+  margin: auto;
   @media (--viewportMedium) {
-    max-width: 650px;
+    max-width: 100%;
   }
 }
 
