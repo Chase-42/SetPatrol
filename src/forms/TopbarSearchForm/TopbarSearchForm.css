@@ -19,12 +19,22 @@
   );
 }
 
+.icon {
+  margin-left: 5%;
+  margin-right: 1%;
+}
 .mobileInputRoot {
   width: 100%;
 }
 
+.searchDiv {
+  display: flex;
+  align-items: center;
+}
+
 .desktopInputRoot {
   height: var(--topbarHeightDesktop);
+  border-bottom-style: none;
 }
 
 .mobileIcon {

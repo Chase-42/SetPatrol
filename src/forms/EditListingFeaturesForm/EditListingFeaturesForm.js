@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { bool, func, shape, string } from 'prop-types';
 import classNames from 'classnames';
 import { Form as FinalForm } from 'react-final-form';
@@ -11,66 +11,74 @@ import { Button, FieldCheckboxGroup, Form } from '../../components';
 
 import css from './EditListingFeaturesForm.css';
 
-const EditListingFeaturesFormComponent = props => (
-  <FinalForm
-    {...props}
-    mutators={{ ...arrayMutators }}
-    render={formRenderProps => {
-      const {
-        disabled,
-        ready,
-        rootClassName,
-        className,
-        name,
-        handleSubmit,
-        pristine,
-        saveActionMsg,
-        updated,
-        updateInProgress,
-        fetchErrors,
-        filterConfig,
-      } = formRenderProps;
+const EditListingFeaturesFormComponent = props => {
+  const [options, setOptions] = useState([]);
 
-      const classes = classNames(rootClassName || css.root, className);
-      const submitReady = (updated && pristine) || ready;
-      const submitInProgress = updateInProgress;
-      const submitDisabled = disabled || submitInProgress;
+  return (
+    <FinalForm
+      {...props}
+      mutators={{ ...arrayMutators }}
+      render={formRenderProps => {
+        const {
+          disabled,
+          ready,
+          rootClassName,
+          className,
+          name,
+          handleSubmit,
+          pristine,
+          saveActionMsg,
+          updated,
+          updateInProgress,
+          fetchErrors,
+          filterConfig,
+        } = formRenderProps;
 
-      const { updateListingError, showListingsError } = fetchErrors || {};
-      const errorMessage = updateListingError ? (
-        <p className={css.error}>
-          <FormattedMessage id="EditListingFeaturesForm.updateFailed" />
-        </p>
-      ) : null;
+        if (props.category === 'camera') {
+          setOptions(findOptionsForSelectFilter('amenities2', filterConfig));
+        } else {
+          setOptions(findOptionsForSelectFilter('amenities', filterConfig));
+        }
+        const classes = classNames(rootClassName || css.root, className);
+        const submitReady = (updated && pristine) || ready;
+        const submitInProgress = updateInProgress;
+        const submitDisabled = disabled || submitInProgress;
 
-      const errorMessageShowListing = showListingsError ? (
-        <p className={css.error}>
-          <FormattedMessage id="EditListingFeaturesForm.showListingFailed" />
-        </p>
-      ) : null;
+        const { updateListingError, showListingsError } = fetchErrors || {};
+        const errorMessage = updateListingError ? (
+          <p className={css.error}>
+            <FormattedMessage id="EditListingFeaturesForm.updateFailed" />
+          </p>
+        ) : null;
 
-      const options = findOptionsForSelectFilter('amenities', filterConfig);
-      return (
-        <Form className={classes} onSubmit={handleSubmit}>
-          {errorMessage}
-          {errorMessageShowListing}
+        const errorMessageShowListing = showListingsError ? (
+          <p className={css.error}>
+            <FormattedMessage id="EditListingFeaturesForm.showListingFailed" />
+          </p>
+        ) : null;
 
-          <FieldCheckboxGroup className={css.features} id={name} name={name} options={options} />
+        return (
+          <Form className={classes} onSubmit={handleSubmit}>
+            {errorMessage}
+            {errorMessageShowListing}
 
-          <Button
-            className={css.submitButton}
-            type="submit"
-            inProgress={submitInProgress}
-            disabled={submitDisabled}
-            ready={submitReady}
-          >
-            {saveActionMsg}
-          </Button>
-        </Form>
-      );
-    }}
-  />
-);
+            <FieldCheckboxGroup className={css.features} id={name} name={name} options={options} />
+
+            <Button
+              className={css.submitButton}
+              type="submit"
+              inProgress={submitInProgress}
+              disabled={submitDisabled}
+              ready={submitReady}
+            >
+              {saveActionMsg}
+            </Button>
+          </Form>
+        );
+      }}
+    />
+  );
+};
 
 EditListingFeaturesFormComponent.defaultProps = {
   rootClassName: null,

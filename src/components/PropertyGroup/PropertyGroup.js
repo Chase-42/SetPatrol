@@ -14,6 +14,7 @@ import includes from 'lodash/includes';
 import css from './PropertyGroup.css';
 
 const checkSelected = (options, selectedOptions) => {
+  console.log(selectedOptions);
   return options.map(option => ({
     key: option.key,
     label: option.label,
@@ -52,16 +53,20 @@ const Item = props => {
 };
 
 const PropertyGroup = props => {
+  console.log('propertygroupprops', props);
   const { rootClassName, className, id, options, selectedOptions, twoColumns } = props;
   const classes = classNames(rootClassName || css.root, className);
   const listClasses = twoColumns ? classNames(classes, css.twoColumns) : classes;
 
   const checked = checkSelected(options, selectedOptions);
-
+  console.log('selectedOptions', selectedOptions);
   return (
     <ul className={listClasses}>
-      {checked.map(option => (
+      {/* {checked.map(option => (
         <Item key={`${id}.${option.key}`} label={option.label} isSelected={option.isSelected} />
+      ))} */}
+      {selectedOptions.map(option => (
+        <li>{option}</li>
       ))}
     </ul>
   );

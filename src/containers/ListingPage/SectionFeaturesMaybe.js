@@ -5,6 +5,7 @@ import { PropertyGroup } from '../../components';
 import css from './ListingPage.css';
 
 const SectionFeaturesMaybe = props => {
+  console.log(props);
   const { options, publicData } = props;
   if (!publicData) {
     return null;

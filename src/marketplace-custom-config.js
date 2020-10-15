@@ -143,6 +143,57 @@ export const filters = [
       ],
     },
   },
+  {
+    id: 'amenities2',
+    label: 'Amenities2',
+    type: 'SelectMultipleFilter',
+    group: 'secondary',
+    queryParamNames: ['pub_amenities'],
+    config: {
+      // Optional modes: 'has_all', 'has_any'
+      // https://www.sharetribe.com/api-reference/marketplace.html#extended-data-filtering
+      searchMode: 'has_all',
+
+      // "key" is the option you see in Flex Console.
+      // "label" is set here for this web app's UI only.
+      // Note: label is not added through the translation files
+      // to make filter customizations a bit easier.
+      options: [
+        {
+          key: 'towels2',
+          label: 'Towels2',
+        },
+        {
+          key: 'bathroom2',
+          label: 'Bathroom2',
+        },
+        {
+          key: 'swimming_pool2',
+          label: 'Swimming pool2',
+        },
+        {
+          key: 'own_drinks2',
+          label: 'Own drinks allowed2',
+        },
+        {
+          key: 'jacuzzi2',
+          label: 'Jacuzzi2',
+        },
+        {
+          key: 'audiovisual_entertainment2',
+          label: 'Audiovisual entertainment2',
+        },
+        {
+          key: 'barbeque2',
+          label: 'Barbeque2',
+        },
+        {
+          key: 'own_food_allowed2',
+          label: 'Own food allowed',
+        },
+      ],
+    },
+  },
 ];
 
 export const sortConfig = {
