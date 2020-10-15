@@ -69,12 +69,11 @@ const AboutPage = () => {
                   Our platform gives artists access to the tools they need and the financial freedom they desire in order to focus on their craft. Users can list every type of photo/video related piece of equipment, rent it directly to other professionals, and make money while they aren’t using it.
                 </p>
               </div>
-              <div className={css.aboutVideo}>
-              <ReactPlayer 
+
+              <ReactPlayer           
                 url='https://vimeo.com/406087884'
-                className={css.aVideo}
                 width='100%'/>
-              </div>
+
               <h1 className={css.pageTitle}>The Crew</h1>
               
               <div  className={css.theCrew} >
