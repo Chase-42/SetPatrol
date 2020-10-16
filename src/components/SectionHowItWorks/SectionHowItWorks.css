@@ -1,5 +1,7 @@
 @import '../../marketplace.css';
-
+.how-it-works{
+  display: grid;
+}
 .title {
   @apply --marketplaceH1FontStyles;
   margin-top: 0;
@@ -43,4 +45,7 @@
   @media (--viewportMedium) {
     margin-top: 24px;
   }
+}
+#grid{
+  display: inline-grid;
 }
