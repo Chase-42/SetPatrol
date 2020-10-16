@@ -241,13 +241,11 @@ const routeConfiguration = () => {
       authPage: 'LoginPage',
       component: () => <NamedRedirect name="ContactDetailsPage" />,
     },
+
     {
-      path: '/account/contact-details',
+      path: '/contact-details',
       name: 'ContactDetailsPage',
-      auth: true,
-      authPage: 'LoginPage',
-      component: props => <ContactDetailsPage {...props} />,
-      loadData: ContactDetailsPage.loadData,
+      component: ContactDetailsPage,
     },
     {
       path: '/account/change-password',
