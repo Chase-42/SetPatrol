@@ -8,7 +8,7 @@
 }
 
 .steps {
-  display: flex;
+  display: grid;
   flex-direction: column;
 
   @media (--viewportMedium) {
@@ -18,8 +18,9 @@
 
 .step {
   @media (--viewportMedium) {
-    width: 324px;
-    margin-right: 40px;
+    width: 90vw;
+    margin-right: 10px;
+    display: inline-grid;
   }
 }
 
@@ -39,6 +40,10 @@
   }
 }
 
+h2{
+  color: #4951F2;
+}
+
 .createListingLink {
   margin-top: 18px;
 
@@ -48,4 +53,5 @@
 }
 #grid{
   display: inline-grid;
+  width: 30px;
 }
