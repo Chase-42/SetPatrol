@@ -4,6 +4,7 @@ import {
   FAQPage,
   AuthenticationPage,
   CheckoutPage,
+  CommunityRulesPage,
   ContactDetailsPage,
   EditListingPage,
   EmailVerificationPage,
@@ -68,6 +69,11 @@ const routeConfiguration = () => {
       path: '/faq',
       name: 'FAQPage',
       component: FAQPage,
+    },
+    {
+      path: '/rules',
+      name: 'CommunityRulesPage',
+      component: CommunityRulesPage,
     },
     {
       path: '/s',
