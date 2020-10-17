@@ -7,7 +7,6 @@
   }
   & h1 {
     /* Adjust heading margins to work with the reduced body font size */
-    margin-left: 100px;
     color: #4951f2;
 
     @media (--viewportMedium) {
@@ -26,3 +25,16 @@
     }
   }
 }
+h1{
+    color: #4951f2;
+}
+
+div{
+    margin-left: 13px;
+    margin-right: 10px;
+}
+
+h3 {
+    color: #6EC1E4;
+    opacity: 0.75;
+  }
