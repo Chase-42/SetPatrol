@@ -101,6 +101,11 @@ const siteInstagramPage = 'https://www.instagram.com/setpatrol_eu/';
 // Facebook page is used in SEO schema (http://schema.org/Organization)
 const siteFacebookPage = 'https://www.facebook.com/SetPatrol/';
 
+
+const siteYoutubePage = 'https://www.setpatrol.com/';
+
+const siteLinkedInPage = 'https://www.linkedin.com/company/setpatrol/';
+
 // Facebook counts shares with app or page associated by this id
 // Currently it is unset, but you can read more about fb:app_id from
 // https://developers.facebook.com/docs/sharing/webmasters#basic
@@ -218,6 +223,8 @@ const config = {
   siteTitle,
   siteFacebookPage,
   siteInstagramPage,
+  siteYoutubePage,
+  siteLinkedInPage,
   siteTwitterHandle,
   facebookAppId,
   sentryDsn,
