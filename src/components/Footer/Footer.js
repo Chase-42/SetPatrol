@@ -8,19 +8,26 @@ import {
   IconSocialMediaFacebook,
   IconSocialMediaInstagram,
   IconSocialMediaTwitter,
+  IconSocialMediaYoutube,
+  IconSocialMediaLinkedIn,
   Logo,
   ExternalLink,
   NamedLink,
 } from '../../components';
 
+import homeIcon from './homeIcon.png'
+import emailIcon from './emailIcon.png'
+
 import css from './Footer.css';
 
 const renderSocialMediaLinks = intl => {
-  const { siteFacebookPage, siteInstagramPage, siteTwitterHandle } = config;
+  const { siteFacebookPage, siteInstagramPage, siteYoutubePage, siteLinkedInPage, siteTwitterHandle } = config;
   const siteTwitterPage = twitterPageURL(siteTwitterHandle);
 
   const goToFb = intl.formatMessage({ id: 'Footer.goToFacebook' });
   const goToInsta = intl.formatMessage({ id: 'Footer.goToInstagram' });
+  const goToYoutube = intl.formatMessage({ id: 'Footer.goToYoutube' });
+  const goToLinkedIn = intl.formatMessage({ id: 'Footer.goToLinkedIn' });
   const goToTwitter = intl.formatMessage({ id: 'Footer.goToTwitter' });
 
   const fbLink = siteFacebookPage ? (
@@ -50,7 +57,29 @@ const renderSocialMediaLinks = intl => {
       <IconSocialMediaInstagram />
     </ExternalLink>
   ) : null;
-  return [fbLink, twitterLink, instragramLink].filter(v => v != null);
+
+  const youtubeLink = siteYoutubePage ? (
+    <ExternalLink
+      key="linkToYoutube"
+      href={siteYoutubePage}
+      className={css.icon}
+      title={goToYoutube}
+    >
+      <IconSocialMediaYoutube />
+    </ExternalLink>
+  ) : null;
+
+  const linkedInLink = siteLinkedInPage ? (
+    <ExternalLink
+      key="linkToLinkedIn"
+      href={siteLinkedInPage}
+      className={css.icon}
+      title={goToLinkedIn}
+    >
+      <IconSocialMediaLinkedIn />
+    </ExternalLink>
+  ) : null;
+  return [fbLink, twitterLink, instragramLink, youtubeLink, linkedInLink].filter(v => v != null);
 };
 
 const Footer = props => {
@@ -109,6 +138,11 @@ const Footer = props => {
               </ul>
             </div>
             <div className={css.extraLinks}>
+
+              <div className={css.contactFooter}>
+                <p><img src={homeIcon} alt="address" /> Marino Mart Fairview D d02, Dublin, Ireland</p>
+                <p><img src={emailIcon} alt="email" /> ask@setpatrol.com</p>
+              </div>
               <div className={css.someLinks}>{socialMediaLinks}</div>
               <div className={css.legalMatters}>
                 <ul className={css.tosAndPrivacy}>
