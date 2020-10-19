@@ -85,112 +85,128 @@ export const filters = [
       // Note: label is not added through the translation files
       // to make filter customizations a bit easier.
       options: [
-        { key: 'camera', label: 'Camera' },
-        { key: 'lens', label: 'Lens' },
-        { key: 'lighting', label: 'Lighting' },
+        { key: 'cinema_cameras', label: 'Cinema Cameras' },
+        { key: 'cinema_lenses', label: 'Cinema Lenses' },
+        { key: 'still_hybrid_cameras', label: 'Still / Hybrid Cameras' },
+        { key: 'still_lenses', label: 'Still Lenses' },
+        { key: 'camera_accessories', label: 'Camera Accessories ' },
+        { key: 'lighting_electric', label: 'Lighting / Electric' },
+        { key: 'audio_equipment', label: 'Audio Equipment' },
+        { key: 'monitors_evfs', label: 'Monitors / EVFs' },
+        { key: 'camera_supports', label: 'Camera Supports' },
+        { key: 'grip', label: 'Grip' },
+        { key: 'dit_media_management', label: 'DIT / Media Management' },
+        { key: 'media', label: 'Media' },
+        { key: 'virtual_reality_and_new_tech', label: 'Virtual Reality & New Tech' },
+        { key: 'drones_and_vehicles', label: 'Drones & Vehicles' },
+        { key: 'locations_and_spaces', label: 'Locations & Spaces' },
+      ],
+    },
+  },
+  //  {
+  //    id: 'amenities',
+  //    label: 'Amenities',
+  //    type: 'SelectMultipleFilter',
+  //    group: 'primary',
+  //    queryParamNames: ['pub_amenities'],
+  //    config: {
+  //      // Optional modes: 'has_all', 'has_any'
+  //      // https://www.sharetribe.com/api-reference/marketplace.html#extended-data-filtering
+  //      searchMode: 'has_all',
+
+  //      // "key" is the option you see in Flex Console.
+  //      // "label" is set here for this web app's UI only.
+  //      // Note: label is not added through the translation files
+  //      // to make filter customizations a bit easier.
+  //      options: [
+  //        {
+  //          key: 'towels',
+  //          label: 'Towels',
+  //        },
+  //        {
+  //          key: 'bathroom',
+  //          label: 'Bathroom',
+  //        },
+  //        {
+  //          key: 'swimming_pool',
+  //          label: 'Swimming pool',
+  //        },
+  //        {
+  //          key: 'own_drinks',
+  //          label: 'Own drinks allowed',
+  //        },
+  //        {
+  //          key: 'jacuzzi',
+  //          label: 'Jacuzzi',
+  //        },
+  //        {
+  //          key: 'audiovisual_entertainment',
+  //          label: 'Audiovisual entertainment',
+  //        },
+  //        {
+  //          key: 'barbeque',
+  //          label: 'Barbeque',
+  //        },
+  //        {
+  //          key: 'own_food_allowed',
+  //          label: 'Own food allowed',
+  //        },
+  //      ],
+  //    },
+  //  },
+  {
+    id: 'cinema_camera_brands',
+    label: 'Cinema Camera Brands',
+    type: 'SelectSingleFilter',
+    group: 'secondary',
+    queryParamNames: ['pub_cinema_camera_brands'],
+    config: {
+      options: [
+        { key: 'arri', label: 'ARRI' },
+        { key: 'blackmagic', label: 'Blackmagic' },
+        { key: 'canon', label: 'Canon' },
+        { key: 'gopro', label: 'GoPro' },
+        { key: 'panasonic', label: 'Panasonic' },
+        { key: 'red', label: 'RED' },
+        { key: 'sony', label: 'Sony' },
+        { key: 'high_speed_camera', label: 'High Speed Camera' },
+        { key: 'super_8mm', label: 'Super 8mm' },
         { key: 'other', label: 'Other' },
       ],
     },
   },
   {
-    id: 'amenities',
-    label: 'Amenities',
-    type: 'SelectMultipleFilter',
-    group: 'primary',
-    queryParamNames: ['pub_amenities'],
+    id: 'cinema_lenses',
+    label: 'Cinema Camera Lenses',
+    type: 'SelectSingleFilter',
+    group: 'secondary',
+    queryParamNames: ['pub_cinema_lenses'],
     config: {
-      // Optional modes: 'has_all', 'has_any'
-      // https://www.sharetribe.com/api-reference/marketplace.html#extended-data-filtering
-      searchMode: 'has_all',
-
-      // "key" is the option you see in Flex Console.
-      // "label" is set here for this web app's UI only.
-      // Note: label is not added through the translation files
-      // to make filter customizations a bit easier.
       options: [
-        {
-          key: 'towels',
-          label: 'Towels',
-        },
-        {
-          key: 'bathroom',
-          label: 'Bathroom',
-        },
-        {
-          key: 'swimming_pool',
-          label: 'Swimming pool',
-        },
-        {
-          key: 'own_drinks',
-          label: 'Own drinks allowed',
-        },
-        {
-          key: 'jacuzzi',
-          label: 'Jacuzzi',
-        },
-        {
-          key: 'audiovisual_entertainment',
-          label: 'Audiovisual entertainment',
-        },
-        {
-          key: 'barbeque',
-          label: 'Barbeque',
-        },
-        {
-          key: 'own_food_allowed',
-          label: 'Own food allowed',
-        },
-      ],
-    },
-  },
-  {
-    id: 'amenities2',
-    label: 'Amenities2',
-    type: 'SelectMultipleFilter',
-    group: 'primary',
-    queryParamNames: ['pub_amenities'],
-    config: {
-      // Optional modes: 'has_all', 'has_any'
-      // https://www.sharetribe.com/api-reference/marketplace.html#extended-data-filtering
-      searchMode: 'has_all',
-
-      // "key" is the option you see in Flex Console.
-      // "label" is set here for this web app's UI only.
-      // Note: label is not added through the translation files
-      // to make filter customizations a bit easier.
-      options: [
-        {
-          key: 'towels2',
-          label: 'Towels2',
-        },
-        {
-          key: 'bathroom2',
-          label: 'Bathroom2',
-        },
-        {
-          key: 'swimming_pool2',
-          label: 'Swimming pool2',
-        },
-        {
-          key: 'own_drinks2',
-          label: 'Own drinks allowed2',
-        },
-        {
-          key: 'jacuzzi2',
-          label: 'Jacuzzi2',
-        },
-        {
-          key: 'audiovisual_entertainment2',
-          label: 'Audiovisual entertainment22',
-        },
-        {
-          key: 'barbeque2',
-          label: 'Barbeque2',
-        },
-        {
-          key: 'own_food_allowed2',
-          label: 'Own food allowed2',
-        },
+        { key: 'angenieux', label: 'Angenieux' },
+        { key: 'arri', label: 'ARRI' },
+        { key: 'bausch_and_lomb', label: 'Baussch & Lomb' },
+        { key: 'canon', label: 'Canon' },
+        { key: 'celere', label: 'Celere' },
+        { key: 'centery_kinoptic', label: 'Centery / Kinoptik' },
+        { key: 'cineovision', label: 'Cineovision' },
+        { key: 'cooke', label: 'Cooke' },
+        { key: 'fujinon', label: 'Fujinon' },
+        { key: 'kowa', label: 'Kowa' },
+        { key: 'leica', label: 'Leica' },
+        { key: 'loma', label: 'Loma' },
+        { key: 'mamiya', label: 'Mamiya' },
+        { key: 'nikon', label: 'Nikon' },
+        { key: 'olympus', label: 'Olympus' },
+        { key: 'optica_elite', label: 'Optica-Elite' },
+        { key: 'red', label: 'RED' },
+        { key: 'rokinon', label: 'Rokinon' },
+        { key: 'schneider', label: 'Schneider' },
+        { key: 'sigma', label: 'Sigma' },
+        { key: 'sony', label: 'Sony' },
+        { key: 'tokina', label: 'Tokina' },
+        { key: 'zeiss', label: 'Zeiss' },
+        { key: 'other', label: 'Other' },
       ],
     },
   },

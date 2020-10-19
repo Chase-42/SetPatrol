@@ -7,7 +7,7 @@ import { FormattedMessage } from '../../util/reactIntl';
 import { findOptionsForSelectFilter } from '../../util/search';
 import { propTypes } from '../../util/types';
 import config from '../../config';
-import { Button, FieldCheckboxGroup, Form } from '../../components';
+import { Button, FieldCheckboxGroup, Form, FieldSelect } from '../../components';
 
 import css from './EditListingFeaturesForm.css';
 
@@ -34,11 +34,9 @@ const EditListingFeaturesFormComponent = props => {
           filterConfig,
         } = formRenderProps;
 
-        if (props.category === 'lighting') {
-          setOptions(findOptionsForSelectFilter('amenities2', filterConfig));
-        } else {
-          setOptions(findOptionsForSelectFilter('amenities', filterConfig));
-        }
+        const brandsKey = 'cinema_camera_brands';
+        const brandOptions = findOptionsForSelectFilter(brandsKey, filterConfig);
+
         const classes = classNames(rootClassName || css.root, className);
         const submitReady = (updated && pristine) || ready;
         const submitInProgress = updateInProgress;
@@ -61,8 +59,35 @@ const EditListingFeaturesFormComponent = props => {
           <Form className={classes} onSubmit={handleSubmit}>
             {errorMessage}
             {errorMessageShowListing}
+            {/* 
+            <FieldCheckboxGroup
+              label="Cinema Camera Brands"
+              className={css.features}
+              id={brandsKey}
+              name={brandsKey}
+              options={brandOptions}
+            />
 
-            <FieldCheckboxGroup className={css.features} id={name} name={name} options={options} />
+            <FieldCheckboxGroup
+              className={css.features}
+              id={name}
+              name={name}
+              options={options}
+              label="Amenities"
+            /> */}
+
+            <FieldSelect
+              className={css.features}
+              name={brandsKey}
+              id={brandsKey}
+              label={'Equipment brand'}
+            >
+              {brandOptions.map(o => (
+                <option key={o.key} value={o.key}>
+                  {o.label}
+                </option>
+              ))}
+            </FieldSelect>
 
             <Button
               className={css.submitButton}
