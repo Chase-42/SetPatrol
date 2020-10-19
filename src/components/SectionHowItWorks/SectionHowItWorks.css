@@ -2,8 +2,8 @@
 .how{
   flex-wrap: wrap;
   display: grid;
-  grid-column-gap: 3px;
-  grid-row-gap: 3px;
+  /* grid-column-gap: 3px;
+  grid-row-gap: 3px; */
   width: 90vw;
 }
 .title {
@@ -12,19 +12,20 @@
 }
 
 .steps {
-  display: inline-block;
-  width: 33vw;
-  grid-gap: 50px;
+  display: flex;
+  width: auto;
+  /* grid-gap: 50px; */
 
-  @media (--viewportMedium) {
-    display: inline-block;
+ @media (--viewportMedium) {
+   flex-wrap: wrap;
+    /* display: inline-block; */
   }
 }
 
 .step {
   @media (--viewportMedium) {
-    width: 33vw;
-    margin-right: 6px;
+    width: 20vw;
+    /* margin-right: 6px; */
   }
 }
 
@@ -55,6 +56,6 @@ h2{
     margin-top: 24px;
   }
 }
-#grid{
+/* #grid{
   display: grid;
-}
+} */
