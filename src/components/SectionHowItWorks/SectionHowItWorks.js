@@ -12,7 +12,7 @@ const SectionHowItWorks = props => {
 
   const classes = classNames(rootClassName || css.root, className);
   return (
-    <div className='how-it-works'>
+    <div className='how'>
     <div id='grid' className={classes}>
       <div className={css.title}>
         <span id="SectionHowItWorks.titleLineOne">How it Works!</span>
