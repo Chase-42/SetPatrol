@@ -22,6 +22,7 @@ import {
   ProfileSettingsPage,
   SearchPage,
   StyleguidePage,
+  SupportPage,
   TermsOfServicePage,
   TransactionPage,
 } from './containers';
@@ -68,6 +69,11 @@ const routeConfiguration = () => {
       path: '/faq',
       name: 'FAQPage',
       component: FAQPage,
+    },    
+    {
+      path: '/support',
+      name: 'SupportPage',
+      component: SupportPage,
     },
     {
       path: '/s',

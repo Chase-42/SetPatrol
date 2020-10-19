@@ -20,6 +20,7 @@ export { default as ProfileSettingsPage } from './ProfileSettingsPage/ProfileSet
 export { default as SearchPage } from './SearchPage/SearchPage';
 export { default as StaticPage } from './StaticPage/StaticPage';
 export { default as StyleguidePage } from './StyleguidePage/StyleguidePage';
+export { default as SupportPage } from './SupportPage/SupportPage';
 export { default as TermsOfServicePage } from './TermsOfServicePage/TermsOfServicePage';
 export { default as TopbarContainer } from './TopbarContainer/TopbarContainer';
 export { default as TransactionPage } from './TransactionPage/TransactionPage';
