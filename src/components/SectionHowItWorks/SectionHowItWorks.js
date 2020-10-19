@@ -21,6 +21,7 @@ const SectionHowItWorks = props => {
       <div id='grid'  className={css.steps}>
         <div className={css.step}>
           <h2 className={css.stepTitle}>
+          <h1 className='center'><i className="fa fa-id-badge" aria-hidden="true"></i></h1>
             <span id="SectionHowItWorks">1. Fill out your profile</span>
           </h2>
           <p>
@@ -30,6 +31,7 @@ const SectionHowItWorks = props => {
 
         <div id='grid'  className={css.step}>
           <h2 className={css.stepTitle}>
+            <h1 className='center'><i className="fa fa-money"></i></h1>
             <span id="SectionHowItWorks">2. Set up payments to rent out gear you own:</span>
           </h2>
           <p>
@@ -39,6 +41,7 @@ const SectionHowItWorks = props => {
 
         <div id='grid'  className={css.step}>
           <h2 className={css.stepTitle}>
+          <h1 className='center'><i className="fa fa-camera-retro"></i></h1>
             <span id="SectionHowItWorks">3. List your gear</span>
           </h2>
           <p>
@@ -48,6 +51,7 @@ const SectionHowItWorks = props => {
 
         <div id='grid'  className={css.step}>
           <h2 className={css.stepTitle}>
+          <h1 className='center'><i class="fa fa-cog" aria-hidden="true"></i></h1>
             <span id="SectionHowItWorks">4. Find gear you need</span>
           </h2>
           <p>
@@ -57,6 +61,7 @@ const SectionHowItWorks = props => {
 
         <div id='grid'  className={css.step}>
           <h2 className={css.stepTitle}>
+            <h1 className='center'><i class="fa fa-exchange" aria-hidden="true"></i></h1>
             <span id="SectionHowItWorks">5. Equipment handoff</span>
           </h2>
           <p>
@@ -66,6 +71,7 @@ const SectionHowItWorks = props => {
 
         <div id='grid'  className={css.step}>
           <h2 className={css.stepTitle}>
+            <h1 className='center'><i class="fa fa-star" aria-hidden="true"></i></h1>
             <span id="SectionHowItWorks">6. Review</span>
           </h2>
           <p>

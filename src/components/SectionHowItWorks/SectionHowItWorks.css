@@ -1,4 +1,7 @@
 @import '../../marketplace.css';
+.center{
+  margin-left: 50%;
+}
 .how{
   flex-wrap: wrap;
   display: grid;
