@@ -15,6 +15,9 @@ import {
   NamedLink,
 } from '../../components';
 
+import homeIcon from './homeIcon.png'
+import emailIcon from './emailIcon.png'
+
 import css from './Footer.css';
 
 const renderSocialMediaLinks = intl => {
@@ -135,6 +138,11 @@ const Footer = props => {
               </ul>
             </div>
             <div className={css.extraLinks}>
+
+              <div className={css.contactFooter}>
+                <p><img src={homeIcon} alt="address" /> Marino Mart Fairview D d02, Dublin, Ireland</p>
+                <p><img src={emailIcon} alt="email" /> ask@setpatrol.com</p>
+              </div>
               <div className={css.someLinks}>{socialMediaLinks}</div>
               <div className={css.legalMatters}>
                 <ul className={css.tosAndPrivacy}>
