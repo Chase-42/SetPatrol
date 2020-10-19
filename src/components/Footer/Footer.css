@@ -330,6 +330,16 @@
   margin-right: 24px;
 }
 
+.contactFooter{
+  margin-bottom: 25px;
+}
+
 .contactFooter p {
   font-size: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.contactFooter img {
+  padding-right: 5px;
 }
