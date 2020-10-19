@@ -15,13 +15,19 @@ import {
   NamedLink,
 } from '../../components';
 
-import homeIcon from './homeIcon.png'
-import emailIcon from './emailIcon.png'
+import homeIcon from './homeIcon.png';
+import emailIcon from './emailIcon.png';
 
 import css from './Footer.css';
 
 const renderSocialMediaLinks = intl => {
-  const { siteFacebookPage, siteInstagramPage, siteYoutubePage, siteLinkedInPage, siteTwitterHandle } = config;
+  const {
+    siteFacebookPage,
+    siteInstagramPage,
+    siteYoutubePage,
+    siteLinkedInPage,
+    siteTwitterHandle,
+  } = config;
   const siteTwitterPage = twitterPageURL(siteTwitterHandle);
 
   const goToFb = intl.formatMessage({ id: 'Footer.goToFacebook' });
@@ -130,18 +136,17 @@ const Footer = props => {
                     <FormattedMessage id="Footer.toHelpPage" />
                   </NamedLink>
                 </li>
-                <li className={css.listItem}>
-                  <NamedLink name="AboutPage" to={{ hash: '#contact' }} className={css.link}>
-                    <FormattedMessage id="Footer.toContactPage" />
-                  </NamedLink>
-                </li>
               </ul>
             </div>
             <div className={css.extraLinks}>
-
               <div className={css.contactFooter}>
-                <p><img src={homeIcon} alt="address" /> Marino Mart Fairview D d02, Dublin, Ireland</p>
-                <p><img src={emailIcon} alt="email" /> ask@setpatrol.com</p>
+                <p>
+                  <img src={homeIcon} alt="address" /> Marino Mart Fairview D d02, Dublin, Ireland
+                </p>
+                <p href="mailto:">
+                  <img src={emailIcon} alt="email" />{' '}
+                  <a href="mailto:ask@setpatrol.com">ask@setpatrol.com</a>
+                </p>
               </div>
               <div className={css.someLinks}>{socialMediaLinks}</div>
               <div className={css.legalMatters}>
