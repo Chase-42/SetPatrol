@@ -136,6 +136,7 @@ const Footer = props => {
                 </li>
               </ul>
             </div>
+            
             <div className={css.extraLinks}>
               <div className={css.contactFooter}>
                 <p><FaHome size="20px" /> Marino Mart Fairview D d02, Dublin, Ireland</p>
