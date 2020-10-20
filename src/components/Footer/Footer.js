@@ -1,5 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
+import { FaEnvelope, FaHome } from 'react-icons/fa';
 import { FormattedMessage, injectIntl, intlShape } from '../../util/reactIntl';
 import classNames from 'classnames';
 import { twitterPageURL } from '../../util/urlHelpers';
@@ -14,9 +15,6 @@ import {
   ExternalLink,
   NamedLink,
 } from '../../components';
-
-import homeIcon from './homeIcon.png';
-import emailIcon from './emailIcon.png';
 
 import css from './Footer.css';
 
@@ -140,13 +138,8 @@ const Footer = props => {
             </div>
             <div className={css.extraLinks}>
               <div className={css.contactFooter}>
-                <p>
-                  <img src={homeIcon} alt="address" /> Marino Mart Fairview D d02, Dublin, Ireland
-                </p>
-                <p href="mailto:">
-                  <img src={emailIcon} alt="email" />{' '}
-                  <a href="mailto:ask@setpatrol.com">ask@setpatrol.com</a>
-                </p>
+                <p><FaHome size="20px" /> Marino Mart Fairview D d02, Dublin, Ireland</p>
+                <p><FaEnvelope size="17px" /> ask@setpatrol.com</p>
               </div>
               <div className={css.someLinks}>{socialMediaLinks}</div>
               <div className={css.legalMatters}>
