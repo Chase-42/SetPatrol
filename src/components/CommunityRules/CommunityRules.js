@@ -8,8 +8,8 @@ const CommunityRules = () => {
               <h1>SetPatrol Community Rules</h1>
               <p>These Community Rules, together with our Terms of Service and Privacy Policy, constitute the agreement between you and SetPatrol. If you do not want to agree to the Community Rules, you must not use SetPatrol.</p>
               <p>Please take these rules seriously and honor them in the spirit in which they are intended. We will do our best to enforce them consistently and fairly, and ultimately we’ll try to do what we think is best in each situation.</p>
-            <h1>SetPatrol Rentals</h1>
-            <h2>Owners</h2>
+            <h2>SetPatrol Rentals</h2>
+            <h3>Owners</h3>
                 <ul>
                     <li>Keep it clean.</li>
                 </ul>
@@ -30,7 +30,7 @@ const CommunityRules = () => {
                     <li>Keep it on SetPatrol.</li>
                 </ul>
             <p>Don’t try to take transactions or messaging outside the site. Don’t encourage others to breach our Terms of Use.</p>
-            <h2>Renters</h2>
+            <h3>Renters</h3>
             <ul>
                 <li>Respect the gear.</li>
             </ul>
@@ -51,7 +51,7 @@ const CommunityRules = () => {
                 <li>Keep it on SetPatrol.</li>
             </ul>
             <p>Don’t try to take transactions or messaging outside the site. Don’t encourage others to breach our Terms of Use.</p>
-            <h1>SetPatrol Buy & Sell</h1>
+            <h2>SetPatrol Buy & Sell</h2>
             <ul>
                 <li>Be Kind.</li>
             </ul>
@@ -89,14 +89,14 @@ const CommunityRules = () => {
             <p>Does not function as intended and is not fully operational. This includes items that are defective in ways that render them difficult to use, items that require service or repair, or items missing essential components.</p>
             <p><strong>Note:</strong> By default, all Listings are set to ‘Good’ condition to be suitable for rentals.</p>
             <p>Please adjust your Listing condition, if needed, before offering your Listing for sale.</p>
-            <h1>SetPatrol Policies</h1>
-            <h2>Rental Cancellation Policy</h2>
+            <h2>SetPatrol Policies</h2>
+            <h3>Rental Cancellation Policy</h3>
             <p>Renters can cancel a Listing rental request before it is accepted, more than 48 hours before the start date, or within 2 hours of the request being accepted and the rental is fully refundable. If the Renter cancels within 48 hours of the rental pick-up date, they will receive a 50% refund. If the Renter cancels within 24 hours of the rental pick-up date, the rental is non-refundable. Rental cancellation fees are imposed at Owner’s discretion.</p>
-            <h2>Buy & Sell Cancellation Policy</h2>
+            <h3>Buy & Sell Cancellation Policy</h3>
             <p>An offer may be canceled by the Buyer and the Seller before or during the meetup for any reason. The Buyer will be issued a refund for the amount charged. If the Buyer wishes to cancel the transaction after payment has been confirmed at the meetup, the Buyer will be required to request a refund.</p>
-            <h2>Buy & Sell 48-Hour Return Policy</h2>
+            <h3>Buy & Sell 48-Hour Return Policy</h3>
             <p>The Buyer has 48 hours to request a return and refund, for any reason, of their Listing purchase after they pick it up from the Seller. If the item shows any signs of wear, was damaged by the Buyer in any way, or does not include all items originally included in the sale, it will not be eligible for a refund. The Seller agrees to accept the return of the Listing from the Buyer, and agrees to send a full refund to the Buyer, if the Buyer requests a return and refund during these 48 hours. All sales are final 48 hours after the Buyer picks up the Listing, and any returns and refunds after this period are at Seller’s discretion.</p>
-            <h2>Taking Rental or Sale Offline</h2>
+            <h3>Taking Rental or Sale Offline</h3>
             <p>The exchange of personal contact information before a rental request or offer has been accepted is not permitted. Any efforts to move rentals or sales initiated on SetPatrol off-site to avoid fees is strictly prohibited and may result in account suspension or termination. Any transaction initiated on SetPatrol but completed off-site will not be protected by any of SetPatrol’s policies or protections.</p>
          </div>
     )
