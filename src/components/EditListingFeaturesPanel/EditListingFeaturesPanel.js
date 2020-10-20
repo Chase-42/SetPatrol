@@ -41,9 +41,9 @@ const EditListingFeaturesPanel = props => {
     <FormattedMessage id="EditListingFeaturesPanel.createListingTitle" />
   );
 
-  const amenities = publicData && publicData.amenities;
   const cinema_camera_brands = publicData && publicData.cinema_camera_brands;
-  const initialValues = { amenities, cinema_camera_brands };
+  const cinema_lenses = publicData && publicData.cinema_lenses;
+  const initialValues = { cinema_camera_brands, cinema_lenses };
 
   console.log('EditLIstingFeaturesPanel', props.listing.attributes.publicData.category);
   const category = props.listing.attributes.publicData.category;
@@ -55,10 +55,10 @@ const EditListingFeaturesPanel = props => {
         name={FEATURES_NAME}
         initialValues={initialValues}
         onSubmit={values => {
-          const { amenities = [], cinema_camera_brands = [] } = values;
+          const { cinema_camera_brands = [], cinema_lenses = [] } = values;
 
           const updatedValues = {
-            publicData: { amenities, cinema_camera_brands },
+            publicData: { cinema_camera_brands, cinema_lenses },
           };
           onSubmit(updatedValues);
         }}

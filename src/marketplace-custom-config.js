@@ -103,57 +103,6 @@ export const filters = [
       ],
     },
   },
-  //  {
-  //    id: 'amenities',
-  //    label: 'Amenities',
-  //    type: 'SelectMultipleFilter',
-  //    group: 'primary',
-  //    queryParamNames: ['pub_amenities'],
-  //    config: {
-  //      // Optional modes: 'has_all', 'has_any'
-  //      // https://www.sharetribe.com/api-reference/marketplace.html#extended-data-filtering
-  //      searchMode: 'has_all',
-
-  //      // "key" is the option you see in Flex Console.
-  //      // "label" is set here for this web app's UI only.
-  //      // Note: label is not added through the translation files
-  //      // to make filter customizations a bit easier.
-  //      options: [
-  //        {
-  //          key: 'towels',
-  //          label: 'Towels',
-  //        },
-  //        {
-  //          key: 'bathroom',
-  //          label: 'Bathroom',
-  //        },
-  //        {
-  //          key: 'swimming_pool',
-  //          label: 'Swimming pool',
-  //        },
-  //        {
-  //          key: 'own_drinks',
-  //          label: 'Own drinks allowed',
-  //        },
-  //        {
-  //          key: 'jacuzzi',
-  //          label: 'Jacuzzi',
-  //        },
-  //        {
-  //          key: 'audiovisual_entertainment',
-  //          label: 'Audiovisual entertainment',
-  //        },
-  //        {
-  //          key: 'barbeque',
-  //          label: 'Barbeque',
-  //        },
-  //        {
-  //          key: 'own_food_allowed',
-  //          label: 'Own food allowed',
-  //        },
-  //      ],
-  //    },
-  //  },
   {
     id: 'cinema_camera_brands',
     label: 'Cinema Camera Brands',
