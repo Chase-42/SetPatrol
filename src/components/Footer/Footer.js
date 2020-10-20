@@ -106,6 +106,11 @@ const Footer = props => {
                     <FormattedMessage id="Footer.toContactPage" />
                   </NamedLink>
                 </li>
+                <li className={css.listItem}>
+                  <NamedLink name="CommunityRulesPage" to={{ hash: '#contact' }} className={css.link}>
+                  <span id="Footer">Community Rules</span>
+                  </NamedLink>
+                </li>
               </ul>
             </div>
             <div className={css.extraLinks}>
