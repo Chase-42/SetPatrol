@@ -1,5 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
+import { FaEnvelope, FaHome } from 'react-icons/fa';
 import { FormattedMessage, injectIntl, intlShape } from '../../util/reactIntl';
 import classNames from 'classnames';
 import { twitterPageURL } from '../../util/urlHelpers';
@@ -14,8 +15,6 @@ import {
   ExternalLink,
   NamedLink,
 } from '../../components';
-
-import { FaHome, FaEnvelope } from 'react-icons/fa';
 
 import css from './Footer.css';
 
@@ -142,19 +141,19 @@ const Footer = props => {
                 </li>
                 <li className={css.listItem}>
                   <NamedLink name="CommunityRulesPage" className={css.link}>
-                  <span id="Footer">Community Rules</span>
+                    <span id="Footer">Community Rules</span>
                   </NamedLink>
                 </li>
               </ul>
             </div>
+
             <div className={css.extraLinks}>
               <div className={css.contactFooter}>
                 <p>
-                  <FaHome size="20px"/> Marino Mart Fairview D d02, Dublin, Ireland
+                  <FaHome size="20px" /> Marino Mart Fairview D d02, Dublin, Ireland
                 </p>
-                <p href="mailto:">
-                  <FaEnvelope size="20px"/> {' '}
-                  <a href="mailto:ask@setpatrol.com"> ask@setpatrol.com</a>
+                <p>
+                  <FaEnvelope size="17px" /> ask@setpatrol.com
                 </p>
               </div>
               <div className={css.someLinks}>{socialMediaLinks}</div>
