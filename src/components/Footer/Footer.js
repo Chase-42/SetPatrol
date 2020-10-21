@@ -15,8 +15,7 @@ import {
   NamedLink,
 } from '../../components';
 
-import homeIcon from './homeIcon.png';
-import emailIcon from './emailIcon.png';
+import { FaHome, FaEnvelope } from 'react-icons/fa';
 
 import css from './Footer.css';
 
@@ -151,11 +150,11 @@ const Footer = props => {
             <div className={css.extraLinks}>
               <div className={css.contactFooter}>
                 <p>
-                  <img src={homeIcon} alt="address" /> Marino Mart Fairview D d02, Dublin, Ireland
+                  <FaHome size="20px"/> Marino Mart Fairview D d02, Dublin, Ireland
                 </p>
                 <p href="mailto:">
-                  <img src={emailIcon} alt="email" />{' '}
-                  <a href="mailto:ask@setpatrol.com">ask@setpatrol.com</a>
+                  <FaEnvelope size="20px"/> {' '}
+                  <a href="mailto:ask@setpatrol.com"> ask@setpatrol.com</a>
                 </p>
               </div>
               <div className={css.someLinks}>{socialMediaLinks}</div>
