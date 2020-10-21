@@ -50,9 +50,9 @@ const SectionLocations = props => {
         <FormattedMessage id="SectionLocations.title" />
       </div>
       <div className={css.locations}>
-        {locationLink('Cameras', cameraImage, '?pub_category=camera')}
-        {locationLink('Lenses', lensImage, '?pub_category=lens')}
-        {locationLink('Lighting', lightingImage, '?pub_category=lighting')}
+        {locationLink('Cinema Cameras', cameraImage, '?pub_category=cinema_cameras')}
+        {locationLink('Cinema Lenses', lensImage, '?pub_category=cinema_lenses')}
+        {locationLink('Lighting / Electric', lightingImage, '?pub_category=lighting_electric')}
       </div>
     </div>
   );
