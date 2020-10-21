@@ -60,13 +60,13 @@ const AboutPage = () => {
               <h1 className={css.pageTitle}>About Us</h1>
               <div className={css.aboutText}>
                 <p>
-                  SetPatrol is an European community for filmmakers made by filmmakers. SetPatrol’s main mission is to solve problems that every filmmaker faces; the cost and availability of professional gear to rent and buy. It is our first priority to be a democratized platform for all storytellers to interact and collaborate.
+                  SetPatrol is developing the largest community of filmmakers and photographers in Europe. Our primary mission is to democratize the film industry by resolving the problems every filmmaker faces; costs, gear, and space. As filmmakers ourselves, we know how difficult it is to create when you are limited by circumstances, so we decided to become the solution.
                 </p>
                 <p>
-                  SetPatrol is a marketplace where people who need high-end photography and film equipment can find people who are willing to rent it out. There is a huge problem in the film industry and SetPatrol is trying to change all that. As StoryTellers we work in a field focused on results. Clients are fixated on beautiful, dramatic and creative work. We are victims of our own success; a high demand market, quick turnarounds and forever revamped equipment.
+                  SetPatrol is an interactive marketplace where people who need high-end photography and film equipment can find those willing to rent it out. Users can list every type of photo/video related piece of equipment, rent it directly to other professionals, and make money while they aren't using it. As StoryTellers, we work in a field focused on results. Clients are fixated on beautiful, dramatic, and creative work. We are victims of our own success; a high demand market, quick turnarounds, and forever revamped equipment. Our platform gives artists access to the tools they need and the financial freedom they desire in order to focus on their craft. 
                 </p>
                 <p>
-                  Our platform gives artists access to the tools they need and the financial freedom they desire in order to focus on their craft. Users can list every type of photo/video related piece of equipment, rent it directly to other professionals, and make money while they aren’t using it.
+                  It doesn't end here. When you sign up, you will automatically become a member of the SetPatrol community with access to a whole network of creators. Your profile will showcase who you are and the work you have done. We give you a chance to meet other people within the industry and stay connected through our website.  You can discover job opportunities, find resources, and learn more. Our first priority is to help storytellers like you, so with SetPatrol you will never have to miss out again. 
                 </p>
               </div>
 
