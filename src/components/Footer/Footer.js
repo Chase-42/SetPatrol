@@ -136,7 +136,6 @@ const Footer = props => {
                     <FormattedMessage id="Footer.toHelpPage" />
                   </NamedLink>
                 </li>
-<<<<<<< HEAD
                 <li className={css.listItem}>
                   <NamedLink name="AboutPage" to={{ hash: '#contact' }} className={css.link}>
                     <FormattedMessage id="Footer.toContactPage" />
@@ -147,8 +146,6 @@ const Footer = props => {
                   <span id="Footer">Community Rules</span>
                   </NamedLink>
                 </li>
-=======
->>>>>>> d17e9643189ee3ba245d5d7e7cc8bc178e7a3ea3
               </ul>
             </div>
             <div className={css.extraLinks}>
