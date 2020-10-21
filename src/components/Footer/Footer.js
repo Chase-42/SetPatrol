@@ -135,22 +135,26 @@ const Footer = props => {
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>
-                  <NamedLink name="AboutPage" to={{ hash: '#contact' }} className={css.link}>
+                  <NamedLink name="AboutPage" className={css.link}>
                     <FormattedMessage id="Footer.toContactPage" />
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>
-                  <NamedLink name="CommunityRulesPage" to={{ hash: '#contact' }} className={css.link}>
-                  <span id="Footer">Community Rules</span>
+                  <NamedLink name="CommunityRulesPage" className={css.link}>
+                    <span id="Footer">Community Rules</span>
                   </NamedLink>
                 </li>
               </ul>
             </div>
-            
+
             <div className={css.extraLinks}>
               <div className={css.contactFooter}>
-                <p><FaHome size="20px" /> Marino Mart Fairview D d02, Dublin, Ireland</p>
-                <p><FaEnvelope size="17px" /> ask@setpatrol.com</p>
+                <p>
+                  <FaHome size="20px" /> Marino Mart Fairview D d02, Dublin, Ireland
+                </p>
+                <p>
+                  <FaEnvelope size="17px" /> ask@setpatrol.com
+                </p>
               </div>
               <div className={css.someLinks}>{socialMediaLinks}</div>
               <div className={css.legalMatters}>
