@@ -245,8 +245,298 @@ const PrivacyPolicy = props => {
        </tr>
        <tr>
          <td>__cfduid</td>
+         <td>Cookie is set on websites using Cloudflare to speed up their load times and for threat defense services. It does not collect or share user identification information.</td>
+         <td>.cdnjs.cloudflare.com</td>
+         <td>a month</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>__cfduid</td>
+         <td>Cookie is set on websites using Cloudflare to speed up their load times and for threat defense services. It does not collect or share user identification information.</td>
+         <td>.adsymptotic.com</td>
+         <td>a month</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>cookiefirst-consent</td>
+         <td>This cookie saves your cookie preferences for this website. You can change these or withdraw your consent easily.</td>
+         <td>https://www.SetPatrol.com/</td>
+         <td>a year</td>
+         <td>Cookie First</td>
+       </tr>
+       <tr>
+         <td>cookiefirst-id</td>
+         <td>This cookie contains your unique ID so CookieFirst can identify unique visitors to this website.</td>
+         <td>api.cookiefirst.com</td>
+         <td>a year</td>
+         <td>Cookie First</td>
        </tr>
      </table>
+     <h3>Performance</h3>
+     <table>
+       <tr>
+         <th>Name</th>
+         <th>Purpose</th>
+         <th>Domain name</th>
+         <th>Expiration time</th>
+         <th>Expiration time</th>
+       </tr>
+       <tr>
+         <td>_gid</td>
+         <td>Registers a unique ID for a website visitor it tracks how the visitor uses the website. The data is used for statistics.</td>
+         <td>.spotify.com</td>
+         <td>a day</td>
+         <td>Google, Inc</td>
+       </tr>
+       <tr>
+         <td>_gat_*****</td>
+         <td>Set by Google Analytics to control the request rate.</td>
+         <td>.spotify.com</td>
+         <td>a minute</td>
+         <td>Google LLC</td>
+       </tr>
+       <tr>
+         <td>_ga</td>
+         <td>Registers a unique ID for a website visitor it tracks how the visitor uses the website. The data is used for statistics.</td>
+         <td>.spotify.com</td>
+         <td>2 years</td>
+         <td>Google, Inc</td>
+       </tr>
+       <tr>
+         <td>_gid</td>
+         <td>Registers a unique ID for a website visitor it tracks how the visitor uses the website. The data is used for statistics.</td>
+         <td>.giphy.com</td>
+         <td>a day</td>
+         <td>Google, Inc</td>
+       </tr>
+       <tr>
+         <td>_gid</td>
+         <td>Registers a unique ID for a website visitor it tracks how the visitor uses the website. The data is used for statistics.</td>
+         <td>.SetPatrol.com</td>
+         <td>a day</td>
+         <td>Google, Inc</td>
+       </tr>
+       <tr>
+         <td>_gat_*****</td>
+         <td>Set by Google Analytics to control the request rate.</td>
+         <td>.SetPatrol.com</td>
+         <td>a minute</td>
+         <td>Google LLC</td>
+       </tr>
+       <tr>
+         <td>_gat</td>
+         <td>Set by Google Analytics to control the request rate.</td>
+         <td>.giphy.com</td>
+         <td>a minute</td>
+         <td>Google LLC</td>
+       </tr>
+       <tr>
+         <td>_ga</td>
+         <td>Registers a unique ID for a website visitor it tracks how the visitor uses the website. The data is used for statistics.</td>
+         <td>.giphy.com</td>
+         <td>2 yearss</td>
+         <td>Google, Inc</td>
+       </tr>
+       <tr>
+         <td>_ga</td>
+         <td>Registers a unique ID for a website visitor it tracks how the visitor uses the website. The data is used for statistics.</td>
+         <td>.SetPatrol.com</td>
+         <td>2 years</td>
+         <td>Google, Inc</td>
+       </tr>
+       <tr>
+         <td>__hstc</td>
+         <td>This cookie name is linked to websites that are built on the HubSpot platform. This name is reported by them as being used for website analysis.</td>
+         <td>.SetPatrol.com</td>
+         <td>a year</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>__hssrc</td>
+         <td>Whenever HubSpot changes the session cookie, this cookie is also set to determine if the visitor has restarted their browser. If this cookie does not exist when HubSpot manages cookies, it is considered a new session.</td>
+         <td>.SetPatrol.com</td>
+         <td>Session</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>__hssc</td>
+         <td>This cookie name is linked to websites that are built on the HubSpot platform. This name is reported by them as being used for website analysis.</td>
+         <td>.SetPatrol.com</td>
+         <td>30 minutes</td>
+         <td></td>
+       </tr>
+     </table>
+     <h3>Functional</h3>
+     <table>
+       <tr>
+         <th>Name</th>
+         <th>Purpose</th>
+         <th>Domain name</th>
+         <th>Expiration time</th>
+         <th>Provider</th>
+       </tr>
+       <tr>
+         <td>lang</td>
+         <td>There are many different types of cookies associated with this name, and a more detailed look at how it is used on a particular website is generally recommended. However, in most cases it will likely be used to store language preferences, potentially to serve up content in the stored language.</td>
+         <td>.linkedin.com</td>
+         <td>Session</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>lang</td>
+         <td>There are many different types of cookies associated with this name, and a more detailed look at how it is used on a particular website is generally recommended. However, in most cases it will likely be used to store language preferences, potentially to serve up content in the stored language.</td>
+         <td>.ads.linkedin.com</td>
+         <td>Session</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>hubspotutk</td>
+         <td>This cookie name is associated with websites built on the HubSpot platform. This cookie is used to keep track of a visitor's identity. This cookie is passed to HubSpot on form submission and used when deduplicating contacts.</td>
+         <td>.SetPatrol.com</td>
+         <td>a year</td>
+         <td></td>
+       </tr>
+     </table>
+     <h2>Advertising</h2>
+     <table>
+       <tr>
+         <th>Name</th>
+         <th>Purpose</th>
+         <th>Domain name</th>
+         <th>Expiration time</th>
+         <th>Provider</th>
+       </tr>
+       <tr>
+         <td>sp_t</td>
+         <td>Used to implement Spotify audio content on the website. Can also be used to record user interaction and preferences in combination with audio content. This can serve statistics and marketing purposes.</td>
+         <td>.spotify.com</td>
+         <td>2 months</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>sp_landing</td>
+         <td>Used to implement Spotify audio content on the website. Can also be used to record user interaction and preferences in combination with audio content. This can serve statistics and marketing purposes.</td>
+         <td>open.spotify.com</td>
+         <td>a day</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>lissc</td>
+         <td>This cookie is being set by Linkedin for advertising purposes</td>
+         <td>.linkedin.com</td>
+         <td>a year</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>lidc</td>
+         <td>Cookie from LinkedIn used by share buttons and advertising tags.</td>
+         <td>.linkedin.com</td>
+         <td>a days</td>
+         <td>b</td>
+       </tr>
+       <tr>
+         <td>li_sugr</td>
+         <td>Cookie from LinkedIn used by share buttons and advertising tags.</td>
+         <td>.linkedin.com</td>
+         <td>3 months</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>fr</td>
+         <td>Cookie set by Facebook. The gathered information is used in their advertising products, for example real time bidding from third party advertisers.</td>
+         <td>.facebook.com</td>
+         <td>3 months</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>bscookie</td>
+         <td>Cookie from LinkedIn used by share buttons and advertising tags.</td>
+         <td>.www.linkedin.com</td>
+         <td>2 years</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>bcookie</td>
+         <td>Cookie from LinkedIn used by share buttons and advertising tags.</td>
+         <td>.linkedin.com</td>
+         <td>2 years</td>
+         <td>a</td>
+       </tr>
+       <tr>
+         <td>_fbp</td>
+         <td>This cookie is used by Facebook for advertising purposes and conversion tracking.</td>
+         <td>.SetPatrol.com</td>
+         <td>3 months</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>YSC</td>
+         <td>Registers a unique ID to keep statistics of what videos from YouTube the user has seen.</td>
+         <td>.youtube.com</td>
+         <td>Session</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>VISITOR_INFO1_LIVE</td>
+         <td>This cookie allows Youtube to check for bandwidth usage.</td>
+         <td>.youtube.com</td>
+         <td>6 months</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>UserMatchHistory</td>
+         <td>This cookie is used to track visitor behaviour in order to provide better personalised advertising.</td>
+         <td>.linkedin.com</td>
+         <td>a month</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>IDE</td>
+         <td>Cookie from Double Click (Google) which helps us to analyze and optimize our advertising campaigns.</td>
+         <td>.doubleclick.net</td>
+         <td>a year</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>GPS</td>
+         <td>Cookie which allows Youtube to track mobile devices based on GPS data</td>
+         <td>.youtube.com</td>
+         <td>30 minutes</td>
+         <td></td>
+       </tr>
+       <tr>
+         <td></td>
+         <td>This cookie is set by Facebook and could be used for tracking conversions and advertising purposes.</td>
+         <td>www.facebook.com</td>
+         <td>Session</td>
+         <td>Facebook, Inc</td>
+       </tr>
+     </table>
+     <h2>Unclassified</h2>
+     <table>
+       <tr>
+         <th>Name</th>
+         <th>Purpose</th>
+         <th>Domain name</th>
+         <th>Expiration time</th>
+         <th>Provider</th>
+       </tr>
+       <tr>
+         <td>amp_fa6e12</td>
+         <td>This cookie has not yet been given a description. Our team is working to provide more information.</td>
+         <td>.SetPatrol.com</td>
+         <td>10 years</td>
+         <td></td>
+       </tr>
+     </table>
+     <p>This cookie policy has been created and updated by <strong>CookieFirst.com</strong>.</p>
+     <h2>Data Security</h2>
+     <p>We have implemented measures designed to secure your personal information and messages from accidental loss and from unauthorized access, use, alteration and disclosure. Any payment transactions will be encrypted. The safety and security of your information and messages also depends on you. Where we have given you (or where you have chosen) a password for access to certain parts of our Platform, you are responsible for keeping this password confidential. We ask you not to share your password with anyone. We urge you to be careful about giving out information in public areas of the Platform. The information you share in public areas may be viewed by any user of the Platform. Unfortunately, the transmission of information via the internet is not completely secure. Although we do our best to protect your personal information and messages, we cannot guarantee the security of your personal information transmitted to our Platform. Any transmission of personal information and messages is at your own risk. We are not responsible for circumvention of any privacy settings or security measures contained on the Platform.</p>
+     <h2>Modifications to Privacy Policy</h2>
+     <p>We reserve the right to modify the Platform or revise and update this Privacy Policy (along with SetPatrol’s Terms of Service and Community Rules) from time to time, in our sole discretion. If we modify this Privacy Policy, we will update the “Last Modified” date at the top of this Privacy Policy and we will send an email to the email address that each User submitted and/or post a notification on the Platform regarding the modification on the Platform. By continuing to access or use our Platform after we have posted a modification and/or have provided you with notice of a modification, you are indicating that you agree to be bound by the modified Privacy Policy, Terms of Service, and Community Rules. All changes are effective immediately when we post them, and apply to all access to and use of the Platform thereafter. If the modified  Privacy Policy is not acceptable to you, your only recourse is to stop using and accessing the Platform</p>
+     <h2>Contact Information</h2>
+     <p>To ask questions or comment about this Privacy Policy and our privacy practices, contact us at ask@SetPatrol.com</p>
+     <p>Marino Mart Fairview D d02, Dublin, Ireland</p>
     </div>
   );
 };
