@@ -28,7 +28,7 @@ const CommunityRulesPage = () => {
           <TopbarContainer />
         </LayoutWrapperTopbar>
         <LayoutWrapperMain>
-          <div>
+          <div className={css.communityRules}>
               <CommunityRules /> 
           </div>
         </LayoutWrapperMain>
