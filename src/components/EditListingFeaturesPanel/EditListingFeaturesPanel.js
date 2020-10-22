@@ -10,8 +10,6 @@ import { ListingLink } from '../../components';
 
 import css from './EditListingFeaturesPanel.css';
 
-const FEATURES_NAME = 'amenities';
-
 const EditListingFeaturesPanel = props => {
   const {
     rootClassName,
@@ -43,16 +41,15 @@ const EditListingFeaturesPanel = props => {
 
   const cinema_camera_brands = publicData && publicData.cinema_camera_brands;
   const cinema_lenses = publicData && publicData.cinema_lenses;
+
   const initialValues = { cinema_camera_brands, cinema_lenses };
 
-  console.log('EditLIstingFeaturesPanel', props.listing.attributes.publicData.category);
   const category = props.listing.attributes.publicData.category;
   return (
     <div className={classes}>
       <h1 className={css.title}>{panelTitle}</h1>
       <EditListingFeaturesForm
         className={css.form}
-        name={FEATURES_NAME}
         initialValues={initialValues}
         onSubmit={values => {
           const { cinema_camera_brands = [], cinema_lenses = [] } = values;
