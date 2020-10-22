@@ -130,16 +130,6 @@ const Footer = props => {
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>
-                  <NamedLink name="LandingPage" className={css.link}>
-                    <FormattedMessage id="Footer.toHelpPage" />
-                  </NamedLink>
-                </li>
-                <li className={css.listItem}>
-                  <NamedLink name="AboutPage" className={css.link}>
-                    <FormattedMessage id="Footer.toContactPage" />
-                  </NamedLink>
-                </li>
-                <li className={css.listItem}>
                   <NamedLink name="CommunityRulesPage" className={css.link}>
                     <span id="Footer">Community Rules</span>
                   </NamedLink>
@@ -150,10 +140,11 @@ const Footer = props => {
             <div className={css.extraLinks}>
               <div className={css.contactFooter}>
                 <p>
-                  <FaHome size="20px" /> Marino Mart Fairview D d02, Dublin, Ireland
+                  <FaHome size="20px" style={{ marginRight: '2%' }} /> Marino Mart Fairview D d02,
+                  Dublin, Ireland
                 </p>
                 <p>
-                  <FaEnvelope size="17px" /> ask@setpatrol.com
+                  <FaEnvelope size="17px" style={{ marginRight: '2%' }} /> ask@setpatrol.com
                 </p>
               </div>
               <div className={css.someLinks}>{socialMediaLinks}</div>

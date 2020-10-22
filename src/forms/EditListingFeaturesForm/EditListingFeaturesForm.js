@@ -7,7 +7,7 @@ import { FormattedMessage } from '../../util/reactIntl';
 import { findOptionsForSelectFilter } from '../../util/search';
 import { propTypes } from '../../util/types';
 import config from '../../config';
-import { Button, FieldCheckboxGroup, Form, FieldSelect } from '../../components';
+import { Button, FieldSelect, Form } from '../../components';
 
 import css from './EditListingFeaturesForm.css';
 
@@ -25,7 +25,6 @@ const EditListingFeaturesFormComponent = props => {
           ready,
           rootClassName,
           className,
-          name,
           handleSubmit,
           pristine,
           saveActionMsg,
@@ -37,7 +36,6 @@ const EditListingFeaturesFormComponent = props => {
 
         const cinemaCameraKey = 'cinema_camera_brands';
         const cinemaCameraOptions = findOptionsForSelectFilter(cinemaCameraKey, filterConfig);
-
         const cinemaLensesKey = 'cinema_lenses';
         const cinemaLensesOptions = findOptionsForSelectFilter(cinemaLensesKey, filterConfig);
 

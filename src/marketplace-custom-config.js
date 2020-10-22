@@ -103,6 +103,7 @@ export const filters = [
       ],
     },
   },
+
   {
     id: 'cinema_camera_brands',
     label: 'Cinema Camera Brands',
