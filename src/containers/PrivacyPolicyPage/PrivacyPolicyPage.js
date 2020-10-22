@@ -55,7 +55,7 @@ const PrivacyPolicyPageComponent = props => {
         <LayoutWrapperMain>
           <div className={css.content}>
             <h1 className={css.heading}>
-              <FormattedMessage id="PrivacyPolicyPage.heading" />
+              <span id="PrivacyPolicyPage.heading">Privacy Policy</span>
             </h1>
             <PrivacyPolicy />
           </div>
