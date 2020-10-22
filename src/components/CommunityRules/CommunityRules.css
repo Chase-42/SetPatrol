@@ -1,6 +1,9 @@
 @import '../../marketplace.css';
 
 .root {
+  & .rules{
+    width: 33%;
+  }
   & p {
     @apply --marketplaceH4FontStyles;
     margin-left: 100px;
@@ -22,15 +25,13 @@
     @media (--viewportMedium) {
       margin-top: 0;
       margin-bottom: 54px;
+      width: 33%;
     }
   }
 }
+
 h1{
     color: #4951f2;
-}
-div{
-    margin-left: 13px;
-    margin-right: 10px;
 }
 
 h3 {
