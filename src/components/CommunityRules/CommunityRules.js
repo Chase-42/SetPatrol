@@ -5,11 +5,11 @@ import './CommunityRules.css'
 const CommunityRules = () => {
     return (
         <div className='rules'>
-                <br></br>
-                <br></br>
-              <h1>SetPatrol Community Rules</h1>
-              <p>These Community Rules, together with our Terms of Service and Privacy Policy, constitute the agreement between you and SetPatrol. If you do not want to agree to the Community Rules, you must not use SetPatrol.</p>
-              <p>Please take these rules seriously and honor them in the spirit in which they are intended. We will do our best to enforce them consistently and fairly, and ultimately we’ll try to do what we think is best in each situation.</p>
+            <br></br>
+            <br></br>
+            <h1>SetPatrol Community Rules</h1>
+            <p>These Community Rules, together with our Terms of Service and Privacy Policy, constitute the agreement between you and SetPatrol. If you do not want to agree to the Community Rules, you must not use SetPatrol.</p>
+            <p>Please take these rules seriously and honor them in the spirit in which they are intended. We will do our best to enforce them consistently and fairly, and ultimately we’ll try to do what we think is best in each situation.</p>
             <h2>SetPatrol Rentals</h2>
             <h3>Owners</h3>
                 <ul>
