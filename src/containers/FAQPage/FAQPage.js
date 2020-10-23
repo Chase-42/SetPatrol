@@ -114,6 +114,69 @@ const FAQPage = () => {
            <p>We offer a weekend discount: weekends count as 1 day (Saturday + Sunday). We know a lot of you create content on your weekends,as always Set Patrol is a more affordable option for you. </p>
            <p><i>Example</i>: your <strong>shoot days</strong> are Saturday and Sunday. Pick-up is Friday, drop-off is Monday. You will be charged for 1 shoot day.</p>
            <p>How should I prepare to pick up or rent gear?</p>
+           <p>Before picking up, users should discuss how the item.s will be packed: a pelican case, a camera case etc. Make sure the gear is ready and packed before the renter arrives, both parties should have their check in agreement and ID’s ready as well.</p>
+           <p>What is the community fee you charge?</p>
+           <p>We charge renters a 5% Community Fee on each booking. This fee helps cover the costs of ID verification, security, customer service, feature improvements, dispute mitigation, and credit card processing that the community incurs.</p>
+           <p>Do you support shipping or delivery courier? Can I have the gear shipped or delivered to me?</p>
+           <p>We are working on providing the best and safest shipping option. For now we encourage renters and rentees to meet at local coffee shops to exchange rentals. You can simultaneously be supporting three locals at once (coffee, equipment and filmmakers!!)</p>
+           <p>Can I extend a rental?</p>
+           <p>Sometimes your plans change, and you need to keep gear longer than expected. Here are the steps if you need to change the dates of your rental.</p>
+           <p>Renters:</p>
+           <p>Please contact the equipment owner and ask to extend your rental. As long as the equipment is available for the extended period and the owner agrees to the extension, they can adjust the dates of the rental using the Edit Order button. Extensions are entirely at the owner's discretion: if they refuse your request, you must return the gear on the existing return date.</p>
+           <p>How can I contact the Owner/Renter?</p>
+           <p>You can simply message the owner prior to renting by clicking the “Contact” button underneath the owner’s name on the listing page or “Contact Owner” on the owner’s profile page.</p>
+           <p>How do I know for sure the gear works well? What happens if, once I start using it, it ends up being defective?</p>
+           <p>At Set Patrol, everyone is vetted when creating a profile and for each transaction. We have a secured system that includes contact and ID verification. All parties, before the transactions have to fill out a rental agreement, and a check out form that attest that everything is in good state, same at return. If a problem rises, let’s say technical issues not foreseen by the check out forms, our insurance will cover it.</p>
+           <p>What if I am renting gear, and I end up needing it at the last minute?</p>
+           <p>If you cancel within 2 hours of a request being accepted, no cancellation fee will be imposed. As a renter, if you cancel within 48 hours of pickup time, we reserve the right to charge a fee of up to 50% of the rental cost, at the owner's request.</p>
+           <p>If the owner cancels within 24 hours of pickup time, we reserve the right to charge a fee of up to 100% of the rental cost.</p>
+           <p>I lost something I rented. What should I do?</p>
+           <p>If you misplaced a rental or had something stolen from you please stay calm: let us know - Send an email with the subject line “Insurance Coverage Claim” to ask@setpatrol.com including the following: </p>
+           <ul>
+             <li>Your name </li>
+             <li>Your phone number </li>
+             <li>Rental details (gear owner's name, equipment rented, date, location)</li>
+             <li>A description of the incident with as much detail as possible</li>
+             <li>Tell the Rentee</li>
+             <li>File a police report if any items are stolen </li>
+           </ul>
+           <p>Can I send someone else to pick up the gear for me?</p>
+           <p>When you're busy coordinating your production, sometimes you'll need someone else to handle the pick-up or drop-off of equipment. On ShareGrid, you'll add that person to the rental as an 'Authorized Person'.</p>
+           <h3>6 . DAMAGE</h3>
+           <p>What if I damage the equipment?</p>
+           <p>Yes. Both owners and renters will receive a digital checklist before pick up.</p>
+           <p><strong>What are digital checksheets?</strong></p>
+           <p>Renters and owners use digital checksheets to record the condition of rented equipment before and after each rental. This check list is mandatory. That way, everyone is clear on the condition of the gear, and if there’s any issue during the rental, we can help resolve things more quickly.</p>
+           <p><strong>Renters:</strong>You will receive a link on the <strong>day of pick-up</strong> via email and text message. Complete it with the owner at the pick-up location.</p>
+           <p><strong>Owners:</strong>You will receive a link the <strong>day of drop-off</strong> via email and text message. Complete it with the renter at the return location. Make sure you test the gear thoroughly and note any missing items or damage.</p>
+           <hr></hr>
+           <p>BUYING GEAR WITH SET PATROL</p>
+           <p>SELLING GEAR</p>
+           <p>Why should I sell my gear through Set Patrol?</p>
+           <p>Set Patrol is a vetted and secured platform with verified users. This allows all your transactions to be safe, as opposed to let’s say, a regular second hand website or a facebook group.</p>
+           <p>What does it cost to sell an item on ShareGrid?</p>
+           <p>We take a percentage of  5% for each transaction between seller and buyer. Listing is always free.</p>
+           <p>What do I do when someone makes an offer to buy my item?</p>
+           <p>You will be notified on your Set Patrol account and by email.</p>
+           <p>When do I get paid for a sale?</p>
+           <p>Within 3 to 5 business days.</p>
+           <p>Do you charge taxes on purchases?</p>
+           <p>We do not. You can decide to add taxes to the price in your listing.</p>
+           <p>LISTING GEAR AND MANAGING YOUR RENTAL</p>
+           <p>What does it mean if a request says SetPatrol is reviewing this rental'? Why can't I accept the request?</p>
+           <p>It takes us a couple of days to review each listing and make sure it is up to our security standard. If you are in a rush send us an email at ask@setpatrol.com so we can accommodate you.</p>
+           <p>Do I have to pay to list gear?</p>
+           <p>No, it is always free!</p>
+           <p>Can I adjust the availability of my listing?</p>
+           <p>Of course, as long as the item is not rented out yet, feel free to make changes.</p>
+           <p>Can I post an equipment package?</p>
+           <p>Of course, you create your own listings. Feel free, for example, to list a camera body and its lenses.</p>
+           <p>What if I want to de-list an item?</p>
+           <p>You are 100 percent responsible for your listings, feel free to de-list an item as long as it is not rented out.</p>
+           <p>Do you set prices or do I?</p>
+           <p>You always set your own prices! Feel free to browse around to see what other listings offer.</p>
+           <p>Do I have to pay taxes on the income made from Set Patrol?</p>
+           <p>Because Set Patrol operates in all the countries of the European Union, with various tax legislations, you are responsible for filing your own taxes with your Set Patrol earnings. We recommend you speak to your accountant.</p>
           </div>
         </LayoutWrapperMain>
 
