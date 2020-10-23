@@ -9,6 +9,8 @@ import {
 } from '../../components';
 
 import css from './FAQPage.css';
+import calender1 from './calender1.png';
+import calender2 from './calender2.png';
 
 const FAQPage = () => {
   // prettier-ignore
@@ -86,6 +88,32 @@ const FAQPage = () => {
             <h3>5 . RENTING GEAR</h3>
             <p>What is the renting process like?</p>
             <p>It’s very easy!</p>
+            <p>Request: Renter selects gear on Set Patrol, enters payment method, chooses insurance option.</p>
+            <p>Acceptance: Owner accepts the rental request.</p>
+            <p>Charge: Once the owner accepts the rental request the renters’ card is charged and the money is sent to the owner's bank account.</p>
+            <p>Both users agree to meet at a place and time that is convenient for both of them. We recommend a public place if possible: a park or coffee shop. You will then both receive a check in and check out package, our rental agreement, to make sure the gear is functioning well.</p>
+            <p>Pickup: Both users must present their IDs and inspect all items, then electronically check it out (A very easy process).</p>
+            <p>Return & Inspection: When the renter returns the equipment, the owner must inspect all items to ensure they are in the same condition that they were when the renter first picked up. If the owner finds that the equipment is NOT in the same condition, they must report the discrepancy to the renter and to Set Patrol within one hour.</p>
+            <p>How is the rental fee estimated?</p>
+            <p><strong>Very simple.No charge for pick-up and drop-off days</strong></p>
+            <p>Pick-up and drop-off days are free, this is when you will <i>check, prep and pack your gear</i>.</p>
+            <p>When you rent on Set Patrol  you'll <strong>pick up your gear after 3 pm</strong> on the rental date, and you'll <strong>return it before 1pm</strong> on the return day.</p>
+            <p>Unless you're booking a one-day rental, you should not plan to shoot on these days.</p>
+            <p><strong>Shoot days</strong></p>
+            <p>The cost of your rental is based on the number of <strong>shoot days</strong>. These are the days you'll actually be using the equipment.</p>
+           <p><strong>1 to 3 Shoot Days</strong></p>
+           <p>If you rent for 1, 2 or 3 <strong>shoot days</strong>, you pay for the shoot days only.</p>
+           <p><i>Example:</i> your shoot days are Tuesday and Wednesday. Pick-up is Monday, drop-off is Thursday. You will be charged for 2 shoot days.</p>
+           <img src={calender1} alt='calender' width="460" height="315"/>
+           <p><i>Example</i>: your <strong>shoot days</strong> are Tuesday, Wednesday and Thursday. Pick-up is Monday, drop-off is Friday. You will be charged for 3 shoot days.</p>
+           <img src={calender2} alt='calender' width="460" height="315"/>
+           <p><strong>The full-week rule (5 to 7 days) with a discount.</strong></p>
+           <p>We also have a great weekly discount.</p>
+           <p>If you rent gear for 5 to 7 days, you only pay for 3 shoot days.</p>
+           <p><strong>Weekends count as one day</strong></p>
+           <p>We offer a weekend discount: weekends count as 1 day (Saturday + Sunday). We know a lot of you create content on your weekends,as always Set Patrol is a more affordable option for you. </p>
+           <p><i>Example</i>: your <strong>shoot days</strong> are Saturday and Sunday. Pick-up is Friday, drop-off is Monday. You will be charged for 1 shoot day.</p>
+           <p>How should I prepare to pick up or rent gear?</p>
           </div>
         </LayoutWrapperMain>
 
