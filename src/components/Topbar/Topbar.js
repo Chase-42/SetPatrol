@@ -96,18 +96,36 @@ class TopbarComponent extends Component {
   }
 
   handleSubmit(values) {
-    const { currentSearchParams } = this.props;
-    const keywords = values.keywords;
-    console.log('hey', values.pub_category);
-    const pub_category = values.pub_category;
-    console.log(pub_category);
-    const { history } = this.props;
-    const searchParams = {
-      ...currentSearchParams,
-      keywords,
-      pub_category,
-    };
-    history.push(createResourceLocatorString('SearchPage', routeConfiguration(), {}, searchParams));
+    if (values.location) {
+      const { currentSearchParams } = this.props;
+      const keywords = values.keywords;
+      const { search, selectedPlace } = values.location;
+      const { origin, bounds } = selectedPlace;
+      const { history } = this.props;
+      const originMaybe = config.sortSearchByDistance ? { origin } : {};
+      const searchParams = {
+        ...currentSearchParams,
+        ...originMaybe,
+        address: search,
+        keywords,
+        bounds,
+      };
+      history.push(
+        createResourceLocatorString('SearchPage', routeConfiguration(), {}, searchParams)
+      );
+    } else {
+      const { currentSearchParams } = this.props;
+      const keywords = values.keywords;
+      const { history } = this.props;
+      const searchParams = {
+        ...currentSearchParams,
+
+        keywords,
+      };
+      history.push(
+        createResourceLocatorString('SearchPage', routeConfiguration(), {}, searchParams)
+      );
+    }
   }
 
   handleLogout() {
@@ -260,7 +278,7 @@ class TopbarComponent extends Component {
               isMobile
             />
             <p className={css.mobileHelp}>
-              <FormattedMessage id="Topbar.mobileSearchHelp" />
+              {/* <FormattedMessage id="Topbar.mobileSearchHelp" /> */}
             </p>
           </div>
         </Modal>
