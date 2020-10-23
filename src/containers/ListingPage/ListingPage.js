@@ -380,7 +380,7 @@ export class ListingPageComponent extends Component {
       </NamedLink>
     );
 
-    const amenityOptions = findOptionsForSelectFilter('amenities', filterConfig);
+    const brandOptions = findOptionsForSelectFilter('brand', filterConfig);
     const categoryOptions = findOptionsForSelectFilter('category', filterConfig);
     const viewOptions = findOptionsForSelectFilter('view', filterConfig);
     const category =
@@ -441,7 +441,7 @@ export class ListingPageComponent extends Component {
                   />
                   <SectionDescriptionMaybe description={description} />
                   {/* <SectionViewMaybe options={viewOptions} publicData={publicData} /> */}
-                  <SectionFeaturesMaybe options={amenityOptions} publicData={publicData} />
+                  <SectionFeaturesMaybe options={brandOptions} publicData={publicData} />
                   <SectionRulesMaybe publicData={publicData} />
                   <SectionMapMaybe
                     geolocation={geolocation}
