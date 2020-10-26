@@ -103,12 +103,11 @@ export const filters = [
       ],
     },
   },
-
   {
     id: 'cinema_camera_brands',
     label: 'Cinema Camera Brands',
     type: 'SelectSingleFilter',
-    group: 'secondary',
+    group: 'primary',
     queryParamNames: ['pub_cinema_camera_brands'],
     config: {
       options: [
@@ -129,7 +128,7 @@ export const filters = [
     id: 'cinema_lenses',
     label: 'Cinema Camera Lenses',
     type: 'SelectSingleFilter',
-    group: 'secondary',
+    group: 'primary',
     queryParamNames: ['pub_cinema_lenses'],
     config: {
       options: [
@@ -156,6 +155,26 @@ export const filters = [
         { key: 'sony', label: 'Sony' },
         { key: 'tokina', label: 'Tokina' },
         { key: 'zeiss', label: 'Zeiss' },
+        { key: 'other', label: 'Other' },
+      ],
+    },
+  },
+  {
+    id: 'still_hybrid_cameras',
+    label: 'Still / Hybrid Cameras',
+    type: 'SelectSingleFilter',
+    group: 'primary',
+    queryParamNames: ['pub_still_hybrid_cameras'],
+    config: {
+      options: [
+        { key: 'canon', label: 'Canon' },
+        { key: 'nikon', label: 'Nikon' },
+        { key: 'fuji', label: 'Fuji' },
+        { key: 'olympus', label: 'Olympus' },
+        { key: 'sony', label: 'Sony' },
+        { key: 'panasonic', label: 'Panasonic' },
+        { key: 'samsung', label: 'Samsung' },
+        { key: 'gopro', label: 'GoPro' },
         { key: 'other', label: 'Other' },
       ],
     },

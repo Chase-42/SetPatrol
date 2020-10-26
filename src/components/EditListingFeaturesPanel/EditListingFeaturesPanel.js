@@ -41,8 +41,9 @@ const EditListingFeaturesPanel = props => {
 
   const cinema_camera_brands = publicData && publicData.cinema_camera_brands;
   const cinema_lenses = publicData && publicData.cinema_lenses;
+  const still_hybrid_cameras = publicData && publicData.still_hybrid_cameras;
 
-  const initialValues = { cinema_camera_brands, cinema_lenses };
+  const initialValues = { cinema_camera_brands, cinema_lenses, still_hybrid_cameras };
 
   const category = props.listing.attributes.publicData.category;
   return (
@@ -52,10 +53,14 @@ const EditListingFeaturesPanel = props => {
         className={css.form}
         initialValues={initialValues}
         onSubmit={values => {
-          const { cinema_camera_brands = [], cinema_lenses = [] } = values;
+          const {
+            cinema_camera_brands = [],
+            cinema_lenses = [],
+            still_hybrid_cameras = [],
+          } = values;
 
           const updatedValues = {
-            publicData: { cinema_camera_brands, cinema_lenses },
+            publicData: { cinema_camera_brands, cinema_lenses, still_hybrid_cameras },
           };
           onSubmit(updatedValues);
         }}
