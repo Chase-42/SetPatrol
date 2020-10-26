@@ -8,20 +8,19 @@
 
 .staticPageWrapper {
   width: calc(100% - 48px);
-  max-width: 100%;
+  max-width: 720px;
   margin: 24px auto;
-  text-align: justify;
-  color: #7a7a7a;
 
   @media (--viewportMedium) {
+    max-width: 650px;
     width: calc(100% - 72px);
-    margin: 72px auto;
+    margin: 72px auto 36px auto;
   }
 }
 
-.aboutText p {
+/* .aboutText p {
   font-size: 25px;
-}
+} */
 
 .aboutVideo {
   margin-top: 10%;
@@ -76,10 +75,14 @@
 }
 */
 .contentMain {
-  width: 70%;
-  margin: auto;
+  width: calc(100% - 48px);
+  max-width: 720px;
+  margin: 24px auto;
+
   @media (--viewportMedium) {
-    max-width: 100%;
+    max-width: 650px;
+    width: calc(100% - 72px);
+    margin: 72px auto 36px auto;
   }
 }
 

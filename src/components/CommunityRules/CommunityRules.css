@@ -2,7 +2,15 @@
 
 .root {
   & .rules{
-    width: 33%;
+    width: calc(100% - 48px);
+    max-width: 720px;
+    margin: 24px auto;
+  
+    @media (--viewportMedium) {
+      max-width: 650px;
+      width: calc(100% - 72px);
+      margin: 72px auto 36px auto;
+    };
   }
   & p {
     @apply --marketplaceH4FontStyles;
@@ -13,7 +21,9 @@
     color: #4951f2;
 
     @media (--viewportMedium) {
-      margin: 32px 0 0 0;
+      max-width: 650px;
+      width: calc(100% - 72px);
+      margin: 72px auto 36px auto;
     }
   }
 
@@ -39,5 +49,13 @@ h3 {
     opacity: 0.75;
   }
   .rules{
-    margin-top: 25px;
+    width: calc(100% - 48px);
+    max-width: 720px;
+    margin: 24px auto;
+  
+    @media (--viewportMedium) {
+      max-width: 650px;
+      width: calc(100% - 72px);
+      margin: 72px auto 36px auto;
+    }
   }
