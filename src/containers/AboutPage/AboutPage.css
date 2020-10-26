@@ -18,9 +18,9 @@
   }
 }
 
-.aboutText p {
+/* .aboutText p {
   font-size: 25px;
-}
+} */
 
 .aboutVideo {
   margin-top: 10%;
@@ -55,14 +55,11 @@
 }
 
 .contentWrapper {
-  width: calc(100% - 48px);
-  max-width: 720px;
-  margin: 24px auto;
+  display: flex;
+  flex-wrap: wrap;
 
   @media (--viewportMedium) {
-    max-width: 650px;
-    width: calc(100% - 72px);
-    margin: 72px auto 36px auto;
+    flex-wrap: nowrap;
   }
 }
 
