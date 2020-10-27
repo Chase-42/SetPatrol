@@ -70,10 +70,8 @@ const AboutPage = () => {
                 </p>
               </div>
 
-              <ReactPlayer 
-                className={css.aboutVideo}          
-                url='https://vimeo.com/406087884'
-                width='100%'/>
+              <iframe src="https://player.vimeo.com/video/406087884" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+              <p><a href="https://vimeo.com/406087884">SetPatrol Promo</a> from <a href="https://vimeo.com/user112322915">Set Patrol</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
               <h1 className={css.pageTitle}>The Crew</h1>
               
