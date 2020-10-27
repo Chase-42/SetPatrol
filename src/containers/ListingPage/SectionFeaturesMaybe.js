@@ -11,6 +11,8 @@ const SectionFeaturesMaybe = props => {
     return null;
   }
 
+
+
 if (publicData.category == "cinema_cameras") {
 const selectedOptions = publicData && props.publicData.cinema_camera_brands.split(" ") ? props.publicData.cinema_camera_brands.split(" ") : [];
   return (
@@ -44,9 +46,24 @@ const selectedOptions = publicData && props.publicData.cinema_lenses.split(" ") 
     </div>
   );
 
+} else if(publicData.category == "still_hybrid_cameras") {
+  
+const selectedOptions = publicData && props.publicData.still_hybrid_cameras.split(" ") ? props.publicData.still_hybrid_cameras.split(" ") : [];
+  return (
+    <div className={css.sectionFeatures}>
+      <h2 className={css.featuresTitle}>
+        <FormattedMessage id="ListingPage.featuresTitle" />
+      </h2>
+      <PropertyGroup
+        id="ListingPage.amenities"
+        options={options}
+        selectedOptions={selectedOptions}
+        twoColumns={true}
+      />
+    </div>
+  );
 
-
-}else{
+} else{
   return null;
 }
 
