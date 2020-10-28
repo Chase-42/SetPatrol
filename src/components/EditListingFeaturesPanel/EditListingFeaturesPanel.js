@@ -42,8 +42,16 @@ const EditListingFeaturesPanel = props => {
   const cinema_camera_brands = publicData && publicData.cinema_camera_brands;
   const cinema_lenses = publicData && publicData.cinema_lenses;
   const still_hybrid_cameras = publicData && publicData.still_hybrid_cameras;
+  const still_lenses = publicData && publicData.still_lenses;
+  const camera_accessories = publicData && publicData.camera_accessories;
 
-  const initialValues = { cinema_camera_brands, cinema_lenses, still_hybrid_cameras };
+  const initialValues = {
+    cinema_camera_brands,
+    cinema_lenses,
+    still_hybrid_cameras,
+    still_lenses,
+    camera_accessories,
+  };
 
   const category = props.listing.attributes.publicData.category;
   return (
@@ -57,10 +65,18 @@ const EditListingFeaturesPanel = props => {
             cinema_camera_brands = [],
             cinema_lenses = [],
             still_hybrid_cameras = [],
+            still_lenses = [],
+            camera_accessories = [],
           } = values;
 
           const updatedValues = {
-            publicData: { cinema_camera_brands, cinema_lenses, still_hybrid_cameras },
+            publicData: {
+              cinema_camera_brands,
+              cinema_lenses,
+              still_hybrid_cameras,
+              still_lenses,
+              camera_accessories,
+            },
           };
           onSubmit(updatedValues);
         }}
