@@ -100,7 +100,9 @@ const tabCompleted = (tab, listing) => {
         publicData &&
         publicData.cinema_camera_brands &&
         publicData.cinema_lenses &&
-        publicData.still_hybrid_cameras
+        publicData.still_hybrid_cameras &&
+        publicData.still_lenses &&
+        publicData.camera_accessories
       );
     case POLICY:
       return !!(publicData && typeof publicData.rules !== 'undefined');

@@ -179,6 +179,50 @@ export const filters = [
       ],
     },
   },
+  {
+    id: 'still_lenses',
+    label: 'Still Lenses',
+    type: 'SelectSingleFilter',
+    group: 'primary',
+    queryParamNames: ['pub_still_lenses'],
+    config: {
+      options: [
+        { key: 'canon', label: 'Canon' },
+        { key: 'nikon', label: 'Nikon' },
+        { key: 'fuji', label: 'Fuji' },
+        { key: 'leica', label: 'Leica' },
+        { key: 'minolta', label: 'Minolta' },
+        { key: 'olympus', label: 'Olympus' },
+        { key: 'panasonic', label: 'Panasonic' },
+        { key: 'pentax', label: 'Pentax' },
+        { key: 'sigma', label: 'Sigma' },
+        { key: 'sony', label: 'Sony' },
+        { key: 'tamron', label: 'Tamron' },
+        { key: 'tokina', label: 'Tokina' },
+        { key: 'zeiss', label: 'Zeiss' },
+        { key: 'other', label: 'Other' },
+      ],
+    },
+  },
+  {
+    id: 'camera_accessories',
+    label: 'Camera Accessories',
+    type: 'SelectSingleFilter',
+    group: 'primary',
+    queryParamNames: ['pub_camera_accessories'],
+    config: {
+      options: [
+        { key: 'batteries_power', label: 'Batteries / Power' },
+        { key: 'camera_adaptors', label: 'Camera Adaptors' },
+        { key: 'cables', label: 'Cables' },
+        { key: 'filters', label: 'Filters' },
+        { key: 'follow_focuses', label: 'Follow focuses' },
+        { key: 'light_meters', label: 'Light Meters' },
+        { key: 'matteboxes', label: 'Matteboxes' },
+        { key: 'other', label: 'Other' },
+      ],
+    },
+  },
 ];
 
 export const sortConfig = {

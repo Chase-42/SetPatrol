@@ -40,6 +40,13 @@ const EditListingFeaturesFormComponent = props => {
         const cinemaLensesOptions = findOptionsForSelectFilter(cinemaLensesKey, filterConfig);
         const stillCamerasKey = 'still_hybrid_cameras';
         const stillCamerasOptions = findOptionsForSelectFilter(stillCamerasKey, filterConfig);
+        const stillLensesKey = 'still_lenses';
+        const stillLensesOptions = findOptionsForSelectFilter(stillLensesKey, filterConfig);
+        const cameraAccessoriesKey = 'camera_accessories';
+        const cameraAccessoriesOptions = findOptionsForSelectFilter(
+          cameraAccessoriesKey,
+          filterConfig
+        );
 
         if (props.category === 'cinema_cameras') {
           setKey(cinemaCameraKey);
@@ -50,6 +57,12 @@ const EditListingFeaturesFormComponent = props => {
         } else if (props.category === 'still_hybrid_cameras') {
           setKey(stillCamerasKey);
           setOptions(stillCamerasOptions);
+        } else if (props.category === 'still_lenses') {
+          setKey(stillLensesKey);
+          setOptions(stillLensesOptions);
+        } else if (props.category === 'camera_accessories') {
+          setKey(cameraAccessoriesKey);
+          setOptions(cameraAccessoriesOptions);
         }
         const classes = classNames(rootClassName || css.root, className);
         const submitReady = (updated && pristine) || ready;
