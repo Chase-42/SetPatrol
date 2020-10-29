@@ -47,6 +47,13 @@ const EditListingFeaturesFormComponent = props => {
           cameraAccessoriesKey,
           filterConfig
         );
+        const lightingElectricKey = 'lighting_electric';
+        const lightingElectricOptions = findOptionsForSelectFilter(
+          lightingElectricKey,
+          filterConfig
+        );
+        const audioEquipmentKey = 'audio_equipment';
+        const audioEquipmentOptions = findOptionsForSelectFilter(audioEquipmentKey, filterConfig);
 
         if (props.category === 'cinema_cameras') {
           setKey(cinemaCameraKey);
@@ -63,6 +70,12 @@ const EditListingFeaturesFormComponent = props => {
         } else if (props.category === 'camera_accessories') {
           setKey(cameraAccessoriesKey);
           setOptions(cameraAccessoriesOptions);
+        } else if (props.category === 'lighting_electric') {
+          setKey(lightingElectricKey);
+          setOptions(lightingElectricOptions);
+        } else if (props.category === 'audio_equipment') {
+          setKey(audioEquipmentKey);
+          setOptions(audioEquipmentOptions);
         }
         const classes = classNames(rootClassName || css.root, className);
         const submitReady = (updated && pristine) || ready;
@@ -87,7 +100,15 @@ const EditListingFeaturesFormComponent = props => {
             {errorMessage}
             {errorMessageShowListing}
 
-            <FieldSelect className={css.features} name={key} id={key} label={'Equipment brand'}>
+            <FieldSelect
+              className={css.features}
+              name={key}
+              id={key}
+              label={'Equipment brand or description'}
+            >
+              <option disabled value="">
+                {'Select the brand or description of your equipment...'}
+              </option>
               {options.map(o => (
                 <option key={o.key} value={o.key}>
                   {o.label}
