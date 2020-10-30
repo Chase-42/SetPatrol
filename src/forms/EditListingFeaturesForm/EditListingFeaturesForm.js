@@ -54,6 +54,10 @@ const EditListingFeaturesFormComponent = props => {
         );
         const audioEquipmentKey = 'audio_equipment';
         const audioEquipmentOptions = findOptionsForSelectFilter(audioEquipmentKey, filterConfig);
+        const monitorsEvfsKey = 'monitors_evfs';
+        const monitorsEvfsOptions = findOptionsForSelectFilter(monitorsEvfsKey, filterConfig);
+        const cameraSupportsKey = 'camera_supports';
+        const cameraSupportsOptions = findOptionsForSelectFilter(cameraSupportsKey, filterConfig);
 
         if (props.category === 'cinema_cameras') {
           setKey(cinemaCameraKey);
@@ -76,6 +80,12 @@ const EditListingFeaturesFormComponent = props => {
         } else if (props.category === 'audio_equipment') {
           setKey(audioEquipmentKey);
           setOptions(audioEquipmentOptions);
+        } else if (props.category === 'monitors_evfs') {
+          setKey(monitorsEvfsKey);
+          setOptions(monitorsEvfsOptions);
+        } else if (props.category === 'camera_supports') {
+          setKey(cameraSupportsKey);
+          setOptions(cameraSupportsOptions);
         }
         const classes = classNames(rootClassName || css.root, className);
         const submitReady = (updated && pristine) || ready;
