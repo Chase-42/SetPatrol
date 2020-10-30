@@ -104,7 +104,9 @@ const tabCompleted = (tab, listing) => {
         publicData.still_lenses &&
         publicData.camera_accessories &&
         publicData.lighting_electric &&
-        publicData.audio_equipment
+        publicData.audio_equipment &&
+        publicData.monitors_evfs &&
+        publicData.camera_supports
       );
     case POLICY:
       return !!(publicData && typeof publicData.rules !== 'undefined');
