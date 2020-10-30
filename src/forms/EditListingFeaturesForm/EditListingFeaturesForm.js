@@ -58,6 +58,8 @@ const EditListingFeaturesFormComponent = props => {
         const monitorsEvfsOptions = findOptionsForSelectFilter(monitorsEvfsKey, filterConfig);
         const cameraSupportsKey = 'camera_supports';
         const cameraSupportsOptions = findOptionsForSelectFilter(cameraSupportsKey, filterConfig);
+        const gripKey = 'grip';
+        const gripOptions = findOptionsForSelectFilter(gripKey, filterConfig);
 
         if (props.category === 'cinema_cameras') {
           setKey(cinemaCameraKey);
@@ -86,7 +88,11 @@ const EditListingFeaturesFormComponent = props => {
         } else if (props.category === 'camera_supports') {
           setKey(cameraSupportsKey);
           setOptions(cameraSupportsOptions);
+        } else if (props.category === 'grip') {
+          setKey(gripKey);
+          setOptions(gripOptions);
         }
+
         const classes = classNames(rootClassName || css.root, className);
         const submitReady = (updated && pristine) || ready;
         const submitInProgress = updateInProgress;

@@ -48,6 +48,7 @@ const EditListingFeaturesPanel = props => {
   const audio_equipment = publicData && publicData.audio_equipment;
   const monitors_evfs = publicData && publicData.monitors_evfs;
   const camera_supports = publicData && publicData.camera_supports;
+  const grip = publicData && publicData.grip;
 
   const initialValues = {
     cinema_camera_brands,
@@ -59,6 +60,7 @@ const EditListingFeaturesPanel = props => {
     audio_equipment,
     monitors_evfs,
     camera_supports,
+    grip,
   };
 
   const category = props.listing.attributes.publicData.category;
@@ -79,6 +81,7 @@ const EditListingFeaturesPanel = props => {
             audio_equipment = [],
             monitors_evfs = [],
             camera_supports = [],
+            grip = [],
           } = values;
 
           const updatedValues = {
@@ -92,6 +95,7 @@ const EditListingFeaturesPanel = props => {
               audio_equipment,
               monitors_evfs,
               camera_supports,
+              grip,
             },
           };
           onSubmit(updatedValues);

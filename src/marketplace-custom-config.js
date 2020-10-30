@@ -311,6 +311,31 @@ export const filters = [
       ],
     },
   },
+  {
+    id: 'grip',
+    label: 'Grip',
+    type: 'SelectSingleFilter',
+    group: 'primary',
+    queryParamNames: ['pub_grip'],
+    config: {
+      options: [
+        { key: 'stands', label: 'Stands' },
+        { key: 'standbags', label: 'Standbags' },
+        { key: 'green_screens_black_drops', label: 'Green Screens / Black Drops' },
+        { key: 'flags_and_nets', label: 'Flags and Nets' },
+        { key: 'apple_boxes', label: 'Apple boxes' },
+        { key: '6x6_rags_and_frames', label: '6x6 Rags and Frames' },
+        { key: '8x8_rags_and_frames', label: '8x8 Rags and Frames' },
+        { key: '10x10_rags_and_frames', label: '10x10 Rags and Frames' },
+        { key: '12x12_rags_and_frames', label: '12x12 Rags and Frames' },
+        { key: '20x20_rags_and_frames', label: '20x20 Rags and Frames' },
+        { key: 'car_mounts', label: 'Car Mounts' },
+        { key: 'clamps', label: 'Clamps' },
+        { key: 'reflectors_flex_fills', label: 'Reflectors / FLex Fills' },
+        { key: 'other', label: 'Other' },
+      ],
+    },
+  },
 ];
 
 export const sortConfig = {
