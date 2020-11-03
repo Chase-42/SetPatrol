@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import css from './SearchFiltersPrimary.css';
 
 const SearchFiltersPrimaryComponent = props => {
+
   const {
     rootClassName,
     className,
@@ -18,6 +19,60 @@ const SearchFiltersPrimaryComponent = props => {
     toggleSecondaryFiltersOpen,
     selectedSecondaryFiltersCount,
   } = props;
+
+   const search = window.location.search;
+   const params = new URLSearchParams(search);
+   const urlCategory = params.get('pub_category');
+   let newChildren = [];
+
+  const renObjData = props.children.map(function(child, idx) {
+    if(child.key == 'SearchFiltersPrimary.dates'){
+      newChildren = newChildren.concat(child);
+    }
+    if(child.key == 'SearchFiltersPrimary.price'){
+      newChildren = newChildren.concat(child);
+    }
+    if(child.key == 'SearchFiltersPrimary.keyword'){
+      newChildren = newChildren.concat(child);
+    }
+    if(child.key == 'SearchFiltersPrimary.category'){
+      newChildren = newChildren.concat(child);
+    }
+      console.log(child.key);
+    if(urlCategory == 'cinema_cameras' && child.key == 'SearchFiltersPrimary.cinema_camera_brands'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'cinema_lenses' && child.key == 'SearchFiltersPrimary.cinema_lenses'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'still_hybrid_cameras' && child.key == 'SearchFiltersPrimary.still_hybrid_cameras'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'still_lenses' && child.key == 'SearchFiltersPrimary.still_lenses'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'camera_accessories' && child.key == 'SearchFiltersPrimary.camera_accessories'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'lighting_electric' && child.key == 'SearchFiltersPrimary.lighting_electric'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'audio_equipment' && child.key == 'SearchFiltersPrimary.audio_equipment'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'camera_supports' && child.key == 'SearchFiltersPrimary.camera_supports'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'monitors_evfs' && child.key == 'SearchFiltersPrimary.monitors_evfs'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'grip' && child.key == 'SearchFiltersPrimary.grip'){
+      newChildren = newChildren.concat(child);
+    }
+  });
+
+  console.log(newChildren);
+
 
   const hasNoResult = listingsAreLoaded && resultsCount === 0;
   const classes = classNames(rootClassName || css.root, className);
@@ -57,7 +112,7 @@ const SearchFiltersPrimaryComponent = props => {
       </div>
 
       <div className={css.filters}>
-        {children}
+        {newChildren}
         {toggleSecondaryFiltersOpenButton}
       </div>
 
