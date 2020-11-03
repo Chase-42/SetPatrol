@@ -92,3 +92,7 @@
     );
   }
 }
+
+.ListingPageBrand{  
+  text-transform: capitalize;
+}
