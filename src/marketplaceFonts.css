@@ -11,8 +11,7 @@
     since browsers support CSS Properties already.
  */
 
-  --fontFamily: 'poppins', Helvetica, Arial, sans-serif;
-
+  --fontFamily: 'Rubik', sans-serif;
   --fontWeightRegular: 400;
   --fontWeightMedium: 500;
   --fontWeightSemiBold: 600;
