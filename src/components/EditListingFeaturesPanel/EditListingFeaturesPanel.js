@@ -49,6 +49,11 @@ const EditListingFeaturesPanel = props => {
   const monitors_evfs = publicData && publicData.monitors_evfs;
   const camera_supports = publicData && publicData.camera_supports;
   const grip = publicData && publicData.grip;
+  const dit_media_management = publicData && publicData.grip;
+  const media = publicData && publicData.media;
+  const virtual_reality_and_new_tech = publicData && publicData.virtual_reality_and_new_tech;
+  const drones_and_vehicles = publicData && publicData.drones_and_vehicles;
+  const locations_and_spaces = publicData && publicData.locations_and_spaces;
 
   const initialValues = {
     cinema_camera_brands,
@@ -61,6 +66,11 @@ const EditListingFeaturesPanel = props => {
     monitors_evfs,
     camera_supports,
     grip,
+    dit_media_management,
+    media,
+    virtual_reality_and_new_tech,
+    drones_and_vehicles,
+    locations_and_spaces,
   };
 
   const category = props.listing.attributes.publicData.category;
@@ -82,6 +92,11 @@ const EditListingFeaturesPanel = props => {
             monitors_evfs = [],
             camera_supports = [],
             grip = [],
+            dit_media_management = [],
+            media = [],
+            virtual_reality_and_new_tech = [],
+            drones_and_vehicles = [],
+            locations_and_spaces = [],
           } = values;
 
           const updatedValues = {
@@ -96,6 +111,11 @@ const EditListingFeaturesPanel = props => {
               monitors_evfs,
               camera_supports,
               grip,
+              dit_media_management,
+              media,
+              virtual_reality_and_new_tech,
+              drones_and_vehicles,
+              locations_and_spaces,
             },
           };
           onSubmit(updatedValues);

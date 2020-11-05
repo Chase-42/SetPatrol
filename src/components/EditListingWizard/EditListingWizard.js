@@ -107,7 +107,12 @@ const tabCompleted = (tab, listing) => {
         publicData.audio_equipment &&
         publicData.monitors_evfs &&
         publicData.camera_supports &&
-        publicData.grip
+        publicData.grip &&
+        publicData.dit_media_management &&
+        publicData.media &&
+        publicData.virtual_reality_and_new_tech &&
+        publicData.drones_and_vehicles &&
+        publicData.locations_and_spaces
       );
     case POLICY:
       return !!(publicData && typeof publicData.rules !== 'undefined');
