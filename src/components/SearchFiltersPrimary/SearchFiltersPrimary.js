@@ -86,8 +86,6 @@ const SearchFiltersPrimaryComponent = props => {
     }
   });
 
-  console.log(newChildren);
-
 
   const hasNoResult = listingsAreLoaded && resultsCount === 0;
   const classes = classNames(rootClassName || css.root, className);

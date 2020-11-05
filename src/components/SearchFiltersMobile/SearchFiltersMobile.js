@@ -75,6 +75,72 @@ class SearchFiltersMobileComponent extends Component {
       intl,
     } = this.props;
 
+    const search = window.location.search;
+   const params = new URLSearchParams(search);
+   const urlCategory = params.get('pub_category');
+   let newChildren = [];
+
+  const renObjData = this.props.children.map(function(child, idx) {
+    if(child.key == 'SearchFiltersMobile.dates'){
+      newChildren = newChildren.concat(child);
+    }
+    if(child.key == 'SearchFiltersMobile.price'){
+      newChildren = newChildren.concat(child);
+    }
+    if(child.key == 'SearchFiltersMobile.keyword'){
+      newChildren = newChildren.concat(child);
+    }
+    if(child.key == 'SearchFiltersMobile.category'){
+      newChildren = newChildren.concat(child);
+    }
+      console.log(child.key);
+    if(urlCategory == 'cinema_cameras' && child.key == 'SearchFiltersMobile.cinema_camera_brands'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'cinema_lenses' && child.key == 'SearchFiltersMobile.cinema_lenses'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'still_hybrid_cameras' && child.key == 'SearchFiltersMobile.still_hybrid_cameras'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'still_lenses' && child.key == 'SearchFiltersMobile.still_lenses'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'camera_accessories' && child.key == 'SearchFiltersMobile.camera_accessories'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'lighting_electric' && child.key == 'SearchFiltersMobile.lighting_electric'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'audio_equipment' && child.key == 'SearchFiltersMobile.audio_equipment'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'camera_supports' && child.key == 'SearchFiltersMobile.camera_supports'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'monitors_evfs' && child.key == 'SearchFiltersMobile.monitors_evfs'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'grip' && child.key == 'SearchFiltersMobile.grip'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'dit_media_management' && child.key == 'SearchFiltersMobile.dit_media_management'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'media' && child.key == 'SearchFiltersMobile.media'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'virtual_reality_and_new_tech' && child.key == 'SearchFiltersMobile.virtual_reality_and_new_tech'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'drones_and_vehicles' && child.key == 'SearchFiltersMobile.drones_and_vehicles'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'locations_and_spaces' && child.key == 'SearchFiltersMobile.locations_and_spaces'){
+      newChildren = newChildren.concat(child);
+    }
+  });
+
     const classes = classNames(rootClassName || css.root, className);
 
     const resultsFound = (
@@ -128,7 +194,7 @@ class SearchFiltersMobileComponent extends Component {
             </button>
           </div>
           {this.state.isFiltersOpenOnMobile ? (
-            <div className={css.filtersWrapper}>{children}</div>
+            <div className={css.filtersWrapper}>{newChildren}</div>
           ) : null}
 
           <div className={css.showListingsContainer}>
