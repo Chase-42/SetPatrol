@@ -336,6 +336,93 @@ export const filters = [
       ],
     },
   },
+  {
+    id: 'dit_media_management',
+    label: 'DIT / Media Mangement',
+    type: 'SelectSingleFilter',
+    group: 'primary',
+    queryParamNames: ['pub_dit_media_management'],
+    config: {
+      options: [
+        { key: 'converters', label: 'Converters' },
+        { key: 'camera_carts', label: 'Camera Carts' },
+        { key: 'color_correction', label: 'Color Correction' },
+        { key: 'dit_media_manager_kit', label: 'Dit / Media Manager Kit' },
+        { key: 'hard_drives', label: 'Hard Drives' },
+        { key: 'other', label: 'Other' },
+      ],
+    },
+  },
+  {
+    id: 'media',
+    label: 'Media',
+    type: 'SelectSingleFilter',
+    group: 'primary',
+    queryParamNames: ['pub_media'],
+    config: {
+      options: [
+        { key: 'compact_flash_cards', label: 'Compact Flash Cards' },
+        { key: 'cfast_cards', label: 'CFast Cards' },
+        { key: 'sd_cards', label: 'SD Cards' },
+        { key: 'sxs_cards', label: 'SxS Cards' },
+        { key: 'external_recorders', label: 'External Recorders' },
+        { key: 'ssd_drives', label: 'SSD Drives' },
+
+        { key: 'other', label: 'Other' },
+      ],
+    },
+  },
+  {
+    id: 'virtual_reality_and_new_tech',
+    label: 'Virtual Reality & New Tech',
+    type: 'SelectSingleFilter',
+    group: 'primary',
+    queryParamNames: ['pub_virtual_reality_and_new_tech'],
+    config: {
+      options: [
+        { key: 'vr_headset', label: 'VR Headset' },
+        { key: 'vr_rigs', label: 'VR Rigs' },
+        { key: 'gopro_vr_rigs', label: 'GoPro VR Rigs' },
+        { key: 'nokia_vr_rigs', label: 'Nokia VR Rigs' },
+        { key: 'with_operator', label: 'with Operator' },
+        { key: 'other', label: 'Other' },
+      ],
+    },
+  },
+  {
+    id: 'drones_and_vehicles',
+    label: 'Drones & Vehicles',
+    type: 'SelectSingleFilter',
+    group: 'primary',
+    queryParamNames: ['pub_drones_and_vehicles'],
+    config: {
+      options: [
+        { key: 'drones', label: 'Drones' },
+        { key: 'helicopters', label: 'Helicopters' },
+        { key: 'vehicles', label: 'Vehicles' },
+        { key: 'production_vehicles', label: 'Production Vehicles' },
+        { key: 'with_operator', label: 'with Operator' },
+        { key: 'other', label: 'Other' },
+      ],
+    },
+  },
+  {
+    id: 'locations_and_spaces',
+    label: 'Locations & Spaces',
+    type: 'SelectSingleFilter',
+    group: 'primary',
+    queryParamNames: ['pub_locations_and_spaces'],
+    config: {
+      options: [
+        { key: 'commercial_retail', label: 'Commercial / Retail' },
+        { key: 'editin_suites_post_facilities', label: 'Edition Suites / Post Facilities' },
+        { key: 'residential_private', label: 'Residential / Private' },
+        { key: 'studio_stage', label: 'Studio / Stage' },
+        { key: 'work_spaces_offices', label: 'Work Spaces / Offices' },
+        { key: 'other', label: 'Other' },
+      ],
+    },
+  },
 ];
 
 export const sortConfig = {

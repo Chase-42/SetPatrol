@@ -34,6 +34,7 @@ const EditListingFeaturesFormComponent = props => {
           filterConfig,
         } = formRenderProps;
 
+        // Subcategory Keys and Option variables
         const cinemaCameraKey = 'cinema_camera_brands';
         const cinemaCameraOptions = findOptionsForSelectFilter(cinemaCameraKey, filterConfig);
         const cinemaLensesKey = 'cinema_lenses';
@@ -60,7 +61,30 @@ const EditListingFeaturesFormComponent = props => {
         const cameraSupportsOptions = findOptionsForSelectFilter(cameraSupportsKey, filterConfig);
         const gripKey = 'grip';
         const gripOptions = findOptionsForSelectFilter(gripKey, filterConfig);
+        const ditMediaManagmentKey = 'dit_media_management';
+        const ditMediaManagmentOptions = findOptionsForSelectFilter(
+          ditMediaManagmentKey,
+          filterConfig
+        );
+        const mediaKey = 'media';
+        const mediaOptions = findOptionsForSelectFilter(mediaKey, filterConfig);
+        const virtualRealityAndNewTechKey = 'virtual_reality_and_new_tech';
+        const virtualRealityAndNewTechOptions = findOptionsForSelectFilter(
+          virtualRealityAndNewTechKey,
+          filterConfig
+        );
+        const dronesAndVehiclesKey = 'drones_and_vehicles';
+        const dronesAndVehiclesOptions = findOptionsForSelectFilter(
+          dronesAndVehiclesKey,
+          filterConfig
+        );
+        const locationsAndSpacesKey = 'locations_and_spaces';
+        const locationsAndSpacesOptions = findOptionsForSelectFilter(
+          locationsAndSpacesKey,
+          filterConfig
+        );
 
+        // Logic to align correct category w/ subcategory
         if (props.category === 'cinema_cameras') {
           setKey(cinemaCameraKey);
           setOptions(cinemaCameraOptions);
@@ -91,8 +115,22 @@ const EditListingFeaturesFormComponent = props => {
         } else if (props.category === 'grip') {
           setKey(gripKey);
           setOptions(gripOptions);
+        } else if (props.category === 'dit_media_management') {
+          setKey(ditMediaManagmentKey);
+          setOptions(ditMediaManagmentOptions);
+        } else if (props.category === 'media') {
+          setKey(mediaKey);
+          setOptions(mediaOptions);
+        } else if (props.category === 'virtual_reality_and_new_tech') {
+          setKey(virtualRealityAndNewTechKey);
+          setOptions(virtualRealityAndNewTechOptions);
+        } else if (props.category === 'drones_and_vehicles') {
+          setKey(dronesAndVehiclesKey);
+          setOptions(dronesAndVehiclesOptions);
+        } else if (props.category === 'locations_and_spaces') {
+          setKey(locationsAndSpacesKey);
+          setOptions(locationsAndSpacesOptions);
         }
-
         const classes = classNames(rootClassName || css.root, className);
         const submitReady = (updated && pristine) || ready;
         const submitInProgress = updateInProgress;
@@ -120,10 +158,10 @@ const EditListingFeaturesFormComponent = props => {
               className={css.features}
               name={key}
               id={key}
-              label={'Equipment brand or description'}
+              label={'Equipment brand or category'}
             >
               <option disabled value="">
-                {'Select the brand or description of your equipment...'}
+                {'Select the brand or category of your equipment...'}
               </option>
               {options.map(o => (
                 <option key={o.key} value={o.key}>
