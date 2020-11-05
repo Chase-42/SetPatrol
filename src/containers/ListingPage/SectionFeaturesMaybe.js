@@ -182,6 +182,91 @@ const selectedOptions = publicData && props.publicData.grip.split(" ") ? props.p
     </div>
   );
 
+} else if(publicData.category == "gripdit_media_management") {
+  
+const selectedOptions = publicData && props.publicData.gripdit_media_management.split(" ") ? props.publicData.gripdit_media_management.split(" ") : [];
+  return (
+    <div className={css.sectionFeatures}>
+      <h2 className={css.featuresTitle}>
+        <FormattedMessage id="ListingPage.featuresTitle" />
+      </h2>
+      <PropertyGroup
+        id="ListingPage.amenities"
+        options={options}
+        selectedOptions={selectedOptions}
+        twoColumns={true}
+      />
+    </div>
+  );
+
+} else if(publicData.category == "media") {
+  
+const selectedOptions = publicData && props.publicData.media.split(" ") ? props.publicData.media.split(" ") : [];
+  return (
+    <div className={css.sectionFeatures}>
+      <h2 className={css.featuresTitle}>
+        <FormattedMessage id="ListingPage.featuresTitle" />
+      </h2>
+      <PropertyGroup
+        id="ListingPage.amenities"
+        options={options}
+        selectedOptions={selectedOptions}
+        twoColumns={true}
+      />
+    </div>
+  );
+
+} else if(publicData.category == "virtual_reality_and_new_tech") {
+  
+const selectedOptions = publicData && props.publicData.virtual_reality_and_new_tech.split(" ") ? props.publicData.virtual_reality_and_new_tech.split(" ") : [];
+  return (
+    <div className={css.sectionFeatures}>
+      <h2 className={css.featuresTitle}>
+        <FormattedMessage id="ListingPage.featuresTitle" />
+      </h2>
+      <PropertyGroup
+        id="ListingPage.amenities"
+        options={options}
+        selectedOptions={selectedOptions}
+        twoColumns={true}
+      />
+    </div>
+  );
+
+} else if(publicData.category == "drones_and_vehicles") {
+  
+const selectedOptions = publicData && props.publicData.drones_and_vehicles.split(" ") ? props.publicData.drones_and_vehicles.split(" ") : [];
+  return (
+    <div className={css.sectionFeatures}>
+      <h2 className={css.featuresTitle}>
+        <FormattedMessage id="ListingPage.featuresTitle" />
+      </h2>
+      <PropertyGroup
+        id="ListingPage.amenities"
+        options={options}
+        selectedOptions={selectedOptions}
+        twoColumns={true}
+      />
+    </div>
+  );
+
+} else if(publicData.category == "locations_and_spaces") {
+  
+const selectedOptions = publicData && props.publicData.locations_and_spaces.split(" ") ? props.publicData.locations_and_spaces.split(" ") : [];
+  return (
+    <div className={css.sectionFeatures}>
+      <h2 className={css.featuresTitle}>
+        <FormattedMessage id="ListingPage.featuresTitle" />
+      </h2>
+      <PropertyGroup
+        id="ListingPage.amenities"
+        options={options}
+        selectedOptions={selectedOptions}
+        twoColumns={true}
+      />
+    </div>
+  );
+
 } else{
   return null;
 }
