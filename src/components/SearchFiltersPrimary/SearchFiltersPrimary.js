@@ -69,6 +69,21 @@ const SearchFiltersPrimaryComponent = props => {
     if(urlCategory == 'grip' && child.key == 'SearchFiltersPrimary.grip'){
       newChildren = newChildren.concat(child);
     }
+    if(urlCategory == 'dit_media_management' && child.key == 'SearchFiltersPrimary.dit_media_management'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'media' && child.key == 'SearchFiltersPrimary.media'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'virtual_reality_and_new_tech' && child.key == 'SearchFiltersPrimary.virtual_reality_and_new_tech'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'drones_and_vehicles' && child.key == 'SearchFiltersPrimary.drones_and_vehicles'){
+      newChildren = newChildren.concat(child);
+    }
+    if(urlCategory == 'locations_and_spaces' && child.key == 'SearchFiltersPrimary.locations_and_spaces'){
+      newChildren = newChildren.concat(child);
+    }
   });
 
   console.log(newChildren);
