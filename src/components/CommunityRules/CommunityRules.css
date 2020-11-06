@@ -1,16 +1,16 @@
 @import '../../marketplace.css';
 
 .root {
-  & .rules{
+  & .rules {
     width: calc(100% - 48px);
     max-width: 720px;
     margin: 24px auto;
-  
+
     @media (--viewportMedium) {
       max-width: 650px;
       width: calc(100% - 72px);
       margin: 72px auto 36px auto;
-    };
+    }
   }
   & p {
     @apply --marketplaceH4FontStyles;
@@ -18,7 +18,7 @@
   }
   & h1 {
     /* Adjust heading margins to work with the reduced body font size */
-    color: #4951f2;
+    color: #050752;
 
     @media (--viewportMedium) {
       max-width: 650px;
@@ -40,22 +40,22 @@
   }
 }
 
-h1{
-    color: #4951f2;
+h1 {
+  color: #050752;
 }
 
 h3 {
-    color: #6EC1E4;
-    opacity: 0.75;
+  color: #00c9c0;
+  opacity: 0.75;
+}
+.rules {
+  width: calc(100% - 48px);
+  max-width: 720px;
+  margin: 24px auto;
+
+  @media (--viewportMedium) {
+    max-width: 650px;
+    width: calc(100% - 72px);
+    margin: 72px auto 36px auto;
   }
-  .rules{
-    width: calc(100% - 48px);
-    max-width: 720px;
-    margin: 24px auto;
-  
-    @media (--viewportMedium) {
-      max-width: 650px;
-      width: calc(100% - 72px);
-      margin: 72px auto 36px auto;
-    }
-  }
+}

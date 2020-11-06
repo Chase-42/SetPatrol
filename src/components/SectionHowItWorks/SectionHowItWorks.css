@@ -16,7 +16,7 @@
 .title {
   @apply --marketplaceH1FontStyles;
   margin-top: 0;
-  color: #4951F2;
+  color: #050752;
 }
 
 .steps {
@@ -25,20 +25,19 @@
   flex-wrap: wrap;
   /* grid-gap: 50px; */
   text-align: center;
- @media (--viewportMedium) {
-   flex-wrap: wrap;
+  @media (--viewportMedium) {
+    flex-wrap: wrap;
     /* display: inline-block; */
   }
 }
 
-.steps p{
-  color: #797D8F;
+.steps p {
+  color: #797d8f;
   font-size: 12px;
   line-height: 200%;
 }
 
 .step {
-
   padding-left: 10px;
   padding-right: 10px;
   @media (--viewportMedium) {
@@ -61,10 +60,10 @@
     margin-top: 21px;
     margin-bottom: 18px;
   }
-} 
+}
 
-h2{
-  color: #4951F2;
+h2 {
+  color: #050752;
 }
 
 .createListingLink {
@@ -78,6 +77,6 @@ h2{
   display: grid;
 } */
 
-.stepHeader{
-  color: #6EC1E4;
+.stepHeader {
+  color: #00c9c0;
 }

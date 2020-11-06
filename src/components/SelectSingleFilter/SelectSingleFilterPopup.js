@@ -43,55 +43,122 @@ class SelectSingleFilterPopup extends Component {
       initialValues,
       contentPlacementOffset,
     } = this.props;
-
+    console.log('hello!!!!!', this.props);
     const queryParamName = getQueryParamName(queryParamNames);
     const initialValue =
       initialValues && initialValues[queryParamNames] ? initialValues[queryParamNames] : null;
 
     // resolve menu label text and class
+
     const menuLabel = initialValue ? optionLabel(options, initialValue) : label;
     const menuLabelClass = initialValue ? css.menuLabelSelected : css.menuLabel;
+    const menuLabelClassSecondary = initialValue
+      ? css.menuLabelSelectedSecondary
+      : css.menuLabelSecondary;
 
     const classes = classNames(rootClassName || css.root, className);
 
     return (
-      <Menu
-        className={classes}
-        useArrow={false}
-        contentPlacementOffset={contentPlacementOffset}
-        onToggleActive={this.onToggleActive}
-        isOpen={this.state.isOpen}
-      >
-        <MenuLabel className={menuLabelClass}>{menuLabel}</MenuLabel>
-        <MenuContent className={css.menuContent}>
-          {options.map(option => {
-            // check if this option is selected
-            const selected = initialValue === option.key;
-            // menu item border class
-            const menuItemBorderClass = selected ? css.menuItemBorderSelected : css.menuItemBorder;
+      <>
+        {this.props.id === 'SearchFiltersPrimary.cinema_camera_brands' ||
+        this.props.id === 'SearchFiltersPrimary.cinema_lenses' ||
+        this.props.id === 'SearchFiltersPrimary.still_hybrid_cameras' ||
+        this.props.id === 'SearchFiltersPrimary.still_lenses' ||
+        this.props.id === 'SearchFiltersPrimary.camera_accessories' ||
+        this.props.id === 'SearchFiltersPrimary.lighting_electric' ||
+        this.props.id === 'SearchFiltersPrimary.audio_equipment' ||
+        this.props.id === 'SearchFiltersPrimary.monitors_evfs' ||
+        this.props.id === 'SearchFiltersPrimary.camera_supports' ||
+        this.props.id === 'SearchFiltersPrimary.grip' ||
+        this.props.id === 'SearchFiltersPrimary.dit_media_mangement' ||
+        this.props.id === 'SearchFiltersPrimary.media' ||
+        this.props.id === 'SearchFiltersPrimary.virtual_reality_and_new_tech' ||
+        this.props.id === 'SearchFiltersPrimary.drones_and_vehicles' ||
+        this.props.id === 'SearchFiltersPrimary.locations_and_spaces' ? (
+          <div className={css.subcategoryDiv}>
+            <Menu
+              className={classes}
+              useArrow={false}
+              contentPlacementOffset={contentPlacementOffset}
+              onToggleActive={this.onToggleActive}
+              isOpen={this.state.isOpen}
+            >
+              <MenuLabel className={menuLabelClassSecondary}>{menuLabel}</MenuLabel>
+              <MenuContent className={css.menuContent}>
+                {options.map(option => {
+                  // check if this option is selected
+                  const selected = initialValue === option.key;
+                  // menu item border class
+                  const menuItemBorderClass = selected
+                    ? css.menuItemBorderSelected
+                    : css.menuItemBorder;
 
-            return (
-              <MenuItem key={option.key}>
+                  return (
+                    <MenuItem key={option.key}>
+                      <button
+                        className={css.menuItem}
+                        onClick={() => this.selectOption(queryParamName, option.key)}
+                      >
+                        <span className={menuItemBorderClass} />
+                        {option.label}
+                      </button>
+                    </MenuItem>
+                  );
+                })}
+                <MenuItem key={'clearLink'}>
+                  <button
+                    className={css.clearMenuItem}
+                    onClick={() => this.selectOption(queryParamName, null)}
+                  >
+                    <FormattedMessage id={'SelectSingleFilter.popupClear'} />
+                  </button>
+                </MenuItem>
+              </MenuContent>
+            </Menu>
+          </div>
+        ) : (
+          <Menu
+            className={classes}
+            useArrow={false}
+            contentPlacementOffset={contentPlacementOffset}
+            onToggleActive={this.onToggleActive}
+            isOpen={this.state.isOpen}
+          >
+            <MenuLabel className={menuLabelClass}>{menuLabel}</MenuLabel>
+
+            <MenuContent className={css.menuContent}>
+              {options.map(option => {
+                // check if this option is selected
+                const selected = initialValue === option.key;
+                // menu item border class
+                const menuItemBorderClass = selected
+                  ? css.menuItemBorderSelected
+                  : css.menuItemBorder;
+
+                return (
+                  <MenuItem key={option.key}>
+                    <button
+                      className={css.menuItem}
+                      onClick={() => this.selectOption(queryParamName, option.key)}
+                    >
+                      <span className={menuItemBorderClass} />
+                      {option.label}
+                    </button>
+                  </MenuItem>
+                );
+              })}
+              <MenuItem key={'clearLink'}>
                 <button
-                  className={css.menuItem}
-                  onClick={() => this.selectOption(queryParamName, option.key)}
+                  className={css.clearMenuItem}
+                  onClick={() => this.selectOption(queryParamName, null)}
                 >
-                  <span className={menuItemBorderClass} />
-                  {option.label}
+                  <FormattedMessage id={'SelectSingleFilter.popupClear'} />
                 </button>
               </MenuItem>
-            );
-          })}
-          <MenuItem key={'clearLink'}>
-            <button
-              className={css.clearMenuItem}
-              onClick={() => this.selectOption(queryParamName, null)}
-            >
-              <FormattedMessage id={'SelectSingleFilter.popupClear'} />
-            </button>
-          </MenuItem>
-        </MenuContent>
-      </Menu>
+            </MenuContent>
+          </Menu>
+        )}
+      </>
     );
   }
 }
