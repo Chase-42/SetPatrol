@@ -10,7 +10,9 @@
     are left to CSS bundle. We are planning to enable it in the future
     since browsers support CSS Properties already.
  */
-  --fontFamily: 'Montserrat', sans-serif;
+ --fontFamily: 'Rubik', sans-serif;
+ /* --fontFamily: 'Paytone One', sans-serif; */
+  /* --fontFamily: 'Montserrat', sans-serif; */
   /* --fontFamily: 'Rubik', sans-serif; */
   --fontWeightRegular: 400;
   --fontWeightMedium: 500;
