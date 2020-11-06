@@ -42,9 +42,9 @@
 
   /* ================ Colors ================ */
 
-  --marketplaceColor: #003594;
-  --marketplaceColorLight: #ff4c38;
-  --marketplaceColorDark: #8c291e;
+  --marketplaceColor: #050752;
+  --marketplaceColorLight: #00c9c0;
+  --marketplaceColorDark: #ff7761;
 
   /* Used with inline CSS SVGs */
   --marketplaceColorEncoded: %23c0392b;
@@ -221,6 +221,59 @@
       min-height: 65px;
     }
   }
+
+  --marketplaceButtonStylesSecondaryCategorySelected {
+    @apply --marketplaceButtonFontStyles;
+
+    /* Dimensions */
+    display: block;
+    width: 100%;
+    min-height: 59px;
+    margin: 0;
+
+    /* Padding is only for <a> elements where button styles are applied,
+		buttons elements should have zero padding */
+    padding: 17px 0 17px 0;
+
+    @media (--viewportMedium) {
+      padding: 20px 0 20px 0;
+    }
+
+    /* Borders */
+    border: none;
+    border-radius: var(--borderRadius);
+
+    /* Colors */
+    background-color: var(--marketplaceColorDark);
+    color: var(--matterColorLight);
+
+    /* Text */
+    text-align: center;
+    text-decoration: none;
+
+    /* Effects */
+    transition: all var(--transitionStyleButton);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: var(--marketplaceColor);
+      text-decoration: none;
+      box-shadow: var(--boxShadowButton);
+    }
+    &:disabled {
+      background-color: var(--matterColorNegative);
+      color: var(--matterColorLight);
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    @media (--viewportMedium) {
+      min-height: 65px;
+    }
+  }
+
   --marketplaceButtonStylesPrimary {
     @apply --marketplaceButtonStyles;
 
@@ -253,6 +306,33 @@
     &:hover,
     &:focus {
       background-color: var(--matterColorLight);
+      border-color: var(--matterColorAnti);
+    }
+    &:disabled {
+      background-color: var(--matterColorNegative);
+      color: var(--matterColorLight);
+      border-color: var(--matterColorNegative);
+    }
+  }
+
+  --marketplaceButtonStylesSecondaryCategory {
+    @apply --marketplaceButtonStyles;
+
+    background-color: var(--marketplaceColorLight);
+    color: var(--matterColorLight);
+
+    /* Padding is only for <a> elements where button styles are applied,
+   buttons elements should have zero padding */
+    padding: 18px 0 0 0;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--matterColorNegative);
+
+    &:hover,
+    &:focus {
+      background-color: var(--matterColorLight);
+      color: var(--matterColorDark);
       border-color: var(--matterColorAnti);
     }
     &:disabled {
