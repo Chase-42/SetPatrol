@@ -61,17 +61,16 @@ const PropertyGroup = props => {
   const checked = checkSelected(options, selectedOptions);
   console.log('selectedOptions', selectedOptions);
   return (
-    <ul className={listClasses, css.ListingPageBrand}>
+    <ul className={(listClasses, css.ListingPageBrand)}>
       {/* {checked.map(option => (
         <Item key={`${id}.${option.key}`} label={option.label} isSelected={option.isSelected} />
       ))} */}
       {selectedOptions.map(option => (
-        <li>{option}</li>
+        <li>{option.split('_').join(' / ')}</li>
       ))}
     </ul>
   );
 };
-
 
 PropertyGroup.defaultProps = {
   rootClassName: null,

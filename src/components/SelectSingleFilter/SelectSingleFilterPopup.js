@@ -70,7 +70,7 @@ class SelectSingleFilterPopup extends Component {
         this.props.id === 'SearchFiltersPrimary.monitors_evfs' ||
         this.props.id === 'SearchFiltersPrimary.camera_supports' ||
         this.props.id === 'SearchFiltersPrimary.grip' ||
-        this.props.id === 'SearchFiltersPrimary.dit_media_mangement' ||
+        this.props.id === 'SearchFiltersPrimary.dit_media_management' ||
         this.props.id === 'SearchFiltersPrimary.media' ||
         this.props.id === 'SearchFiltersPrimary.virtual_reality_and_new_tech' ||
         this.props.id === 'SearchFiltersPrimary.drones_and_vehicles' ||
