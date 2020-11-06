@@ -66,7 +66,7 @@ const PropertyGroup = props => {
         <Item key={`${id}.${option.key}`} label={option.label} isSelected={option.isSelected} />
       ))} */}
       {selectedOptions.map(option => (
-        <li>{option}</li>
+        <li>{option.split('_').join(' / ')}</li>
       ))}
     </ul>
   );
