@@ -8,13 +8,20 @@ import IconHourGlass from '../../components/LocationAutocompleteInput/IconHourGl
 
 import css from './TopbarSearchForm.css';
 
+
 const identity = v => v;
 
 class TopbarSearchFormComponent extends Component {
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
+    this.toggleHoverKeywords = this.toggleHoverKeywords.bind(this);
+    this.toggleHoverLocation = this.toggleHoverLocation.bind(this);
     this.searchInput = React.createRef();
+    this.state = {
+    hoverKeywords: false,
+    hoverLocation: false,
+  }
   }
   onChange(location) {
     if (location.selectedPlace) {
@@ -38,7 +45,26 @@ class TopbarSearchFormComponent extends Component {
     }
   }
 
+  toggleHoverKeywords() {
+  this.setState({hoverKeywords: !this.state.hoverKeywords})
+}
+  toggleHoverLocation() {
+  this.setState({hoverLocation: !this.state.hoverLocation})
+}
+
   render() {
+    var linkStyleKeywords;
+   if (this.state.hoverKeywords) {
+     linkStyleKeywords = {maxWidth: '100%', borderRight: 'none' }
+   } else {
+     linkStyleKeywords = {maxWidth: '250px', borderRight: 'none'}
+   }
+    var linkStyleLocation;
+   if (this.state.hoverLocation) {
+     linkStyleLocation = {maxWidth: '100%'}
+   } else {
+     linkStyleLocation = {maxWidth: '250px' }
+   }
     return (
       <div className={css.searchContainer}>
         <FinalForm
@@ -49,8 +75,15 @@ class TopbarSearchFormComponent extends Component {
             const classes = classNames(rootClassName, className);
 
             return (
-              <Form className={classes} onSubmit={handleSubmit} style={{ borderRight: 'none' }}>
+              <Form  
+                className={classes} 
+                onSubmit={handleSubmit}     
+                style={!isMobile ? linkStyleKeywords : null} 
+                onMouseEnter={this.toggleHoverKeywords}
+                onMouseLeave={this.toggleHoverKeywords}
+              >
                 <Field
+
                   name="keywords"
                   render={({ input, meta }) => {
                     return (
@@ -68,6 +101,7 @@ class TopbarSearchFormComponent extends Component {
                             id: 'TopbarSearchFormKeyword.placeholder',
                           })}
                           autoComplete="off"
+                          
                         />
                       </div>
                     );
@@ -89,7 +123,13 @@ class TopbarSearchFormComponent extends Component {
             const preventFormSubmit = e => e.preventDefault();
 
             return (
-              <Form className={classes} onSubmit={preventFormSubmit}>
+              <Form 
+                className={classes} 
+                onSubmit={preventFormSubmit}
+                style={!isMobile ? linkStyleLocation : null} 
+                onMouseEnter={this.toggleHoverLocation}
+                onMouseLeave={this.toggleHoverLocation}
+              >
                 <Field
                   name="location"
                   format={identity}
