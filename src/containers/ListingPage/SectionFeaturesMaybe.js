@@ -175,8 +175,8 @@ const SectionFeaturesMaybe = props => {
     );
   } else if (publicData.category == 'grip') {
     const selectedOptions =
-      publicData && props.publicData.dit_media_management.split(' ')
-        ? props.publicData.dit_media_management.split(' ')
+      publicData && props.publicData.grip.split(' ')
+        ? props.publicData.grip.split(' ')
         : [];
     return (
       <div className={css.sectionFeatures}>
@@ -193,8 +193,8 @@ const SectionFeaturesMaybe = props => {
     );
   } else if (publicData.category == 'dit_media_management') {
     const selectedOptions =
-      publicData && props.publicData.gripdit_media_management.split(' ')
-        ? props.publicData.gripdit_media_management.split(' ')
+      publicData && props.publicData.dit_media_management.split(' ')
+        ? props.publicData.dit_media_management.split(' ')
         : [];
     return (
       <div className={css.sectionFeatures}>
