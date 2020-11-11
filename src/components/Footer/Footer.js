@@ -143,9 +143,9 @@ const Footer = props => {
                   <FaHome size="20px" style={{ marginRight: '2%' }} /> Marino Mart Fairview D d02,
                   Dublin, Ireland
                 </p>
-                <p>
+                <a href="mailto:ask@setpatrol.com"><p>
                   <FaEnvelope size="17px" style={{ marginRight: '2%' }} /> ask@setpatrol.com
-                </p>
+                </p></a>
               </div>
               <div className={css.someLinks}>{socialMediaLinks}</div>
               <div className={css.legalMatters}>

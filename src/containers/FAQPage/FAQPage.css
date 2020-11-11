@@ -2,12 +2,30 @@
 
 .mainWrapper {
   width: calc(100% - 48px);
-  max-width: 720px;
-  margin: 24px auto;
+	/*max-width: 720px;*/
+	margin: 24px auto;
+	text-align: justify;
+  
+	@media (--viewportMedium) {
+	  /*max-width: 650px;*/
+	  width: calc(100% - 400px);
+      margin: 0px auto 36px auto;
+	}
+}
 
-  @media (--viewportMedium) {
-    max-width: 650px;
-    width: calc(100% - 72px);
-    margin: 72px auto 36px auto;
+.pageTitle {
+  color: #050752;
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px){
+  .mainWrapper {
+    width: calc(100% - 220px);
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .mainWrapper {
+    width: calc(100% - 120px);
   }
 }

@@ -40,8 +40,9 @@
   }
 }
 
-h1 {
+.pageTitle {
   color: #050752;
+  text-align: center;
 }
 
 h3 {
