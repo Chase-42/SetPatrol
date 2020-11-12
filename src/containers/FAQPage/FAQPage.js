@@ -40,7 +40,7 @@ const FAQPage = () => {
         </LayoutWrapperTopbar>
 
         <LayoutWrapperMain className={css.mainWrapper}>
-          <h1>Frequently Asked Questions</h1>
+          <h1 className={css.pageTitle}>Frequently Asked Questions</h1>
           <div>
             <h3>1 . GETTING STARTED</h3>
             <p><strong>What is SetPatrol?</strong></p>
