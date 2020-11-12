@@ -8,13 +8,13 @@
 
 .staticPageWrapper {
   width: calc(100% - 48px);
-  max-width: 720px;
+  /*max-width: 720px;*/
   margin: 24px auto;
 
   @media (--viewportMedium) {
-    max-width: 650px;
-    width: calc(100% - 72px);
-    margin: 72px auto 36px auto;
+    /*max-width: 650px;*/
+    width: calc(100% - 200px);
+    margin: 0px auto 36px auto;
   }
 }
 
@@ -22,14 +22,24 @@
   font-size: 25px;
 } */
 
-.aboutVideo {
-  margin-top: 10%;
-  margin-bottom: 15%;
+.aboutVideo{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align:center;
+  width:100%;
+  margin: 0 auto;
+}
+
+.aboutVideo iframe{
+  width: 640px;
+  height: 360px;
+
 }
 
 .theCrew {
   display: inline-block;
-  padding: 100px;
+  padding-bottom: 20px;
+  width: 33%;
   text-align: center;
 }
 
@@ -57,7 +67,7 @@
 .contentWrapper {
   display: flex;
   flex-wrap: wrap;
-
+  text-align: justify;
   @media (--viewportMedium) {
     flex-wrap: nowrap;
   }
@@ -76,13 +86,13 @@
 */
 .contentMain {
   width: calc(100% - 48px);
-  max-width: 720px;
+  /*max-width: 720px;*/
   margin: 24px auto;
 
   @media (--viewportMedium) {
-    max-width: 650px;
-    width: calc(100% - 72px);
-    margin: 72px auto 36px auto;
+   /* max-width: 650px;*/
+    width: calc(100% - 200px);
+    margin: 0px auto 36px auto;
   }
 }
 
@@ -90,4 +100,42 @@
   @apply --marketplaceH3FontStyles;
   margin-top: 32px;
   margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 800px){
+  .contentMain {
+    width: calc(100% - 20px);
+  }
+  .aboutVideo iframe{
+    width:400px;
+  }
+  .theCrew {
+    width: 50%;
+    margin-top: 0;
+  }
+  .theCrew img{
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .contentMain {
+    width: calc(100% - 60px);
+  }
+  .aboutVideo iframe{
+      width:300px;
+
+    }
+    .theCrew {
+      width: 100%;
+    }
+}
+@media only screen and (max-width: 350px){
+  .aboutVideo iframe{
+      width:200px;
+
+    }
+    .theCrew {
+      width: 100%;
+    }
 }

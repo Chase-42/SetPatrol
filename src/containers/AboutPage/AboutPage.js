@@ -69,10 +69,9 @@ const AboutPage = () => {
                   It doesn't end here. When you sign up, you will automatically become a member of the SetPatrol community with access to a whole network of creators. Your profile will showcase who you are and the work you have done. We give you a chance to meet other people within the industry and stay connected through our website.  You can discover job opportunities, find resources, and learn more. Our first priority is to help storytellers like you, so with SetPatrol you will never have to miss out again. 
                 </p>
               </div>
-
-              <iframe src="https://player.vimeo.com/video/406087884" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-              <p><a href="https://vimeo.com/406087884">SetPatrol Promo</a> from <a href="https://vimeo.com/user112322915">Set Patrol</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
+              <div className={css.aboutVideo}>
+              <iframe src="https://player.vimeo.com/video/406087884"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
               <h1 className={css.pageTitle}>The Crew</h1>
               
               <div  className={css.theCrew} >
@@ -80,6 +79,7 @@ const AboutPage = () => {
                 <h2 className={css.crewHeader}>Alberto Innella</h2>
                 <p>CEO & Founder</p>
               </div>
+
 
               <div className={css.theCrew} >
                 <img className={css.crewImage} src={fran} alt="Francesco Del Pozzo." onMouseEnter={changeOpacity} onMouseLeave={changeOpacityBack} />

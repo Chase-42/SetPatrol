@@ -339,3 +339,10 @@
   padding: 0;
   margin: 0;
 }
+
+.contactFooter a {
+  color: #4A4A4A;
+}
+.contactFooter a:hover {
+  text-decoration: none;
+}
