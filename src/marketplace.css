@@ -160,7 +160,8 @@
   /* ================ Buttons ================ */
 
   --marketplaceButtonFontStyles: {
-    font-family: 'poppins', Helvetica, Arial, sans-serif;
+    font-family: 'Rubik', sans-serif;
+    /* font-family: 'poppins', Helvetica, Arial, sans-serif; */
     font-weight: var(--fontWeightSemiBold);
     font-size: 16px;
     line-height: 24px;
