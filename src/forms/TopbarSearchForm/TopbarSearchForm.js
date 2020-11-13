@@ -15,10 +15,14 @@ class TopbarSearchFormComponent extends Component {
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
+    this.toggleClickKeywords = this.toggleClickKeywords.bind(this);
+    this.toggleClickLocation = this.toggleClickLocation.bind(this);
     this.toggleHoverKeywords = this.toggleHoverKeywords.bind(this);
     this.toggleHoverLocation = this.toggleHoverLocation.bind(this);
     this.searchInput = React.createRef();
     this.state = {
+    clickKeywords: false,
+    clickLocation: false,
     hoverKeywords: false,
     hoverLocation: false,
   }
@@ -45,6 +49,12 @@ class TopbarSearchFormComponent extends Component {
     }
   }
 
+  toggleClickKeywords() {
+  this.setState({clickKeywords: !this.state.clickKeywords})
+}
+  toggleClickLocation() {
+  this.setState({clickLocation: !this.state.clickLocation})
+}
   toggleHoverKeywords() {
   this.setState({hoverKeywords: !this.state.hoverKeywords})
 }
@@ -55,15 +65,30 @@ class TopbarSearchFormComponent extends Component {
   render() {
     var linkStyleKeywords;
    if (this.state.hoverKeywords) {
-     linkStyleKeywords = {maxWidth: '100%', borderRight: 'none' }
+     linkStyleKeywords = {borderRight: '5px solid #9B9B9B', borderLeft: '3px solid #9B9B9B', }
    } else {
-     linkStyleKeywords = {maxWidth: '250px', borderRight: 'none'}
+     linkStyleKeywords = {borderLeft: '1px solid #E7E7E7',}
+
    }
+   var linkStyleClickKeywords;
+   if (this.state.clickKeywords) {
+     linkStyleClickKeywords = {maxWidth: '100%', borderRight: 'none', }
+   } else {
+     linkStyleClickKeywords = {maxWidth: '250px', borderRight: 'none',}
+   }
+
+   var linkStyleClickLocation;
+   if (this.state.clickLocation) {
+     linkStyleClickLocation = {maxWidth: '100%', borderRight: 'none', }
+   } else {
+     linkStyleClickLocation = {maxWidth: '250px', borderRight: 'none',}
+   }
+
     var linkStyleLocation;
    if (this.state.hoverLocation) {
-     linkStyleLocation = {maxWidth: '100%'}
+     linkStyleLocation = {borderRight: '1px solid #9B9B9B', borderLeft: '3px solid #9B9B9B', }
    } else {
-     linkStyleLocation = {maxWidth: '250px' }
+     linkStyleLocation = { borderRight: '1px solid #E7E7E7', borderLeft: '1px solid #E7E7E7',}
    }
     return (
       <div className={css.searchContainer}>
@@ -78,9 +103,10 @@ class TopbarSearchFormComponent extends Component {
               <Form  
                 className={classes} 
                 onSubmit={handleSubmit}     
-                style={!isMobile ? linkStyleKeywords : null} 
-                onMouseEnter={this.toggleHoverKeywords}
+                style={Object.assign({}, !isMobile ? linkStyleKeywords : null,  !isMobile ? linkStyleClickKeywords : null)} 
+                onMouseEnter={this.toggleHoverKeywords} 
                 onMouseLeave={this.toggleHoverKeywords}
+                onClick={this.toggleClickKeywords}
               >
                 <Field
 
@@ -126,9 +152,10 @@ class TopbarSearchFormComponent extends Component {
               <Form 
                 className={classes} 
                 onSubmit={preventFormSubmit}
-                style={!isMobile ? linkStyleLocation : null} 
-                onMouseEnter={this.toggleHoverLocation}
+                style={Object.assign({}, !isMobile ? linkStyleLocation : null, !isMobile ? linkStyleClickLocation : null, {borderRight: '1px solid #E7E7E7'})} 
+                onMouseEnter={this.toggleHoverLocation} 
                 onMouseLeave={this.toggleHoverLocation}
+                onClick={this.toggleClickLocation}
               >
                 <Field
                   name="location"
