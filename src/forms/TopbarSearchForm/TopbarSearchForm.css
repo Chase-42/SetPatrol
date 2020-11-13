@@ -22,6 +22,7 @@
 .searchContainer {
   width: 100%;
   display: flex;
+  justify-content: flex-end;
   @media (max-width: 767px) {
     flex-direction: column;
     width: 100%;

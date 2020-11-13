@@ -18,6 +18,7 @@ import { TopbarSearchForm } from '../../forms';
 
 import css from './TopbarDesktop.css';
 
+
 const TopbarDesktop = props => {
   const {
     className,
