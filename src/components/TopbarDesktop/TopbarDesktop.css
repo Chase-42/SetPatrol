@@ -112,9 +112,10 @@
 }
 
 .dropDown {
-  width: fit-content;
+  width: 50%;
   flex-grow: 1;
   height: 100%;
+  text-align: right;
   border-left-style: solid;
   border-left-width: 1px;
   border-left-color: var(--matterColorNegative);
