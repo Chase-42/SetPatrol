@@ -15,6 +15,7 @@ import {
   NamedLink,
 } from '../../components';
 import { TopbarSearchForm } from '../../forms';
+import { Link } from 'react-router-dom';
 
 import css from './TopbarDesktop.css';
 
@@ -52,15 +53,16 @@ const TopbarDesktop = props => {
     />
   );
 
+ const handleOnChange = e => <Link to={e.target.value} />
 
   const dropDown = (
-    <select className={css.dropDown}>
+    <select onChange={handleOnChange} className={css.dropDown}>
       <option> About</option>
-      <option name='AboutPage'>About Us</option>
-      <option name='HowItWorksPage'> How it Works</option>
-      <option name='FAQPage'> FAQ</option>
-      <option name='TermsOfServicePage'> Terms of Service</option>
-      <option name='CommunityRulesPage'> Community Rules</option>
+      <option value='/about'>About Us</option>
+      <option value='HowItWorksPage'>How it Works</option>
+      <option value='FAQPage'>FAQ</option>
+      <option value='TermsOfServicePage'>Terms of Service</option>
+      <option value='CommunityRulesPage'>Community Rules</option>
     </select>
   )
 
