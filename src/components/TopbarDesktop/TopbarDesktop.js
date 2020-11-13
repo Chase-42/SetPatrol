@@ -52,6 +52,15 @@ const TopbarDesktop = props => {
     />
   );
 
+  const dropDown = (
+    <select className={css.searchLink}>
+      <option placeholder='Select'></option>
+      <option>Greg</option>
+      <option>OrangeGreg</option>
+      <option>OrangeMuffinGreg</option>
+    </select>
+  )
+
   const notificationDot = notificationCount > 0 ? <div className={css.notificationDot} /> : null;
 
   const inboxLink = authenticatedOnClientSide ? (
@@ -151,6 +160,7 @@ const TopbarDesktop = props => {
       {profileMenu}
       {signupLink}
       {loginLink}
+      {dropDown}
     </nav>
   );
 };
