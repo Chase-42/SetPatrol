@@ -53,7 +53,7 @@ const TopbarDesktop = props => {
   );
 
   const dropDown = (
-    <select className={css.searchLink}>
+    <select className={css.dropDown}>
       <option placeholder='Select'></option>
       <option>Greg</option>
       <option>OrangeGreg</option>

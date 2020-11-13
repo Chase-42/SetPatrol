@@ -111,6 +111,18 @@
   color: var(--matterColor);
 }
 
+.dropDown {
+  width: fit-content;
+  flex-grow: 1;
+  height: 100%;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: var(--matterColorNegative);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: var(--matterColorNegative);
+}
+
 .topbarSearchWithLeftPadding {
   padding-left: 24px;
   height: var(--topbarHeightDesktop);
