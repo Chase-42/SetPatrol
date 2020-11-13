@@ -52,14 +52,15 @@ const TopbarDesktop = props => {
     />
   );
 
+
   const dropDown = (
     <select className={css.dropDown}>
       <option> About</option>
-      <option> About Us</option>
-      <option> How it Works</option>
-      <option> FAQ</option>
-      <option> Terms of Service</option>
-      <option> Community Rules</option>
+      <option name='AboutPage'>About Us</option>
+      <option name='HowItWorksPage'> How it Works</option>
+      <option name='FAQPage'> FAQ</option>
+      <option name='TermsOfServicePage'> Terms of Service</option>
+      <option name='CommunityRulesPage'> Community Rules</option>
     </select>
   )
 
