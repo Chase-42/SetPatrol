@@ -52,8 +52,7 @@ const TopbarDesktop = props => {
     />
   );
 
-  handleOnChange = e => console.log(e.target.value)
-
+  const handleOnChange = e => console.log(e.target.value)
 
   const dropDown = (
     <select onChange={handleOnChange} className={css.dropDown}>
