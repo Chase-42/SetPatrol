@@ -53,6 +53,7 @@ const toggleClickKeywords = e => {
         <LayoutWrapperMain className={css.mainWrapper}>
           <h1 className={css.pageTitle}>Frequently Asked Questions</h1>
           <div>
+            <br></br>
           <div>
               <h3 onClick={toggleClickKeywords}>1 . GETTING STARTED</h3>
               <div className='text' style={{ display: 'none' } }>
