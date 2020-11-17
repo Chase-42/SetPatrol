@@ -25,9 +25,6 @@ const toggleClickKeywords = e => {
   }
 }
 
-
-  // prettier-ignore
-
   return (
     <StaticPage
       title="Frequently Asked Questions"
@@ -75,7 +72,7 @@ const toggleClickKeywords = e => {
                 <p>Our goal is to maintain and expand a diverse inventory of equipment for our members to rent. Though we strive to have as many options for production as possible, we understand that we may not have everything just yet. If there is something specific you are looking for but can’t find, <u>let us know</u> and we’ll do everything we can to bring these items into our marketplace in the future.</p>
               </div>
             </div>
-       
+       <br></br>
             <div>
               <h3 onClick={toggleClickKeywords}>2 . MAKING YOUR USER PROFILE</h3>
               <div className='text' style={{ display: 'none' } }>
@@ -87,7 +84,7 @@ const toggleClickKeywords = e => {
               <p>We’re all skilled creatives at SetPatrol, go with your intuition. A color image that shows details of the equipment is very helpful. You can write out what you have but why not show it, with a well lit and hi-definition photo!</p>
               </div>
             </div>
-
+            <br></br>
             <div>
               <h3 onClick={toggleClickKeywords}>3 . IDENTIFICATION AND VERIFICATION	</h3>
               <div className='text' style={{ display: 'none' } }>
@@ -107,7 +104,7 @@ const toggleClickKeywords = e => {
                 <p>Yes. All data is processed through our secure site.</p>
               </div>
             </div>
-            
+            <br></br>
             <div>
               <h3 onClick={toggleClickKeywords}>4 . TRUST AND SAFETY</h3>
               <div className='text' style={{ display: 'none' } }>
@@ -118,7 +115,7 @@ const toggleClickKeywords = e => {
                 <p>If you suspect fraudulent activity on SetPatrol, Take note of their member name and activity and <strong>please notify us immediately</strong>.</p>
               </div>
             </div>
-
+            <br></br>
             <div>
               <h3 onClick={toggleClickKeywords}>5 . RENTING GEAR</h3>
               <div className='text' style={{ display: 'none' } }>
@@ -180,7 +177,7 @@ const toggleClickKeywords = e => {
               <p>When you're busy coordinating your production, sometimes you'll need someone else to handle the pick-up or drop-off of equipment. On ShareGrid, you'll add that person to the rental as an 'Authorized Person'.</p>
               </div> 
           </div>
-
+          <br></br>
            <div>
               <h3 onClick={toggleClickKeywords}>6 . DAMAGE</h3>
               <div className='text' style={{ display: 'none' } }> 
