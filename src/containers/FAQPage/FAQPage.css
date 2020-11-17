@@ -13,6 +13,10 @@
 	}
 }
 
+.question {
+  background: black !important;
+}
+
 .pageTitle {
   color: #050752;
   text-align: center;
