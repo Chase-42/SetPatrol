@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { StaticPage, TopbarContainer } from '../../containers';
 import {
   LayoutSingleColumn,
@@ -13,21 +13,9 @@ import calender1 from './calender1.png';
 import calender2 from './calender2.png';
 import { render } from 'enzyme';
 
-class FAQPage extends Component {
+const FAQPage = () => {
 
-  constructor(props) {
-    super(props);
-    this.toggleClickKeywords = this.toggleClickKeywords.bind(this);
-    this.state = {
-    clickKeywords: false,
-  }
-}
-
-// toggleClickKeywords() {
-//   this.setState({clickKeywords: !this.state.clickKeywords})
-// }
-
-toggleClickKeywords = e => {
+const toggleClickKeywords = e => {
   console.log(e.target.parentElement.children[1])
   const text = e.target.parentElement.children[1]
   if (text.style.display === 'inline-block'){
@@ -39,18 +27,7 @@ toggleClickKeywords = e => {
 
 
   // prettier-ignore
-  render(){
 
-    var linksStyleParagraph = {display: 'none'};
-
-    var linkStyleClickKeywords;
-    if (this.state.clickKeywords) {
-      // linkStyleClickKeywords = {maxHeight: '100%', borderRight: 'none' }
-      linksStyleParagraph = { display: 'inline'}
-    } else {
-      // linkStyleClickKeywords = {maxHeight: '250px', borderRight: 'none'}
-      linksStyleParagraph = { display: 'none' }
-    }
   return (
     <StaticPage
       title="Frequently Asked Questions"
@@ -80,7 +57,7 @@ toggleClickKeywords = e => {
           <h1 className={css.pageTitle}>Frequently Asked Questions</h1>
           <div>
           <div>
-              <h3 onClick={this.toggleClickKeywords}>1 . GETTING STARTED</h3>
+              <h3 onClick={toggleClickKeywords}>1 . GETTING STARTED</h3>
               <div className='text' style={{ display: 'none' } }>
                 <p><strong>What is SetPatrol?</strong></p>
                 <p>SetPatrol is a European platform that unites all filmmakers to share and rent out personal equipment, studio spaces and more. When you’re not using it, don’t let your personal equipment sit at home to rust. Rent it out, make money and help other storytellers locally. It's just an easy click here XXXXX to create your FREE profile, list your gear, follow other creatives and start collaborating. We are here to help you create.</p>
@@ -99,9 +76,9 @@ toggleClickKeywords = e => {
               </div>
             </div>
        
-            <div onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords }>
-              <h3>2 . MAKING YOUR USER PROFILE</h3>
-              <div style={ linksStyleParagraph}>
+            <div>
+              <h3 onClick={toggleClickKeywords}>2 . MAKING YOUR USER PROFILE</h3>
+              <div className='text' style={{ display: 'none' } }>
               <p><strong>Who can join Set Patrol? Do I have to be based in Europe?</strong></p>
               <p>Anyone! Our listings are offered all over Europe, but if you are based somewhere else and visiting, welcome! You can create your user profile <stong>here</stong>.</p>
               <p><strong>Do I have to use a facebook account to sign up?</strong></p>
@@ -111,35 +88,40 @@ toggleClickKeywords = e => {
               </div>
             </div>
 
-            <div onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords }>
-              <h3>3 . IDENTIFICATION AND VERIFICATION	</h3>
-              <p><strong>What is your verification process? Why do I need to provide an ID?</strong></p>
-              <p>In order to create a safe community we expect all users to verify their emails, phone numbers and ID through simple code or link steps. To become a top renter or rentee we recommend you becoming a SUPER PATROLLER by confirming your identity. You'll need to add either your legal name and address, or a photo of a government ID (driver's license, passport, or national identity card). Additionally, you will be asked to take a brand-new photo of yourself so that we can ensure all these photos match.</p>
-              <p><strong>Why should I link my portfolio/reel/ vimeo etc?</strong></p>
-              <p>We strongly encourage all of our members to add as many social links as possible. This includes any portfolio websites, links to work or credits. When you add these links in your account settings, they'll appear on your profile page under your 'About me' section. It's a great way to showcase your work, highlight your skills and experience, and help other members get to know you. As a new member of the site in particular, filling out your profile as much as possible means your rental requests are more likely to be accepted.</p>
-              <p>Watch the video below on how to easily update your profile to include links to your social profiles and industry experience:</p>
-              <p><strong>How do I verify my ID?</strong></p>
-              <p>Security is our top priority at SetPatrol. Our community is based on trust, and we're proud that we've created one of the safest ways to share equipment with other people.</p>
-              <p>We work hard to protect all of our members by making sure that each person using the site is who they say they are. That way, you always know who you're talking to.</p>
-              <p>We've developed powerful tools to help with this, including our Automated ID Verification System, which we use to detect and prevent potential identity fraud.</p>
-              <p><strong>How does it work?</strong></p>
-              <p>Before you place a rental request or send a message to another user on the site, you'll be asked to verify your ID. You can find this option under Settings / ID Verification.</p>
-              <p>Once you've entered some basic information, our automated system will check the info you provided. In many cases, accounts can be verified instantly.</p>
-              <p><strong>If we're not able to immediately verify your account, we'll need to collect a little more information so we can <u>manually verify your account</u>. Look out for a message from our customer support team, which will let you know the next steps. Is my information safe?</strong></p>
-              <p>Yes. All data is processed through our secure site.</p>
+            <div>
+              <h3 onClick={toggleClickKeywords}>3 . IDENTIFICATION AND VERIFICATION	</h3>
+              <div className='text' style={{ display: 'none' } }>
+                <p><strong>What is your verification process? Why do I need to provide an ID?</strong></p>
+                <p>In order to create a safe community we expect all users to verify their emails, phone numbers and ID through simple code or link steps. To become a top renter or rentee we recommend you becoming a SUPER PATROLLER by confirming your identity. You'll need to add either your legal name and address, or a photo of a government ID (driver's license, passport, or national identity card). Additionally, you will be asked to take a brand-new photo of yourself so that we can ensure all these photos match.</p>
+                <p><strong>Why should I link my portfolio/reel/ vimeo etc?</strong></p>
+                <p>We strongly encourage all of our members to add as many social links as possible. This includes any portfolio websites, links to work or credits. When you add these links in your account settings, they'll appear on your profile page under your 'About me' section. It's a great way to showcase your work, highlight your skills and experience, and help other members get to know you. As a new member of the site in particular, filling out your profile as much as possible means your rental requests are more likely to be accepted.</p>
+                <p>Watch the video below on how to easily update your profile to include links to your social profiles and industry experience:</p>
+                <p><strong>How do I verify my ID?</strong></p>
+                <p>Security is our top priority at SetPatrol. Our community is based on trust, and we're proud that we've created one of the safest ways to share equipment with other people.</p>
+                <p>We work hard to protect all of our members by making sure that each person using the site is who they say they are. That way, you always know who you're talking to.</p>
+                <p>We've developed powerful tools to help with this, including our Automated ID Verification System, which we use to detect and prevent potential identity fraud.</p>
+                <p><strong>How does it work?</strong></p>
+                <p>Before you place a rental request or send a message to another user on the site, you'll be asked to verify your ID. You can find this option under Settings / ID Verification.</p>
+                <p>Once you've entered some basic information, our automated system will check the info you provided. In many cases, accounts can be verified instantly.</p>
+                <p><strong>If we're not able to immediately verify your account, we'll need to collect a little more information so we can <u>manually verify your account</u>. Look out for a message from our customer support team, which will let you know the next steps. Is my information safe?</strong></p>
+                <p>Yes. All data is processed through our secure site.</p>
+              </div>
             </div>
             
-            <div onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords }>
-              <h3>4 . TRUST AND SAFETY</h3>
-              <p><strong>What happens to my ID data? How do you verify users’ accounts?</strong></p>
-              <p>We are serious about vetting and safety at SetPatrol. The SetPatrol vetting system is designed to ensure that our community has the most trustworthy members. It’s incredibly effective at keeping bad actors off the platform.</p>
-              <p>The SetPatrol vetting system combines machine learning algorithms harnessing a vast network of data on fraud prevention, along with the human review.  Every person who rents on SetPatrol has been reviewed by our team. Plus we don’t just vet the renter once, we vet them every time they rent. This means our community is high quality, trustworthy, and professional. To vet SetPatrol members, we collect personal information (like a state issued photo ID, address, phone number, birth date) and use automated tools as well as SetPatrol team reviews to verify that it is accurate. Sometimes it takes a day or two. If you are in a rush, we can expedite the process! Just email us at ask@SetPatrol.com.</p>
-              <p><strong>I think someone is using the platform fraudulently, what should I do?</strong></p>
-              <p>If you suspect fraudulent activity on SetPatrol, Take note of their member name and activity and <strong>please notify us immediately</strong>.</p>
+            <div>
+              <h3 onClick={toggleClickKeywords}>4 . TRUST AND SAFETY</h3>
+              <div className='text' style={{ display: 'none' } }>
+                <p><strong>What happens to my ID data? How do you verify users’ accounts?</strong></p>
+                <p>We are serious about vetting and safety at SetPatrol. The SetPatrol vetting system is designed to ensure that our community has the most trustworthy members. It’s incredibly effective at keeping bad actors off the platform.</p>
+                <p>The SetPatrol vetting system combines machine learning algorithms harnessing a vast network of data on fraud prevention, along with the human review.  Every person who rents on SetPatrol has been reviewed by our team. Plus we don’t just vet the renter once, we vet them every time they rent. This means our community is high quality, trustworthy, and professional. To vet SetPatrol members, we collect personal information (like a state issued photo ID, address, phone number, birth date) and use automated tools as well as SetPatrol team reviews to verify that it is accurate. Sometimes it takes a day or two. If you are in a rush, we can expedite the process! Just email us at ask@SetPatrol.com.</p>
+                <p><strong>I think someone is using the platform fraudulently, what should I do?</strong></p>
+                <p>If you suspect fraudulent activity on SetPatrol, Take note of their member name and activity and <strong>please notify us immediately</strong>.</p>
+              </div>
             </div>
 
-            <div onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords }>
-              <h3>5 . RENTING GEAR</h3>
+            <div>
+              <h3 onClick={toggleClickKeywords}>5 . RENTING GEAR</h3>
+              <div className='text' style={{ display: 'none' } }>
               <p><strong>What is the renting process like?</strong></p>
               <p>It’s very easy!</p>
               <p>Request: Renter selects gear on Set Patrol, enters payment method, chooses insurance option.</p>
@@ -196,10 +178,12 @@ toggleClickKeywords = e => {
               </ul>
               <p>Can I send someone else to pick up the gear for me?</p>
               <p>When you're busy coordinating your production, sometimes you'll need someone else to handle the pick-up or drop-off of equipment. On ShareGrid, you'll add that person to the rental as an 'Authorized Person'.</p>
-           </div>
+              </div> 
+          </div>
 
-           <div onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords }>
-              <h3>6 . DAMAGE</h3>
+           <div>
+              <h3 onClick={toggleClickKeywords}>6 . DAMAGE</h3>
+              <div className='text' style={{ display: 'none' } }> 
               <p><strong>What if I damage the equipment?</strong></p>
               <p>Yes. Both owners and renters will receive a digital checklist before pick up.</p>
               <p><strong>What are digital checksheets?</strong></p>
@@ -234,6 +218,7 @@ toggleClickKeywords = e => {
               <p>You always set your own prices! Feel free to browse around to see what other listings offer.</p>
               <p><strong>Do I have to pay taxes on the income made from Set Patrol?</strong></p>
               <p>Because Set Patrol operates in all the countries of the European Union, with various tax legislations, you are responsible for filing your own taxes with your Set Patrol earnings. We recommend you speak to your accountant.</p>
+              </div>
            </div>
            
           </div>
@@ -245,7 +230,6 @@ toggleClickKeywords = e => {
       </LayoutSingleColumn>
     </StaticPage>
   );
- }
 };
 
 export default FAQPage;
