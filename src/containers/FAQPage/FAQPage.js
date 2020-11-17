@@ -28,10 +28,12 @@ class FAQPage extends Component {
 // }
 
 toggleClickKeywords = e => {
-  if (e.target.style.display === 'inline'){
-    e.target.style.display = 'none'
+  console.log(e.target.parentElement.children[1])
+  const text = e.target.parentElement.children[1]
+  if (text.display === 'inline'){
+    text.display = 'none'
   } else {    
-    e.target.style.display = 'inline'
+    text.display = 'inline'
   }
 }
 
@@ -80,9 +82,9 @@ toggleClickKeywords = e => {
           <div>
 
 
-          <div onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords } >
-              <h3>1 . GETTING STARTED</h3>
-              <div onClick={this.toggleClickKeywords}>
+          <div style={ linkStyleClickKeywords } >
+              <h3 onClick={this.toggleClickKeywords}>1 . GETTING STARTED</h3>
+              <span className='text' style={ display: 'none' }>
                 <p><strong>What is SetPatrol?</strong></p>
                 <p>SetPatrol is a European platform that unites all filmmakers to share and rent out personal equipment, studio spaces and more. When you’re not using it, don’t let your personal equipment sit at home to rust. Rent it out, make money and help other storytellers locally. It's just an easy click here XXXXX to create your FREE profile, list your gear, follow other creatives and start collaborating. We are here to help you create.</p>
                 <p><strong>How does it work?</strong></p>
@@ -97,7 +99,7 @@ toggleClickKeywords = e => {
                 <p>It's quick and easy to join SetPatrol—and it's also free! SetPatrol is free to join; there are no membership fees or monthly fees, and there are no fees to list equipment. (The way we make money is that we take a cut of each transaction—so we only make money when you make money).</p>
                 <p><strong>What if there’s no equipment in my area?</strong></p>
                 <p>Our goal is to maintain and expand a diverse inventory of equipment for our members to rent. Though we strive to have as many options for production as possible, we understand that we may not have everything just yet. If there is something specific you are looking for but can’t find, <u>let us know</u> and we’ll do everything we can to bring these items into our marketplace in the future.</p>
-              </div>
+              </span>
             </div>
        
             <div onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords }>
