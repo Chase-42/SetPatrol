@@ -30,10 +30,10 @@ class FAQPage extends Component {
 toggleClickKeywords = e => {
   console.log(e.target.parentElement.children[1])
   const text = e.target.parentElement.children[1]
-  if (text.display === 'inline'){
-    text.display = 'none'
+  if (text.style.display === 'inline-block'){
+    text.style.display = 'none'
   } else {    
-    text.display = 'inline'
+    text.style.display = 'inline-block'
   }
 }
 
@@ -78,11 +78,8 @@ toggleClickKeywords = e => {
 
         <LayoutWrapperMain className={css.mainWrapper}>
           <h1 className={css.pageTitle}>Frequently Asked Questions</h1>
-
           <div>
-
-
-          <div style={ linkStyleClickKeywords } >
+          <div>
               <h3 onClick={this.toggleClickKeywords}>1 . GETTING STARTED</h3>
               <div className='text' style={{ display: 'none' } }>
                 <p><strong>What is SetPatrol?</strong></p>
