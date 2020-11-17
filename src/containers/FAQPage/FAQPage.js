@@ -23,8 +23,16 @@ class FAQPage extends Component {
   }
 }
 
-toggleClickKeywords() {
-  this.setState({clickKeywords: !this.state.clickKeywords})
+// toggleClickKeywords() {
+//   this.setState({clickKeywords: !this.state.clickKeywords})
+// }
+
+toggleClickKeywords = e => {
+  if (e.target.style.display === 'inline'){
+    e.target.style.display = 'none'
+  } else {    
+    e.target.style.display = 'inline'
+  }
 }
 
 
@@ -35,10 +43,10 @@ toggleClickKeywords() {
 
     var linkStyleClickKeywords;
     if (this.state.clickKeywords) {
-      linkStyleClickKeywords = {maxHeight: '100%', borderRight: 'none' }
+      // linkStyleClickKeywords = {maxHeight: '100%', borderRight: 'none' }
       linksStyleParagraph = { display: 'inline'}
     } else {
-      linkStyleClickKeywords = {maxHeight: '250px', borderRight: 'none'}
+      // linkStyleClickKeywords = {maxHeight: '250px', borderRight: 'none'}
       linksStyleParagraph = { display: 'none' }
     }
   return (
@@ -68,10 +76,13 @@ toggleClickKeywords() {
 
         <LayoutWrapperMain className={css.mainWrapper}>
           <h1 className={css.pageTitle}>Frequently Asked Questions</h1>
+
           <div>
-            <div  onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords }  className='question'>
+
+
+          <div onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords } >
               <h3>1 . GETTING STARTED</h3>
-              <div style={ linksStyleParagraph}>
+              <div onClick={this.toggleClickKeywords}>
                 <p><strong>What is SetPatrol?</strong></p>
                 <p>SetPatrol is a European platform that unites all filmmakers to share and rent out personal equipment, studio spaces and more. When you’re not using it, don’t let your personal equipment sit at home to rust. Rent it out, make money and help other storytellers locally. It's just an easy click here XXXXX to create your FREE profile, list your gear, follow other creatives and start collaborating. We are here to help you create.</p>
                 <p><strong>How does it work?</strong></p>
@@ -88,18 +99,20 @@ toggleClickKeywords() {
                 <p>Our goal is to maintain and expand a diverse inventory of equipment for our members to rent. Though we strive to have as many options for production as possible, we understand that we may not have everything just yet. If there is something specific you are looking for but can’t find, <u>let us know</u> and we’ll do everything we can to bring these items into our marketplace in the future.</p>
               </div>
             </div>
-
-            <div className='question'>
+       
+            <div onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords }>
               <h3>2 . MAKING YOUR USER PROFILE</h3>
+              <div style={ linksStyleParagraph}>
               <p><strong>Who can join Set Patrol? Do I have to be based in Europe?</strong></p>
               <p>Anyone! Our listings are offered all over Europe, but if you are based somewhere else and visiting, welcome! You can create your user profile <stong>here</stong>.</p>
               <p><strong>Do I have to use a facebook account to sign up?</strong></p>
               <p>No, all you need is a paypal account to be paid or pay users.</p>
               <p><strong>What kind of photos work best for listings?</strong></p>
               <p>We’re all skilled creatives at SetPatrol, go with your intuition. A color image that shows details of the equipment is very helpful. You can write out what you have but why not show it, with a well lit and hi-definition photo!</p>
+              </div>
             </div>
 
-            <div className='question'>
+            <div onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords }>
               <h3>3 . IDENTIFICATION AND VERIFICATION	</h3>
               <p><strong>What is your verification process? Why do I need to provide an ID?</strong></p>
               <p>In order to create a safe community we expect all users to verify their emails, phone numbers and ID through simple code or link steps. To become a top renter or rentee we recommend you becoming a SUPER PATROLLER by confirming your identity. You'll need to add either your legal name and address, or a photo of a government ID (driver's license, passport, or national identity card). Additionally, you will be asked to take a brand-new photo of yourself so that we can ensure all these photos match.</p>
@@ -117,7 +130,7 @@ toggleClickKeywords() {
               <p>Yes. All data is processed through our secure site.</p>
             </div>
             
-            <div className='question'>
+            <div onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords }>
               <h3>4 . TRUST AND SAFETY</h3>
               <p><strong>What happens to my ID data? How do you verify users’ accounts?</strong></p>
               <p>We are serious about vetting and safety at SetPatrol. The SetPatrol vetting system is designed to ensure that our community has the most trustworthy members. It’s incredibly effective at keeping bad actors off the platform.</p>
@@ -126,7 +139,7 @@ toggleClickKeywords() {
               <p>If you suspect fraudulent activity on SetPatrol, Take note of their member name and activity and <strong>please notify us immediately</strong>.</p>
             </div>
 
-            <div className='question'>
+            <div onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords }>
               <h3>5 . RENTING GEAR</h3>
               <p><strong>What is the renting process like?</strong></p>
               <p>It’s very easy!</p>
@@ -186,7 +199,7 @@ toggleClickKeywords() {
               <p>When you're busy coordinating your production, sometimes you'll need someone else to handle the pick-up or drop-off of equipment. On ShareGrid, you'll add that person to the rental as an 'Authorized Person'.</p>
            </div>
 
-           <div className='question'>
+           <div onClick={this.toggleClickKeywords}  style={ linkStyleClickKeywords }>
               <h3>6 . DAMAGE</h3>
               <p><strong>What if I damage the equipment?</strong></p>
               <p>Yes. Both owners and renters will receive a digital checklist before pick up.</p>
