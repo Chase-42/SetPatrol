@@ -108,13 +108,13 @@ export const EditListingPricingFormComponent = props => (
             validate={priceValidators}
           />
           <FieldCurrencyInput
-  id="replacement"
-  name="replacement"
-  className={css.replacementInput}
-  label={replacementLabelMessage}
-  placeholder={priceReplacementPlaceholderMessage}
-  currencyConfig={config.currencyConfig}
-/>
+            id="replacement"
+            name="replacement"
+            className={css.replacementInput}
+            label={replacementLabelMessage}
+            placeholder={priceReplacementPlaceholderMessage}
+            currencyConfig={config.currencyConfig}
+          />
 
           <Button
             className={css.submitButton}
