@@ -58,6 +58,7 @@ import SectionHostMaybe from './SectionHostMaybe';
 import SectionRulesMaybe from './SectionRulesMaybe';
 import SectionMapMaybe from './SectionMapMaybe';
 import SectionViewMaybe from './SectionViewMaybe';
+import SectionViewReplacement from './SectionViewReplacement';
 import css from './ListingPage.css';
 
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
@@ -369,6 +370,14 @@ export class ListingPageComponent extends Component {
       { title, price: formattedPrice, siteTitle }
     );
 
+
+    const replacement =
+  publicData &&
+  publicData.replacement
+    ? publicData.replacement
+    : 0;
+
+
     const hostLink = (
       <NamedLink
         className={css.authorNameLink}
@@ -435,6 +444,7 @@ export class ListingPageComponent extends Component {
                     formattedPrice={formattedPrice}
                     richTitle={richTitle}
                     category={category}
+                    
                     hostLink={hostLink}
                     showContactUser={showContactUser}
                     onContactUser={this.onContactUser}
@@ -442,6 +452,7 @@ export class ListingPageComponent extends Component {
                   <SectionDescriptionMaybe description={description} />
                   {/* <SectionViewMaybe options={viewOptions} publicData={publicData} /> */}
                   <SectionFeaturesMaybe options={brandOptions} publicData={publicData} />
+                  <SectionViewReplacement replacement={replacement}/>
                   <SectionRulesMaybe publicData={publicData} />
                   <SectionMapMaybe
                     geolocation={geolocation}

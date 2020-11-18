@@ -50,6 +50,14 @@ export const EditListingPricingFormComponent = props => (
         id: 'EditListingPricingForm.priceInputPlaceholder',
       });
 
+      const priceReplacementPlaceholderMessage = intl.formatMessage({
+        id: 'EditListingReplacementForm.priceInputPlaceholder',
+      });
+
+      const replacementLabelMessage = intl.formatMessage({
+        id: 'EditListingReplacementForm.priceReplacementLabelPlaceholder',
+      });
+
       const priceRequired = validators.required(
         intl.formatMessage({
           id: 'EditListingPricingForm.priceRequired',
@@ -99,6 +107,14 @@ export const EditListingPricingFormComponent = props => (
             currencyConfig={config.currencyConfig}
             validate={priceValidators}
           />
+          <FieldCurrencyInput
+  id="replacement"
+  name="replacement"
+  className={css.replacementInput}
+  label={replacementLabelMessage}
+  placeholder={priceReplacementPlaceholderMessage}
+  currencyConfig={config.currencyConfig}
+/>
 
           <Button
             className={css.submitButton}
