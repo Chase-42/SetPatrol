@@ -37,7 +37,7 @@ const SearchFiltersPrimaryComponent = props => {
     if (child.key == 'SearchFiltersPrimary.category') {
       newChildren = newChildren.concat(child);
     }
-    console.log(child.key);
+
     if (
       urlCategory == 'cinema_cameras' &&
       child.key == 'SearchFiltersPrimary.cinema_camera_brands'
