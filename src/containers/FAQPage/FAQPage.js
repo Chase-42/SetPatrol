@@ -15,8 +15,16 @@ import { render } from 'enzyme';
 
 const FAQPage = () => {
 
+
+const toggleMouseover = e => {
+  if (e.target.style.color === 'blue'){
+     e.target.style.color = '#6EC1E4'
+  } else {
+    e.target.style.color = 'blue'
+  }
+}
+
 const toggleClickKeywords = e => {
-  console.log(e.target.parentElement.children[1])
   const text = e.target.parentElement.children[1]
   if (text.style.display === 'inline-block'){
     text.style.display = 'none'
@@ -55,7 +63,7 @@ const toggleClickKeywords = e => {
           <div>
             <br></br>
           <div>
-              <h3 onClick={toggleClickKeywords}>1 . GETTING STARTED</h3>
+              <h3 onMouseLeave={toggleMouseover} onMouseEnter={toggleMouseover} onClick={toggleClickKeywords}>1 . GETTING STARTED</h3>
               <div className='text' style={{ display: 'none' } }>
                 <p><strong>What is SetPatrol?</strong></p>
                 <p>SetPatrol is a European platform that unites all filmmakers to share and rent out personal equipment, studio spaces and more. When you’re not using it, don’t let your personal equipment sit at home to rust. Rent it out, make money and help other storytellers locally. It's just an easy click here XXXXX to create your FREE profile, list your gear, follow other creatives and start collaborating. We are here to help you create.</p>
