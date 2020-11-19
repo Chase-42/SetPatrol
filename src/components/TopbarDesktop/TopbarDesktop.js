@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { FormattedMessage, intlShape } from '../../util/reactIntl';
 import classNames from 'classnames';
@@ -52,16 +53,19 @@ const TopbarDesktop = props => {
     />
   );
 
-  const handleOnChange = e => console.log(e.target.value)
+
+  const showDropDown = e => e.target.parentElement.childNodes[1].style.display = 'inline'
+
+  const hideDropDown = e => e.target.parentElement.childNodes[1].style.display = 'none'
 
   const dropDown = (
-    <select onChange={handleOnChange} className={css.dropDown}>
-      <option value='LandingPage'>About</option>
-      <option value='AboutPage'>About Us</option>
-      <option value='FAQPage'>FAQ</option>
-      <option value='TermsOfServicePage'>Terms of Service</option>
-      <option value='CommunityRulesPage'>Community Rules</option>
-    </select>
+    <section className={css.dropDown}>
+      <Link to='/'>About</Link><br/>
+      <Link to='/about'>About Us</Link><br/>
+      <Link to='/faq'>FAQ</Link><br/>
+      <Link to='/terms-of-service'>Terms of Service</Link><br/>
+      <Link to='/rules'>Community Rules</Link><br/>
+  </section>
   )
 
   const notificationDot = notificationCount > 0 ? <div className={css.notificationDot} /> : null;
@@ -163,7 +167,12 @@ const TopbarDesktop = props => {
       {profileMenu}
       {signupLink}
       {loginLink}
+      <div>
+        <p onMouseEnter={showDropDown} onMouseLeave={hideDropDown}>About</p>
+        <span style={{display: 'none' }}>
       {dropDown}
+        </span>
+      </div>
     </nav>
   );
 };
