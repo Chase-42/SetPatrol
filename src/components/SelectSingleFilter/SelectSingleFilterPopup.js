@@ -43,7 +43,7 @@ class SelectSingleFilterPopup extends Component {
       initialValues,
       contentPlacementOffset,
     } = this.props;
-    console.log('hello!!!!!', this.props);
+
     const queryParamName = getQueryParamName(queryParamNames);
     const initialValue =
       initialValues && initialValues[queryParamNames] ? initialValues[queryParamNames] : null;

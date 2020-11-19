@@ -8,40 +8,38 @@ import IconHourGlass from '../../components/LocationAutocompleteInput/IconHourGl
 
 import css from './TopbarSearchForm.css';
 
-
 const identity = v => v;
 
 class TopbarSearchFormComponent extends Component {
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
-    this.toggleClickKeywords = this.toggleClickKeywords.bind(this);
-    this.toggleClickLocation = this.toggleClickLocation.bind(this);
-    this.toggleHoverKeywords = this.toggleHoverKeywords.bind(this);
-    this.toggleHoverLocation = this.toggleHoverLocation.bind(this);
     this.searchInput = React.createRef();
     this.state = {
-    clickKeywords: false,
-    clickLocation: false,
-    hoverKeywords: false,
-    hoverLocation: false,
+      clickKeywords: false,
+      clickLocation: false,
+      hoverKeywords: false,
+      hoverLocation: false,
+      keywords: '',
+    };
   }
-  }
+
   onChange(location) {
     if (location.selectedPlace) {
       // Note that we use `onSubmit` instead of the conventional
       // `handleSubmit` prop for submitting. We want to autosubmit
       // when a place is selected, and don't require any extra
       // validations for the form.
-      this.props.onSubmit({ location });
+      this.props.onSubmit({ location, keywords: this.state.keywords });
       // blur search input to hide software keyboard
       if (this.searchInput) {
         this.searchInput.blur();
       }
     }
   }
+
   onSubmit(values) {
-    this.props.onSubmit({ keywords: values.keywords });
+    this.props.onSubmit({ location: this.state.location, keywords: values.keywords });
 
     // blur search input to hide software keyboard
     if (this.searchInput.current) {
@@ -49,47 +47,41 @@ class TopbarSearchFormComponent extends Component {
     }
   }
 
-  toggleClickKeywords() {
-  this.setState({clickKeywords: !this.state.clickKeywords})
-}
-  toggleClickLocation() {
-  this.setState({clickLocation: !this.state.clickLocation})
-}
-  toggleHoverKeywords() {
-  this.setState({hoverKeywords: !this.state.hoverKeywords})
-}
-  toggleHoverLocation() {
-  this.setState({hoverLocation: !this.state.hoverLocation})
-}
+  toggleClickKeywords = () => this.setState({ clickKeywords: !this.state.clickKeywords });
+
+  toggleClickLocation = () => this.setState({ clickLocation: !this.state.clickLocation });
+
+  toggleHoverKeywords = () => this.setState({ hoverKeywords: !this.state.hoverKeywords });
+
+  toggleHoverLocation = () => this.setState({ hoverLocation: !this.state.hoverLocation });
 
   render() {
     var linkStyleKeywords;
-   if (this.state.hoverKeywords) {
-     linkStyleKeywords = {borderRight: '5px solid #9B9B9B', borderLeft: '3px solid #9B9B9B', }
-   } else {
-     linkStyleKeywords = {borderLeft: '1px solid #E7E7E7',}
+    if (this.state.hoverKeywords) {
+      linkStyleKeywords = { borderRight: '5px solid #9B9B9B', borderLeft: '3px solid #9B9B9B' };
+    } else {
+      linkStyleKeywords = { borderLeft: '1px solid #E7E7E7' };
+    }
+    var linkStyleClickKeywords;
+    if (this.state.clickKeywords) {
+      linkStyleClickKeywords = { maxWidth: '100%', borderRight: 'none' };
+    } else {
+      linkStyleClickKeywords = { maxWidth: '250px', borderRight: 'none' };
+    }
 
-   }
-   var linkStyleClickKeywords;
-   if (this.state.clickKeywords) {
-     linkStyleClickKeywords = {maxWidth: '100%', borderRight: 'none', }
-   } else {
-     linkStyleClickKeywords = {maxWidth: '250px', borderRight: 'none',}
-   }
-
-   var linkStyleClickLocation;
-   if (this.state.clickLocation) {
-     linkStyleClickLocation = {maxWidth: '100%', borderRight: 'none', }
-   } else {
-     linkStyleClickLocation = {maxWidth: '250px', borderRight: 'none',}
-   }
+    var linkStyleClickLocation;
+    if (this.state.clickLocation) {
+      linkStyleClickLocation = { maxWidth: '100%', borderRight: 'none' };
+    } else {
+      linkStyleClickLocation = { maxWidth: '250px', borderRight: 'none' };
+    }
 
     var linkStyleLocation;
-   if (this.state.hoverLocation) {
-     linkStyleLocation = {borderRight: '1px solid #9B9B9B', borderLeft: '3px solid #9B9B9B', }
-   } else {
-     linkStyleLocation = { borderRight: '1px solid #E7E7E7', borderLeft: '1px solid #E7E7E7',}
-   }
+    if (this.state.hoverLocation) {
+      linkStyleLocation = { borderRight: '1px solid #9B9B9B', borderLeft: '3px solid #9B9B9B' };
+    } else {
+      linkStyleLocation = { borderRight: '1px solid #E7E7E7', borderLeft: '1px solid #E7E7E7' };
+    }
     return (
       <div className={css.searchContainer}>
         <FinalForm
@@ -100,16 +92,20 @@ class TopbarSearchFormComponent extends Component {
             const classes = classNames(rootClassName, className);
 
             return (
-              <Form  
-                className={classes} 
-                onSubmit={handleSubmit}     
-                style={Object.assign({}, !isMobile ? linkStyleKeywords : null,  !isMobile ? linkStyleClickKeywords : null)} 
-                onMouseEnter={this.toggleHoverKeywords} 
+              <Form
+                className={classes}
+                onSubmit={handleSubmit}
+                onChange={e => this.setState({ keywords: e.target.value })}
+                style={Object.assign(
+                  {},
+                  !isMobile ? linkStyleKeywords : null,
+                  !isMobile ? linkStyleClickKeywords : null
+                )}
+                onMouseEnter={this.toggleHoverKeywords}
                 onMouseLeave={this.toggleHoverKeywords}
                 onClick={this.toggleClickKeywords}
               >
                 <Field
-
                   name="keywords"
                   render={({ input, meta }) => {
                     return (
@@ -127,7 +123,6 @@ class TopbarSearchFormComponent extends Component {
                             id: 'TopbarSearchFormKeyword.placeholder',
                           })}
                           autoComplete="off"
-                          
                         />
                       </div>
                     );
@@ -149,11 +144,16 @@ class TopbarSearchFormComponent extends Component {
             const preventFormSubmit = e => e.preventDefault();
 
             return (
-              <Form 
-                className={classes} 
+              <Form
+                className={classes}
                 onSubmit={preventFormSubmit}
-                style={Object.assign({}, !isMobile ? linkStyleLocation : null, !isMobile ? linkStyleClickLocation : null, {borderRight: '1px solid #E7E7E7'})} 
-                onMouseEnter={this.toggleHoverLocation} 
+                style={Object.assign(
+                  {},
+                  !isMobile ? linkStyleLocation : null,
+                  !isMobile ? linkStyleClickLocation : null,
+                  { borderRight: '1px solid #E7E7E7' }
+                )}
+                onMouseEnter={this.toggleHoverLocation}
                 onMouseLeave={this.toggleHoverLocation}
                 onClick={this.toggleClickLocation}
               >
