@@ -56,11 +56,10 @@ const TopbarDesktop = props => {
 
   const showDropDown = e => e.target.parentElement.childNodes[1].style.display = 'inline'
 
-  const hideDropDown = e => e.target.parentElement.childNodes[1].style.display = 'none'
+  const hideDropDown = e => e.target.parentElement.style.display = 'none'
 
   const dropDown = (
     <section className={css.dropDown}>
-      <Link to='/'>About</Link><br/>
       <Link to='/about'>About Us</Link><br/>
       <Link to='/faq'>FAQ</Link><br/>
       <Link to='/terms-of-service'>Terms of Service</Link><br/>
@@ -168,8 +167,8 @@ const TopbarDesktop = props => {
       {signupLink}
       {loginLink}
       <div>
-        <p onMouseEnter={showDropDown} onMouseLeave={hideDropDown}>About</p>
-        <span style={{display: 'none' }}>
+        <Link to='/' onMouseEnter={showDropDown}>About</Link>
+        <span onMouseLeave={hideDropDown} style={{display: 'none' }}>
       {dropDown}
         </span>
       </div>
