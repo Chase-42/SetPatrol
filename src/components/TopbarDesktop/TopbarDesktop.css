@@ -112,6 +112,7 @@
 }
 
 .dropDown {
+  text-align: center;
   background-color: white;
   width: fit-content;
   flex-grow: 1;

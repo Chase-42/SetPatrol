@@ -53,11 +53,6 @@ const TopbarDesktop = props => {
     />
   );
 
-
-  const showDropDown = e => e.target.parentElement.childNodes[1].style.display = 'inline'
-
-  const hideDropDown = e => e.target.parentElement.style.display = 'none'
-
   const dropDown = (
     <section className={css.dropDown}>
       <Link to='/about'>About Us</Link><br/>
@@ -66,6 +61,10 @@ const TopbarDesktop = props => {
       <Link to='/rules'>Community Rules</Link><br/>
   </section>
   )
+
+  const showDropDown = e => e.target.parentElement.childNodes[1].style.display = 'inline'
+
+  const hideDropDown = e => e.target.parentElement.style.display = 'none'
 
   const notificationDot = notificationCount > 0 ? <div className={css.notificationDot} /> : null;
 
@@ -168,7 +167,7 @@ const TopbarDesktop = props => {
       {loginLink}
       <div>
         <Link to='/' onMouseEnter={showDropDown}>About</Link>
-        <span onMouseLeave={hideDropDown} style={{display: 'none' }}>
+        <span onMouseLeave={hideDropDown} style={{ display: 'none' }}>
       {dropDown}
         </span>
       </div>
