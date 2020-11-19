@@ -58,6 +58,7 @@ import SectionHostMaybe from './SectionHostMaybe';
 import SectionRulesMaybe from './SectionRulesMaybe';
 import SectionMapMaybe from './SectionMapMaybe';
 import SectionViewMaybe from './SectionViewMaybe';
+import SectionViewCancelationPolicy from './SectionViewCancelationPolicy';
 import css from './ListingPage.css';
 
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
@@ -448,6 +449,7 @@ export class ListingPageComponent extends Component {
                     publicData={publicData}
                     listingId={currentListing.id}
                   />
+                  <SectionViewCancelationPolicy />
                   <SectionReviews reviews={reviews} fetchReviewsError={fetchReviewsError} />
                   <SectionHostMaybe
                     title={title}
