@@ -16,13 +16,9 @@ import { render } from 'enzyme';
 const FAQPage = () => {
 
 
-const toggleMouseover = e => {
-  if (e.target.style.color === 'blue'){
-     e.target.style.color = '#6EC1E4'
-  } else {
-    e.target.style.color = 'blue'
-  }
-}
+const mouseOver = e => e.target.style.color = '#050752'
+
+const mouseLeave = e => e.target.style.color = '#00C9C0'
 
 const toggleClickKeywords = e => {
   const text = e.target.parentElement.children[1]
@@ -63,7 +59,7 @@ const toggleClickKeywords = e => {
           <div>
             <br></br>
           <div>
-              <h3 onMouseLeave={toggleMouseover} onMouseEnter={toggleMouseover} onClick={toggleClickKeywords}>1 . GETTING STARTED</h3>
+              <h3 onMouseLeave={mouseLeave} onMouseEnter={mouseOver} onClick={toggleClickKeywords}>1 . GETTING STARTED</h3>
               <div className='text' style={{ display: 'none' } }>
                 <p><strong>What is SetPatrol?</strong></p>
                 <p>SetPatrol is a European platform that unites all filmmakers to share and rent out personal equipment, studio spaces and more. When you’re not using it, don’t let your personal equipment sit at home to rust. Rent it out, make money and help other storytellers locally. It's just an easy click here XXXXX to create your FREE profile, list your gear, follow other creatives and start collaborating. We are here to help you create.</p>
@@ -83,7 +79,7 @@ const toggleClickKeywords = e => {
             </div>
        <br></br>
             <div>
-              <h3 onClick={toggleClickKeywords}>2 . MAKING YOUR USER PROFILE</h3>
+              <h3 onMouseLeave={mouseLeave} onMouseEnter={mouseOver} onClick={toggleClickKeywords}>2 . MAKING YOUR USER PROFILE</h3>
               <div className='text' style={{ display: 'none' } }>
               <p><strong>Who can join Set Patrol? Do I have to be based in Europe?</strong></p>
               <p>Anyone! Our listings are offered all over Europe, but if you are based somewhere else and visiting, welcome! You can create your user profile <stong>here</stong>.</p>
@@ -95,7 +91,7 @@ const toggleClickKeywords = e => {
             </div>
             <br></br>
             <div>
-              <h3 onClick={toggleClickKeywords}>3 . IDENTIFICATION AND VERIFICATION	</h3>
+              <h3 onMouseLeave={mouseLeave} onMouseEnter={mouseOver} onClick={toggleClickKeywords}>3 . IDENTIFICATION AND VERIFICATION	</h3>
               <div className='text' style={{ display: 'none' } }>
                 <p><strong>What is your verification process? Why do I need to provide an ID?</strong></p>
                 <p>In order to create a safe community we expect all users to verify their emails, phone numbers and ID through simple code or link steps. To become a top renter or rentee we recommend you becoming a SUPER PATROLLER by confirming your identity. You'll need to add either your legal name and address, or a photo of a government ID (driver's license, passport, or national identity card). Additionally, you will be asked to take a brand-new photo of yourself so that we can ensure all these photos match.</p>
@@ -115,7 +111,7 @@ const toggleClickKeywords = e => {
             </div>
             <br></br>
             <div>
-              <h3 onClick={toggleClickKeywords}>4 . TRUST AND SAFETY</h3>
+              <h3 onMouseLeave={mouseLeave} onMouseEnter={mouseOver} onClick={toggleClickKeywords}>4 . TRUST AND SAFETY</h3>
               <div className='text' style={{ display: 'none' } }>
                 <p><strong>What happens to my ID data? How do you verify users’ accounts?</strong></p>
                 <p>We are serious about vetting and safety at SetPatrol. The SetPatrol vetting system is designed to ensure that our community has the most trustworthy members. It’s incredibly effective at keeping bad actors off the platform.</p>
@@ -126,7 +122,7 @@ const toggleClickKeywords = e => {
             </div>
             <br></br>
             <div>
-              <h3 onClick={toggleClickKeywords}>5 . RENTING GEAR</h3>
+              <h3 onMouseLeave={mouseLeave} onMouseEnter={mouseOver} onClick={toggleClickKeywords}>5 . RENTING GEAR</h3>
               <div className='text' style={{ display: 'none' } }>
               <p><strong>What is the renting process like?</strong></p>
               <p>It’s very easy!</p>
@@ -188,7 +184,7 @@ const toggleClickKeywords = e => {
           </div>
           <br></br>
            <div>
-              <h3 onClick={toggleClickKeywords}>6 . DAMAGE</h3>
+              <h3 onMouseLeave={mouseLeave} onMouseEnter={mouseOver} onClick={toggleClickKeywords}>6 . DAMAGE</h3>
               <div className='text' style={{ display: 'none' } }> 
               <p><strong>What if I damage the equipment?</strong></p>
               <p>Yes. Both owners and renters will receive a digital checklist before pick up.</p>
