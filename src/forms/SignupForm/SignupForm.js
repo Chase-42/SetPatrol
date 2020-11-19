@@ -24,6 +24,7 @@ const SignupFormComponent = props => (
         invalid,
         intl,
         onOpenTermsOfService,
+        onOpenPrivacyPolicy,
       } = fieldRenderProps;
 
       // email
@@ -117,6 +118,14 @@ const SignupFormComponent = props => (
           onOpenTermsOfService();
         }
       };
+
+
+      const handlePrivacyKeyUp = e => {
+        // Allow click action with keyboard like with normal links
+        if (e.keyCode === KEY_CODE_ENTER) {
+          onOpenPrivacyPolicy();
+        }
+      };
       const termsLink = (
         <span
           className={css.termsLink}
@@ -126,6 +135,18 @@ const SignupFormComponent = props => (
           onKeyUp={handleTermsKeyUp}
         >
           <FormattedMessage id="SignupForm.termsAndConditionsLinkText" />
+        </span>
+      );
+
+      const privacyLink = (
+        <span
+          className={css.termsLink}
+          onClick={onOpenTermsOfService}
+          role="button"
+          tabIndex="0"
+          onKeyUp={handleTermsKeyUp}
+        >
+          <FormattedMessage id="SignupForm.privacyPolicyLinkText" />
         </span>
       );
 
@@ -181,8 +202,8 @@ const SignupFormComponent = props => (
                 <FormattedMessage
                   id="SignupForm.termsAndConditionsAcceptText"
                   values={{ termsLink }}
-                />
-              </span>
+                /> 
+              </span><span className={css.termsText}> and </span><span> {privacyLink}</span>
             </p>
             <PrimaryButton type="submit" inProgress={submitInProgress} disabled={submitDisabled}>
               <FormattedMessage id="SignupForm.signUp" />

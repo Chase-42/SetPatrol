@@ -27,6 +27,7 @@ import {
   Footer,
   Modal,
   TermsOfService,
+  PrivacyPolicy,
 } from '../../components';
 import { LoginForm, SignupForm } from '../../forms';
 import { TopbarContainer } from '../../containers';
@@ -41,6 +42,7 @@ export class AuthenticationPageComponent extends Component {
   constructor(props) {
     super(props);
     this.state = { tosModalOpen: false };
+    this.state = { ppModalOpen: false };
   }
   render() {
     const {
@@ -148,6 +150,7 @@ export class AuthenticationPageComponent extends Component {
             onSubmit={handleSubmitSignup}
             inProgress={authInProgress}
             onOpenTermsOfService={() => this.setState({ tosModalOpen: true })}
+            onOpenPrivacyPolicy={() => this.setState({ ppModalOpen: true })}
           />
         )}
       </div>
@@ -246,9 +249,23 @@ export class AuthenticationPageComponent extends Component {
             >
               <div className={css.termsWrapper}>
                 <h2 className={css.termsHeading}>
-                  <FormattedMessage id="AuthenticationPage.termsHeading" />
+                  <FormattedMessage id="AuthenticationPage.privacyHeading" />
                 </h2>
                 <TermsOfService />
+              </div>
+            </Modal>
+            <Modal
+              id="AuthenticationPage.tos"
+              isOpen={this.state.ppModalOpen}
+              onClose={() => this.setState({ ppModalOpen: false })}
+              usePortal
+              onManageDisableScrolling={onManageDisableScrolling}
+            >
+              <div className={css.termsWrapper}>
+                <h2 className={css.termsHeading}>
+                  <FormattedMessage id="AuthenticationPage.termsHeading" />
+                </h2>
+                <PrivacyPolicy />
               </div>
             </Modal>
           </LayoutWrapperMain>
