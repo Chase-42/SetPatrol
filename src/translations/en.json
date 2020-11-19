@@ -192,7 +192,7 @@
   "EditListingPhotosPanel.createListingTitle": "Add a few photos",
   "EditListingPhotosPanel.title": "Edit the photos of {listingTitle}",
   "EditListingPoliciesForm.rulesLabel": "Equipment rules",
-  "EditListingPoliciesForm.rulesPlaceholder": "Describe the no-nos",
+  "EditListingPoliciesForm.rulesPlaceholder": "Describe the no-nos (optional)",
   "EditListingPoliciesForm.showListingFailed": "Fetching listing data failed",
   "EditListingPoliciesForm.updateFailed": "Failed to update listing. Please try again.",
   "EditListingPoliciesPanel.createListingTitle": "Time to set some ground rules for your gear.",
