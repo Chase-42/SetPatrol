@@ -219,6 +219,8 @@
   "EditListingWizard.saveEditAvailability": "Salva disponibilità",
   "EditListingWizard.saveEditPhotos": "Salva foto",
   "EditListingWizard.saveEditPolicies": "Salva regole",
+  "EditListingReplacementForm.priceInputPlaceholder": "Aggiungi il valore sostitutivo…",
+  "EditListingReplacementForm.priceReplacementLabelPlaceholder": "Valore della sostituzione in euro",
   "EditListingWizard.saveEditPricing": "Salva prezzo",
   "EditListingWizard.saveNewDescription": "Avanti: Dettagli",
   "EditListingWizard.saveNewFeatures": "Avanti: Regole",
