@@ -121,6 +121,16 @@ const TopbarDesktop = props => {
           </NamedLink>
         </MenuItem>
 
+        <MenuItem key="AccountSettingsPage">
+          <NamedLink
+            className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
+            name="FAQPage"
+          >
+            <span className={css.menuItemBorder}/>
+            <FormattedMessage id="Frequently Asked Questions"/>
+          </NamedLink>
+        </MenuItem>
+
         <MenuItem key="logout">
           <InlineTextButton rootClassName={css.logoutButton} onClick={onLogout}>
             <span className={css.menuItemBorder} />
