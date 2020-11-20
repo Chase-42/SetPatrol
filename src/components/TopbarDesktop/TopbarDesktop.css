@@ -115,8 +115,11 @@
   @apply --TopbarDesktop_linkHover;
   @apply --marketplaceH5FontStyles;
   height: 100%;
+  position: absolute;
+  right: 24%;
+  top: 40%;
+  bottom: 60%;
   padding: 0 12px 0 12px;
-  top: 100px;
   margin-top: 0;
   margin-bottom: 0;
   color: var(--matterColor);
@@ -126,7 +129,7 @@
   }
 
   @media (--viewportMedium) {
-    margin-top: 30px;
+    margin-top: 0;
     margin-bottom: 0;
   }
 }
