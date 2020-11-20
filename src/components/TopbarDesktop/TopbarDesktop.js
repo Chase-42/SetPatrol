@@ -114,6 +114,16 @@ const TopbarDesktop = props => {
         <MenuItem key="AccountSettingsPage">
           <NamedLink
             className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
+            name="LandingPage"
+          >
+            <span className={css.menuItemBorder}/>
+            <FormattedMessage id="How it Works"/>
+          </NamedLink>
+        </MenuItem>
+
+        <MenuItem key="AccountSettingsPage">
+          <NamedLink
+            className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
             name="AboutPage"
           >
             <span className={css.menuItemBorder}/>
@@ -128,6 +138,26 @@ const TopbarDesktop = props => {
           >
             <span className={css.menuItemBorder}/>
             <FormattedMessage id="Frequently Asked Questions"/>
+          </NamedLink>
+        </MenuItem>
+
+        <MenuItem key="AccountSettingsPage">
+          <NamedLink
+            className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
+            name="CommunityRulesPage"
+          >
+            <span className={css.menuItemBorder}/>
+            <FormattedMessage id="Community Rules"/>
+          </NamedLink>
+        </MenuItem>
+
+        <MenuItem key="AccountSettingsPage">
+          <NamedLink
+            className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
+            name="TermsOfServicePage"
+          >
+            <span className={css.menuItemBorder}/>
+            <FormattedMessage id="Terms of Service"/>
           </NamedLink>
         </MenuItem>
 
