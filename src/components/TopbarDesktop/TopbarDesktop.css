@@ -111,10 +111,14 @@
   color: var(--matterColor);
 }
 
+#about{
+  top: 160px;
+}
+
 .dropDown {
-  text-align: center;
+  text-align: left;
   background-color: white;
-  width: fit-content;
+  width: 140px;
   flex-grow: 1;
   height: 100%;
   font-size: small;

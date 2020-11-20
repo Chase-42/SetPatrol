@@ -57,6 +57,7 @@ const TopbarDesktop = props => {
     <section className={css.dropDown}>
       <Link to='/about'>About Us</Link><br/>
       <Link to='/faq'>FAQ</Link><br/>
+      <Link to='how-it-works'>How It Works</Link><br/>
       <Link to='/terms-of-service'>Terms of Service</Link><br/>
       <Link to='/rules'>Community Rules</Link><br/>
   </section>
@@ -156,6 +157,12 @@ const TopbarDesktop = props => {
         />
       </NamedLink>
       {search}
+      <div id='about'>
+        <Link to='/' onMouseEnter={showDropDown}>About</Link>
+        <span onMouseLeave={hideDropDown} style={{ display: 'none' }}>
+      {dropDown}
+        </span>
+      </div>
       <NamedLink className={css.createListingLink} name="NewListingPage">
         <span className={css.createListing}>
           <FormattedMessage id="TopbarDesktop.createListing" />
@@ -165,12 +172,6 @@ const TopbarDesktop = props => {
       {profileMenu}
       {signupLink}
       {loginLink}
-      <div>
-        <Link to='/' onMouseEnter={showDropDown}>About</Link>
-        <span onMouseLeave={hideDropDown} style={{ display: 'none' }}>
-      {dropDown}
-        </span>
-      </div>
     </nav>
   );
 };
