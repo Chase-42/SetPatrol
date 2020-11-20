@@ -478,7 +478,7 @@
   margin-bottom: 20px;
   @media (--viewportMedium) {
     margin-top: 0;
-    margin-bottom: 28px;
+    margin-bottom: 15px;
   }
 }
 .locationTitle {

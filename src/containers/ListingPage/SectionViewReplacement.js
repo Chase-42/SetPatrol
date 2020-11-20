@@ -11,21 +11,16 @@ const SectionViewReplacement = props => {
     replacement,
   } = props;
 
- /* const unitType = config.bookingUnitType;
-  const isNightly = unitType === LINE_ITEM_NIGHT;
-  const isDaily = unitType === LINE_ITEM_DAY;
+const replacementNumber = Number(replacement.amount);
 
-  const unitTranslationKey = isNightly
-    ? 'ListingPage.perNight'
-    : isDaily
-    ? 'ListingPage.perDay'
-    : 'ListingPage.perUnit';
-*/
+function currencyFormat(num) {
+   return '€' + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
   return (
       <div className={css.sectionFeatures}>
 
           <h2 className={css.replacementTitle}>Replacement Price</h2>
-          <p className={css.replacement}>{replacement.amount}</p>
+          <p className={css.replacement}>{currencyFormat(replacementNumber)}</p>
       </div>
   );
 };
