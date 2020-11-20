@@ -199,6 +199,8 @@
   "EditListingPoliciesPanel.createListingTitle": "Time to set some ground rules for your gear.",
   "EditListingPoliciesPanel.title": "Edit the rules of {listingTitle}",
   "EditListingPricingForm.priceInputPlaceholder": "Choose your price…",
+  "EditListingReplacementForm.priceInputPlaceholder": "Add the replacement value…",
+  "EditListingReplacementForm.priceReplacementLabelPlaceholder": "Value of replacement in euros",
   "EditListingPricingForm.pricePerDay": "Price per day in euros",
   "EditListingPricingForm.pricePerNight": "Price per night in euros",
   "EditListingPricingForm.pricePerUnit": "Price per unit in euros",
