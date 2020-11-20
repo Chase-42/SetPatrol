@@ -157,8 +157,8 @@ const TopbarDesktop = props => {
         />
       </NamedLink>
       {search}
-      <div id='about'>
-        <Link to='/' onMouseEnter={showDropDown}>About</Link>
+      <div style={{ top: "500" }}>
+        <Link id={css.about} to='/' onMouseEnter={showDropDown}>About</Link>
         <span onMouseLeave={hideDropDown} style={{ display: 'none' }}>
       {dropDown}
         </span>

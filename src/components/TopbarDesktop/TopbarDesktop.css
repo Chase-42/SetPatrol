@@ -112,7 +112,23 @@
 }
 
 #about{
-  top: 160px;
+  @apply --TopbarDesktop_linkHover;
+  @apply --marketplaceH5FontStyles;
+  height: 100%;
+  padding: 0 12px 0 12px;
+  top: 100px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--matterColor);
+
+  &:hover {
+    color: var(--matterColorDark);
+  }
+
+  @media (--viewportMedium) {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
 }
 
 .dropDown {
