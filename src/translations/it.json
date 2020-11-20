@@ -193,7 +193,7 @@
   "EditListingPhotosPanel.createListingTitle": "Aggiungi alcune foto",
   "EditListingPhotosPanel.title": "Modifica le foto di {listingTitle}",
   "EditListingPoliciesForm.rulesLabel": "Regole attrezzatura",
-  "EditListingPoliciesForm.rulesPlaceholder": "Descrivi i no-nos",
+  "EditListingPoliciesForm.rulesPlaceholder": "Descrivi i no-nos (opzionale)",
   "EditListingPoliciesForm.showListingFailed": "Recupero dati elenco non riuscito",
   "EditListingPoliciesForm.updateFailed": "Impossibile aggiornare l'elenco. Riprova.",
   "EditListingPoliciesPanel.createListingTitle": "È ora di impostare alcune regole di base per la tua attrezzatura.",
