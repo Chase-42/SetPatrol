@@ -145,7 +145,7 @@
   "EditListingAvailabilityForm.bookedDay": "Booked",
   "EditListingAvailabilityForm.updateFailed": "Impossibile aggiornare l'elenco. Riprova.",
   "EditListingAvailabilityPanel.title": "Modifica la disponibilità di {listingTitle}",
-  "EditListingAvailabilityPanel.createListingTitle": "Quando è disponibile?",
+  "EditListingAvailabilityPanel.createListingTitle": "Quando non è disponibile?",
   "EditListingDescriptionForm.categoryLabel": "Tipo di ingranaggio",
   "EditListingDescriptionForm.categoryPlaceholder": "Scegli il tipo di attrezzatura ...",
   "EditListingDescriptionForm.categoryRequired": "Devi selezionare una categoria per la tua attrezzatura.",
