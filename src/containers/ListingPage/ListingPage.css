@@ -469,6 +469,18 @@
     margin-bottom: 0;
   }
 }
+.replacement {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  /* Preserve newlines, but collapse other whitespace */
+  white-space: pre-line;
+
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
 
 .cancelationPolicy {
   margin-top: 0;
@@ -493,6 +505,18 @@
   }
 }
 
+.replacementTitle {
+  /* Font */
+  @apply --marketplaceH3FontStyles;
+  color: var(--matterColorAnti);
+
+  margin-top: 0;
+  margin-bottom: 20px;
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+}
 .locationTitle {
   /* Font */
   @apply --marketplaceH3FontStyles;

@@ -13,6 +13,8 @@ import css from './EditListingPricingPanel.css';
 
 const { Money } = sdkTypes;
 
+
+
 const EditListingPricingPanel = props => {
   const {
     className,
@@ -28,9 +30,18 @@ const EditListingPricingPanel = props => {
     errors,
   } = props;
 
+  
+
   const classes = classNames(rootClassName || css.root, className);
   const currentListing = ensureOwnListing(listing);
-  const { price } = currentListing.attributes;
+  const { price, publicData } = currentListing.attributes;
+const replacement =
+  publicData && publicData.replacement ? publicData.replacement : 0;
+const replacementAsMoney = new Money(
+  replacement.amount,
+  replacement.currency
+);
+const initialValues = { price, replacementAsMoney };
 
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
   const panelTitle = isPublished ? (
