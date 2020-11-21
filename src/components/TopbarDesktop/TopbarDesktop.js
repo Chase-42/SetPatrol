@@ -118,16 +118,6 @@ const TopbarDesktop = props => {
         <MenuItem key="AccountSettingsPage">
           <NamedLink
             className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
-            name="LandingPage"
-          >
-            <span className={css.menuItemBorder}/>
-            <FormattedMessage id="How it Works"/>
-          </NamedLink>
-        </MenuItem>
-
-        <MenuItem key="AccountSettingsPage">
-          <NamedLink
-            className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
             name="AboutPage"
           >
             <span className={css.menuItemBorder}/>
