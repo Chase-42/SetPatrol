@@ -85,8 +85,8 @@ const AboutPage = () => {
                 </p>
               </div>
               <div className={css.aboutVideo}>
-                  <iframe src="https://www.youtube.com/embed/6LvFC1qXb9U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
+                  <iframe src="https://player.vimeo.com/video/406087884" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
               <h1 className={css.pageTitle}>The Crew</h1>
 
               <div className={css.theCrew}>
