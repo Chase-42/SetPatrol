@@ -110,6 +110,38 @@ const TopbarMobileMenu = props => {
         >
           <FormattedMessage id="TopbarMobileMenu.accountSettingsLink" />
         </NamedLink>
+
+        <hr/>
+
+        <NamedLink
+          className={classNames(css.navigationLink, currentPageClass('AccountSettingsPage'))}
+          name="AboutPage"
+        >
+          <FormattedMessage id="About Us" />
+        </NamedLink>
+
+        <NamedLink
+          className={classNames(css.navigationLink, currentPageClass('AccountSettingsPage'))}
+          name="FAQPage"
+        >
+          <FormattedMessage id="Frequently Asked Questions" />
+        </NamedLink>
+        
+        <NamedLink
+          className={classNames(css.navigationLink, currentPageClass('AccountSettingsPage'))}
+          name="CommunityRulesPage"
+        >
+          <FormattedMessage id="Community Rules" />
+        </NamedLink>
+
+        <NamedLink
+          className={classNames(css.navigationLink, currentPageClass('AccountSettingsPage'))}
+          name="TermsOfServicePage"
+        >
+          <FormattedMessage id="Terms Of Service" />
+        </NamedLink>
+
+
       </div>
       <div className={css.footer}>
         <NamedLink className={css.createNewListingLink} name="NewListingPage">
