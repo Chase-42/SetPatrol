@@ -27,13 +27,7 @@
   margin-bottom: 50px;
   text-align:center;
   width:100%;
-  max-height: 100%;
   margin: 0 auto;
-}
-
-.aboutVideo iframe{
-  width: 640px;
-  height: 340px; 
 }
 
 .theCrew {
