@@ -87,7 +87,7 @@ const AboutPage = () => {
               <div className={css.aboutVideo}>
                  <ReactPlayer
           className='react-player'
-          url={SetPatrolPromo} width='100%'          height='100%'        />
+          url={SetPatrolPromo} width='100%'          height='100%'  controls       />
 </div>
               <h1 className={css.pageTitle}>The Crew</h1>
 
