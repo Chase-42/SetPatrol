@@ -96,6 +96,13 @@ class ProfileSettingsFormComponent extends Component {
           const bioPlaceholder = intl.formatMessage({
             id: 'ProfileSettingsForm.bioPlaceholder',
           });
+          // Bio
+          const linkedInLabel = intl.formatMessage({
+            id: 'ProfileSettingsForm.linkedInLabel',
+          });
+          const linkedInPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.linkedInPlaceholder',
+          });
 
           const uploadingOverlay =
             uploadInProgress || this.state.uploadDelay ? (
@@ -291,6 +298,18 @@ class ProfileSettingsFormComponent extends Component {
                 <p className={css.bioInfo}>
                   <FormattedMessage id="ProfileSettingsForm.bioInfo" />
                 </p>
+              </div>
+              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                <h3 className={css.sectionTitle}>
+                  <FormattedMessage id="ProfileSettingsForm.linkedInHeading" />
+                </h3>
+                <FieldTextInput
+                  type="textarea"
+                  id="linkedIn"
+                  name="linkedIn"
+                  label={linkedInLabel}
+                  placeholder={linkedInPlaceholder}
+                />
               </div>
               {submitError}
               <Button

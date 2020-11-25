@@ -42,19 +42,21 @@ export class ProfileSettingsPageComponent extends Component {
       uploadImageError,
       uploadInProgress,
       intl,
+      publicData,
     } = this.props;
 
     const handleSubmit = values => {
-      const { firstName, lastName, bio: rawBio } = values;
+      const { firstName, lastName, linkedIn, bio: rawBio } = values;
 
       // Ensure that the optional bio is a string
       const bio = rawBio || '';
 
       const profile = {
         firstName: firstName.trim(),
-        lastName: lastName.trim(),
+        lastName: lastName.trim(),        
+        publicData: {linkedIn},
         bio,
-      };
+    };
       const uploadedImage = this.props.image;
 
       // Update profileImage only if file system has been accessed
@@ -64,18 +66,22 @@ export class ProfileSettingsPageComponent extends Component {
           : profile;
 
       onUpdateProfile(updatedValues);
+      console.log(updatedValues);
     };
 
     const user = ensureCurrentUser(currentUser);
     const { firstName, lastName, bio } = user.attributes.profile;
+    const linkedIn = user.attributes.profile.publicData;
     const profileImageId = user.profileImage ? user.profileImage.id : null;
     const profileImage = image || { imageId: profileImageId };
+
+    console.log(user.attributes.profile.publicData)
 
     const profileSettingsForm = user.id ? (
       <ProfileSettingsForm
         className={css.form}
         currentUser={currentUser}
-        initialValues={{ firstName, lastName, bio, profileImage: user.profileImage }}
+        initialValues={{ firstName, lastName, linkedIn, bio, profileImage: user.profileImage }}
         profileImage={profileImage}
         onImageUpload={e => onImageUploadHandler(e, onImageUpload)}
         uploadInProgress={uploadInProgress}
