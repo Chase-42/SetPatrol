@@ -91,7 +91,7 @@ const toggleClickKeywords = e => {
             </div>
             <br></br>
             <div>
-              <h3 onMouseLeave={mouseLeave} onMouseEnter={mouseOver} onClick={toggleClickKeywords}>3 . IDENTIFICATION AND VERIFICATION	</h3>
+              <h3 onMouseLeave={mouseLeave} onMouseEnter={mouseOver} onClick={toggleClickKeywords}>3 . VERIFICATION</h3>
               <div className='text' style={{ display: 'none' } }>
                 <p><strong>What is your verification process? Why do I need to provide an ID?</strong></p>
                 <p>In order to create a safe community we expect all users to verify their emails, phone numbers and ID through simple code or link steps. To become a top renter or rentee we recommend you becoming a SUPER PATROLLER by confirming your identity. You'll need to add either your legal name and address, or a photo of a government ID (driver's license, passport, or national identity card). Additionally, you will be asked to take a brand-new photo of yourself so that we can ensure all these photos match.</p>
