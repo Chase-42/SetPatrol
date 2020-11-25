@@ -22,6 +22,7 @@ import chase from './Chase_02.jpg';
 import andras from './Andras.jpg';
 import natasha from './Natasha.jpg';
 import elizabeth from './Elizabeth.jpg';
+import SetPatrolPromo from './SetPatrolPromo.mp4';
 
 const AboutPage = () => {
   const { siteTwitterHandle, siteFacebookPage } = config;
@@ -67,8 +68,7 @@ const AboutPage = () => {
                   SetPatrol is an interactive marketplace where people who need high-end photography
                   and film equipment can find those willing to rent it out. Users can list every
                   type of photo/video related piece of equipment, rent it directly to other
-                  professionals, and make money while they aren't using it. As StoryTellers, we work
-                  in a field focused on results. Clients are fixated on beautiful, dramatic, and
+                  professionals, and make money while they aren't using it. As StoryTellers, we work in a field focused on results. Clients are fixated on beautiful, dramatic, and
                   creative work. We are victims of our own success; a high demand market, quick
                   turnarounds, and forever revamped equipment. Our platform gives artists access to
                   the tools they need and the financial freedom they desire in order to focus on
@@ -85,8 +85,10 @@ const AboutPage = () => {
                 </p>
               </div>
               <div className={css.aboutVideo}>
-                  <iframe src="https://www.youtube.com/embed/6LvFC1qXb9U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
+                 <ReactPlayer
+          className='react-player'
+          url={SetPatrolPromo} width='100%'          height='100%'  controls       />
+</div>
               <h1 className={css.pageTitle}>The Crew</h1>
 
               <div className={css.theCrew}>
