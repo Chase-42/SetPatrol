@@ -26,6 +26,7 @@ import {
 } from '../../components';
 import { TopbarContainer, NotFoundPage } from '../../containers';
 import { loadData } from './ProfilePage.duck';
+import { FaLinkedin, FaYoutube, FaFacebook, FaInstagram, FaTwitter, FaVimeo, FaImdb } from 'react-icons/fa';
 import config from '../../config';
 
 import css from './ProfilePage.css';
@@ -77,7 +78,25 @@ export class ProfilePageComponent extends Component {
       ensuredCurrentUser.id && profileUser.id && ensuredCurrentUser.id.uuid === profileUser.id.uuid;
     const displayName = profileUser.attributes.profile.displayName;
     const bio = profileUser.attributes.profile.bio;
-    const hasBio = !!bio;
+    const hasBio = !!bio;    
+    const newPublicData = profileUser.attributes.profile.publicData || '';
+    
+    const facebookLink = String(newPublicData['facebook']);
+    const hasFacebook = !!facebookLink;
+    const instagramLink = String(newPublicData['instagram']);
+    const hasInstagram = !!instagramLink;
+    const linkedInLink = String(newPublicData['linkedIn']);
+    const hasLinkedIn = !!linkedInLink;
+    const youtubeLink = String(newPublicData['youtube']);
+    const hasYoutube = !!youtubeLink;
+    const twitterLink = String(newPublicData['twitter']);
+    const hasTwitter = !!twitterLink;
+    const vimeoLink = String(newPublicData['vimeo']);
+    const hasVimeo = !!vimeoLink;
+    const imdbLink = String(newPublicData['imdb']);
+    const hasImdb = !!imdbLink;
+    const website = String(newPublicData['website']);
+    const hasWebsite = !!website;
     const hasListings = listings.length > 0;
     const isMobileLayout = viewport.width < MAX_MOBILE_SCREEN_WIDTH;
 
@@ -107,6 +126,14 @@ export class ProfilePageComponent extends Component {
 
     const listingsContainerClasses = classNames(css.listingsContainer, {
       [css.withBioMissingAbove]: !hasBio,
+      [css.withBioMissingAbove]: !hasFacebook,
+      [css.withBioMissingAbove]: !hasInstagram,
+      [css.withBioMissingAbove]: !hasLinkedIn,
+      [css.withBioMissingAbove]: !hasYoutube,
+      [css.withBioMissingAbove]: !hasTwitter,
+      [css.withBioMissingAbove]: !hasVimeo,
+      [css.withBioMissingAbove]: !hasImdb,
+      [css.withBioMissingAbove]: !hasWebsite,
     });
 
     const reviewsError = (
@@ -187,6 +214,14 @@ export class ProfilePageComponent extends Component {
           <FormattedMessage id="ProfilePage.desktopHeading" values={{ name: displayName }} />
         </h1>
         {hasBio ? <p className={css.bio}>{bio}</p> : null}
+        {hasWebsite ? <p className={css.bio}><a href={website} target="blank">{website}</a></p> : null}
+        {hasFacebook ? <p className={css.socialMediaProfile}><a href={facebookLink} target="blank"><FaFacebook size="40px"  /></a></p> : ''}
+        {hasInstagram ? <p className={css.socialMediaProfile}><a href={instagramLink} target="blank"><FaInstagram size="40px"  /></a></p> : ''}
+        {hasYoutube ? <p className={css.socialMediaProfile}><a href={youtubeLink} target="blank"><FaYoutube size="40px"  /></a></p> : ''}
+        {hasTwitter ? <p className={css.socialMediaProfile}><a href={twitterLink} target="blank"><FaTwitter size="40px"  /></a></p> : ''}        
+        {hasLinkedIn ? <p className={css.socialMediaProfile}><a href={linkedInLink} target="blank"><FaLinkedin size="40px"  /></a></p> : ''}
+        {hasVimeo ? <p className={css.socialMediaProfile}><a href={vimeoLink} target="blank"><FaVimeo size="40px"  /></a></p> : ''}
+        {hasImdb ? <p className={css.socialMediaProfile}><a href={imdbLink} target="blank"><FaImdb size="40px"  /></a></p> : ''}
         {hasListings ? (
           <div className={listingsContainerClasses}>
             <h2 className={css.listingsTitle}>
