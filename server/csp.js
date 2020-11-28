@@ -94,7 +94,7 @@ module.exports = (reportUri, enforceSsl, reportOnly) => {
   // Example: extend default img directive with custom domain
   // const { imgSrc = [self] } = defaultDirectives;
   // const exampleImgSrc = imgSrc.concat('my-custom-domain.example.com');
-  ('https://static.zdassets.com/ekr/snippet.js?key=d86f70bf-35d8-4eb0-9656-e564c948caf6');
+  'https://static.zdassets.com/ekr/snippet.js?key=d86f70bf-35d8-4eb0-9656-e564c948caf6';
 
   const customDirectives = {
     // Example: Add custom directive override
