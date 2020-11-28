@@ -96,6 +96,62 @@ class ProfileSettingsFormComponent extends Component {
           const bioPlaceholder = intl.formatMessage({
             id: 'ProfileSettingsForm.bioPlaceholder',
           });
+          // facebook
+          const facebookLabel = intl.formatMessage({
+            id: 'ProfileSettingsForm.facebookLabel',
+          });
+          const facebookPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.facebookPlaceholder',
+          });
+          // instagram
+          const instagramLabel = intl.formatMessage({
+            id: 'ProfileSettingsForm.instagramLabel',
+          });
+          const instagramPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.instagramPlaceholder',
+          });
+          // youtube
+          const youtubeLabel = intl.formatMessage({
+            id: 'ProfileSettingsForm.youtubeLabel',
+          });
+          const youtubePlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.youtubePlaceholder',
+          });
+          // twitter
+          const twitterLabel = intl.formatMessage({
+            id: 'ProfileSettingsForm.twitterLabel',
+          });
+          const twitterPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.twitterPlaceholder',
+          });
+          // imdb
+          const imdbLabel = intl.formatMessage({
+            id: 'ProfileSettingsForm.imdbLabel',
+          });
+          const imdbPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.imdbPlaceholder',
+          });
+          // vimeo
+          const vimeoLabel = intl.formatMessage({
+            id: 'ProfileSettingsForm.vimeoLabel',
+          });
+          const vimeoPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.vimeoPlaceholder',
+          });
+          // website/profile
+          const websiteLabel = intl.formatMessage({
+            id: 'ProfileSettingsForm.websiteLabel',
+          });
+          const websitePlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.websitePlaceholder',
+          });
+          // linkedIn
+          const linkedInLabel = intl.formatMessage({
+            id: 'ProfileSettingsForm.linkedInLabel',
+          });
+          const linkedInPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.linkedInPlaceholder',
+          });
 
           const uploadingOverlay =
             uploadInProgress || this.state.uploadDelay ? (
@@ -160,7 +216,7 @@ class ProfileSettingsFormComponent extends Component {
                   <FormattedMessage id="ProfileSettingsForm.addYourProfilePictureMobile" />
                 </div>
               </div>
-            );
+            ); 
 
           const submitError = updateProfileError ? (
             <div className={css.error}>
@@ -291,6 +347,102 @@ class ProfileSettingsFormComponent extends Component {
                 <p className={css.bioInfo}>
                   <FormattedMessage id="ProfileSettingsForm.bioInfo" />
                 </p>
+              </div>
+              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                <h3 className={css.sectionTitle}>
+                  <FormattedMessage id="ProfileSettingsForm.websiteHeading" />
+                </h3>
+                <FieldTextInput
+                  type="textarea"
+                  id="website"
+                  name="website"
+                  label={websiteLabel}
+                  placeholder={websitePlaceholder}
+                />
+              </div>
+              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                <h3 className={css.sectionTitle}>
+                  <FormattedMessage id="ProfileSettingsForm.facebookHeading" />
+                </h3>
+                <FieldTextInput
+                  type="textarea"
+                  id="facebook"
+                  name="facebook"
+                  label={facebookLabel}
+                  placeholder={facebookPlaceholder}
+                />
+              </div>
+              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                <h3 className={css.sectionTitle}>
+                  <FormattedMessage id="ProfileSettingsForm.instagramHeading" />
+                </h3>
+                <FieldTextInput
+                  type="textarea"
+                  id="instagram"
+                  name="instagram"
+                  label={instagramLabel}
+                  placeholder={instagramPlaceholder}
+                />
+              </div>
+              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                <h3 className={css.sectionTitle}>
+                  <FormattedMessage id="ProfileSettingsForm.youtubeHeading" />
+                </h3>
+                <FieldTextInput
+                  type="textarea"
+                  id="youtube"
+                  name="youtube"
+                  label={youtubeLabel}
+                  placeholder={youtubePlaceholder}
+                />
+              </div>
+              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                <h3 className={css.sectionTitle}>
+                  <FormattedMessage id="ProfileSettingsForm.twitterHeading" />
+                </h3>
+                <FieldTextInput
+                  type="textarea"
+                  id="twitter"
+                  name="twitter"
+                  label={twitterLabel}
+                  placeholder={twitterPlaceholder}
+                />
+              </div>
+              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                <h3 className={css.sectionTitle}>
+                  <FormattedMessage id="ProfileSettingsForm.vimeoHeading" />
+                </h3>
+                <FieldTextInput
+                  type="textarea"
+                  id="vimeo"
+                  name="vimeo"
+                  label={vimeoLabel}
+                  placeholder={vimeoPlaceholder}
+                />
+              </div>
+              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                <h3 className={css.sectionTitle}>
+                  <FormattedMessage id="ProfileSettingsForm.imdbHeading" />
+                </h3>
+                <FieldTextInput
+                  type="textarea"
+                  id="imdb"
+                  name="imdb"
+                  label={imdbLabel}
+                  placeholder={imdbPlaceholder}
+                />
+              </div>
+              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                <h3 className={css.sectionTitle}>
+                  <FormattedMessage id="ProfileSettingsForm.linkedInHeading" />
+                </h3>
+                <FieldTextInput
+                  type="textarea"
+                  id="linkedIn"
+                  name="linkedIn"
+                  label={linkedInLabel}
+                  placeholder={linkedInPlaceholder}
+                />
               </div>
               {submitError}
               <Button
