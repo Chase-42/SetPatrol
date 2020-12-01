@@ -86,28 +86,28 @@ const defaultDirectives = {
  */
 module.exports = (reportUri, enforceSsl, reportOnly) => {
   // ================ START CUSTOM CSP URLs ================ //
-
   // Add custom CSP whitelisted URLs here. See commented example
   // below. For format specs and examples, see:
   // https://content-security-policy.com/
-
   // Example: extend default img directive with custom domain
   // const { imgSrc = [self] } = defaultDirectives;
   // const exampleImgSrc = imgSrc.concat('my-custom-domain.example.com');
-
+  const { defaultSrc = [self], imgSrc = [self] } = defaultDirectives;
+  const extendedImgSrc = imgSrc.concat('https://v2assets.zopim.io', 'https://static.zdassets.com');
+  const extendedDefaultSrc = defaultSrc.concat(
+    'https://static.zdassets.com',
+    'https://ekr.zdassets.com',
+    'https://static.zdassets.com/ekr/snippet.js?key=d86f70bf-35d8-4eb0-9656-e564c948caf6.zendesk.com',
+    'https://*.zopim.com',
+    'wss://static.zdassets.com/ekr/snippet.js?key=d86f70bf-35d8-4eb0-9656-e564c948caf6.zendesk.com',
+    'wss://*.zopim.com'
+  );
   const customDirectives = {
     // Example: Add custom directive override
     // imgSrc: exampleImgSrc,
-    // defaultSrc: [
-    //   'self',
-    //   'https://static.zdassets.com',
-    //   'https://ekr.zdassets.com',
-    //   'https://{zendeskSubdomain}.zendesk.com',
-    //   'wss://{zendeskSubdomain}.zendesk.com',
-    //   'https://*.zopim.com wss://*.zopim.com https://*.zopim.io',
-    // ],
+    imgSrc: extendedImgSrc,
+    defaultSrc: extendedDefaultSrc,
   };
-
   // ================ END CUSTOM CSP URLs ================ //
 
   // Helmet v4 expects every value to be iterable so strings or booleans are not supported directly
