@@ -97,9 +97,9 @@ module.exports = (reportUri, enforceSsl, reportOnly) => {
   const extendedDefaultSrc = defaultSrc.concat(
     'https://static.zdassets.com',
     'https://ekr.zdassets.com',
-    'https://{https://static.zdassets.com/ekr/snippet.js?key=d86f70bf-35d8-4eb0-9656-e564c948caf6}.zendesk.com',
+    'https://static.zdassets.com/ekr/snippet.js?key=d86f70bf-35d8-4eb0-9656-e564c948caf6',
     'https://*.zopim.com',
-    'wss://{https://static.zdassets.com/ekr/snippet.js?key=d86f70bf-35d8-4eb0-9656-e564c948caf6}.zendesk.com',
+    //'wss://static.zdassets.com/ekr/snippet.js?key=d86f70bf-35d8-4eb0-9656-e564c948caf6.zendesk.com',
     'wss://*.zopim.com'
   );
   const customDirectives = {
