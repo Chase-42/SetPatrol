@@ -94,11 +94,19 @@ module.exports = (reportUri, enforceSsl, reportOnly) => {
   // Example: extend default img directive with custom domain
   // const { imgSrc = [self] } = defaultDirectives;
   // const exampleImgSrc = imgSrc.concat('my-custom-domain.example.com');
-  'https://static.zdassets.com/ekr/snippet.js?key=d86f70bf-35d8-4eb0-9656-e564c948caf6';
 
   const customDirectives = {
     // Example: Add custom directive override
     // imgSrc: exampleImgSrc,
+    defaultSrc: [
+      'self',
+      'https://static.zdassets.com',
+      'https://ekr.zdassets.com',
+      'https://{zendeskSubdomain}.zendesk.com',
+      'wss://{zendeskSubdomain}.zendesk.com',
+      'https://*.zopim.com wss://*.zopim.com https://*.zopim.io',
+    ],
+    styleSrc: unsafeInline,
   };
 
   // ================ END CUSTOM CSP URLs ================ //
