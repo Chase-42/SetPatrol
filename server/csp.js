@@ -98,15 +98,14 @@ module.exports = (reportUri, enforceSsl, reportOnly) => {
   const customDirectives = {
     // Example: Add custom directive override
     // imgSrc: exampleImgSrc,
-    defaultSrc: [
-      'self',
-      'https://static.zdassets.com',
-      'https://ekr.zdassets.com',
-      'https://{zendeskSubdomain}.zendesk.com',
-      'wss://{zendeskSubdomain}.zendesk.com',
-      'https://*.zopim.com wss://*.zopim.com https://*.zopim.io',
-    ],
-    styleSrc: unsafeInline,
+    // defaultSrc: [
+    //   'self',
+    //   'https://static.zdassets.com',
+    //   'https://ekr.zdassets.com',
+    //   'https://{zendeskSubdomain}.zendesk.com',
+    //   'wss://{zendeskSubdomain}.zendesk.com',
+    //   'https://*.zopim.com wss://*.zopim.com https://*.zopim.io',
+    // ],
   };
 
   // ================ END CUSTOM CSP URLs ================ //
