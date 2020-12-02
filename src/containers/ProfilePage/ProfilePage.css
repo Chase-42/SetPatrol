@@ -97,6 +97,27 @@
   }
 }
 
+.website {
+  /* Preserve newlines, but collapse other whitespace */
+  white-space: pre-line;
+  margin: 5px 0 24px 0;
+
+  @media (--viewportMedium) {
+    margin: 4px 0 51px 0;
+  }
+  @media (--viewportLarge) {
+    margin: 0 0 56px 0;
+    max-width: 600px;
+  }
+}
+
+.website a{
+  color: #4A4A4A;
+}
+.website a:hover{
+  text-decoration: none;
+}
+
 .socialMediaProfile {
   /* Preserve newlines, but collapse other whitespace */
   white-space: pre-line;
@@ -111,6 +132,9 @@
     margin: 0 0 56px 0;
     max-width: 600px;
   }
+}
+.socialMediaProfile a{
+  color: #4A4A4A;
 }
 
 .listingsContainer {

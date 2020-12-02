@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { bool, string } from 'prop-types';
 import { compose } from 'redux';
 import { FormattedMessage, injectIntl, intlShape } from '../../util/reactIntl';
@@ -9,9 +9,12 @@ import { ensureCurrentUser } from '../../util/data';
 import { propTypes } from '../../util/types';
 import * as validators from '../../util/validators';
 import { isUploadImageOverLimitError } from '../../util/errors';
-import { Form, Avatar, Button, ImageFromFile, IconSpinner, FieldTextInput } from '../../components';
+import { Form, Avatar, Button, ImageFromFile, IconSpinner, FieldTextInput, FieldSelect } from '../../components';
+import {careerJob} from '../../marketplace-custom-config'
 
 import css from './ProfileSettingsForm.css';
+
+
 
 const ACCEPT_IMAGES = 'image/*';
 const UPLOAD_CHANGE_DELAY = 2000; // Show spinner so that browser has time to load img srcset
@@ -21,7 +24,8 @@ class ProfileSettingsFormComponent extends Component {
     super(props);
 
     this.uploadDelayTimeoutId = null;
-    this.state = { uploadDelay: false };
+    this.state = { uploadDelay: false, };
+    this.handleChange = this.handleChange.bind(this);
     this.submittedValues = {};
   }
 
@@ -38,6 +42,10 @@ class ProfileSettingsFormComponent extends Component {
 
   componentWillUnmount() {
     window.clearTimeout(this.uploadDelayTimeoutId);
+  }
+
+  handleChange(e) {
+    this.setState({value: e.target.value});
   }
 
   render() {
@@ -152,6 +160,14 @@ class ProfileSettingsFormComponent extends Component {
           const linkedInPlaceholder = intl.formatMessage({
             id: 'ProfileSettingsForm.linkedInPlaceholder',
           });
+          // careerJob
+          const careerJobLabel = intl.formatMessage({
+            id: 'ProfileSettingsForm.careerJobLabel',
+          });
+          const careerJobPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.careerJobPlaceholder',
+          });
+
 
           const uploadingOverlay =
             uploadInProgress || this.state.uploadDelay ? (
@@ -444,6 +460,27 @@ class ProfileSettingsFormComponent extends Component {
                   placeholder={linkedInPlaceholder}
                 />
               </div>
+              <div className={classNames(css.sectionContainer, css.lastSection)}>
+                <h3 className={css.sectionTitle}>
+                  <FormattedMessage id="ProfileSettingsForm.careerJobHeading" />
+                </h3>
+                <FieldSelect
+                  className={css.features}
+                  id='careerJob' name='careerJob'                 
+                  label={careerJobLabel}                
+                  placeholder={careerJobPlaceholder}
+                >
+                  {careerJob.options.map(o => (
+                    <option key={o.key} value={o.key}>
+                      {o.label}
+                    </option>
+                  ))}
+              </FieldSelect>
+              </div>
+
+
+             
+
               {submitError}
               <Button
                 className={css.submitButton}
@@ -489,3 +526,6 @@ const ProfileSettingsForm = compose(injectIntl)(ProfileSettingsFormComponent);
 ProfileSettingsForm.displayName = 'ProfileSettingsForm';
 
 export default ProfileSettingsForm;
+
+
+/**/

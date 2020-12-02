@@ -97,8 +97,13 @@ export class ProfilePageComponent extends Component {
     const hasImdb = !!imdbLink;
     const website = String(newPublicData['website']);
     const hasWebsite = !!website;
+
+    const careerJob = (String(newPublicData['careerJob']) === 'undefined') ? null : String(newPublicData['careerJob']);
+    const hasCareerJob = !!careerJob;
     const hasListings = listings.length > 0;
     const isMobileLayout = viewport.width < MAX_MOBILE_SCREEN_WIDTH;
+
+    console.log(newPublicData);
 
     const editLinkMobile = isCurrentUser ? (
       <NamedLink className={css.editLinkMobile} name="ProfileSettingsPage">
@@ -134,6 +139,7 @@ export class ProfilePageComponent extends Component {
       [css.withBioMissingAbove]: !hasVimeo,
       [css.withBioMissingAbove]: !hasImdb,
       [css.withBioMissingAbove]: !hasWebsite,
+      [css.withBioMissingAbove]: !hasCareerJob,
     });
 
     const reviewsError = (
@@ -214,7 +220,8 @@ export class ProfilePageComponent extends Component {
           <FormattedMessage id="ProfilePage.desktopHeading" values={{ name: displayName }} />
         </h1>
         {hasBio ? <p className={css.bio}>{bio}</p> : null}
-        {hasWebsite ? <p className={css.bio}><a href={website} target="blank">{website}</a></p> : null}
+        {hasWebsite ? <p className={css.website}><br/><a href={website} target="blank">Website / Portfolio</a></p> : null}
+        {hasCareerJob ? <p className={css.careerJob}>Job Title<br/>{careerJob}</p> : null}
         {hasFacebook ? <p className={css.socialMediaProfile}><a href={facebookLink} target="blank"><FaFacebook size="40px"  /></a></p> : ''}
         {hasInstagram ? <p className={css.socialMediaProfile}><a href={instagramLink} target="blank"><FaInstagram size="40px"  /></a></p> : ''}
         {hasYoutube ? <p className={css.socialMediaProfile}><a href={youtubeLink} target="blank"><FaYoutube size="40px"  /></a></p> : ''}
