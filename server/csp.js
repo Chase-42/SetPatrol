@@ -92,9 +92,30 @@ module.exports = (reportUri, enforceSsl, reportOnly) => {
   // Example: extend default img directive with custom domain
   // const { imgSrc = [self] } = defaultDirectives;
   // const exampleImgSrc = imgSrc.concat('my-custom-domain.example.com');
-  const { defaultSrc = [self], imgSrc = [self] } = defaultDirectives;
+  const {
+    defaultSrc = [self],
+    imgSrc = [self],
+    connectSrc = [self],
+    scriptSrc = [self],
+  } = defaultDirectives;
   const extendedImgSrc = imgSrc.concat('https://v2assets.zopim.io', 'https://static.zdassets.com');
   const extendedDefaultSrc = defaultSrc.concat(
+    'https://static.zdassets.com',
+    'https://ekr.zdassets.com',
+    'https://setpatrolhelp.zendesk.com',
+    'https://*.zopim.com',
+    'wss://setpatrolhelp.zendesk.com',
+    'wss://*.zopim.com'
+  );
+  const extendedConnectSrc = connectSrc.concat(
+    'https://static.zdassets.com',
+    'https://ekr.zdassets.com',
+    'https://setpatrolhelp.zendesk.com',
+    'https://*.zopim.com',
+    'wss://setpatrolhelp.zendesk.com',
+    'wss://*.zopim.com'
+  );
+  const extendedScriptSrc = scriptSrc.concat(
     'https://static.zdassets.com',
     'https://ekr.zdassets.com',
     'https://setpatrolhelp.zendesk.com',
@@ -107,9 +128,10 @@ module.exports = (reportUri, enforceSsl, reportOnly) => {
     // imgSrc: exampleImgSrc,
     imgSrc: extendedImgSrc,
     defaultSrc: extendedDefaultSrc,
+    connectSrc: extendedConnectSrc,
+    scriptSrc: extendedScriptSrc,
   };
   // ================ END CUSTOM CSP URLs ================ //
-
   // Helmet v4 expects every value to be iterable so strings or booleans are not supported directly
   // If we want to add block-all-mixed-content directive we need to add empty array to directives
   // See Helmet's default directives:
