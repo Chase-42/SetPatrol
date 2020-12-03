@@ -46,7 +46,7 @@ export class ProfileSettingsPageComponent extends Component {
     } = this.props;
 
     const handleSubmit = values => {
-      const { firstName, lastName, bio: rawBio, website, facebook, instagram, linkedIn, youtube, twitter, vimeo, imdb } = values;
+      const { firstName, lastName, bio: rawBio, website, facebook, instagram, linkedIn, youtube, twitter, vimeo, imdb, careerJob } = values;
 
       // Ensure that the optional bio is a string
       const bio = rawBio || '';
@@ -54,7 +54,7 @@ export class ProfileSettingsPageComponent extends Component {
       const profile = {
         firstName: firstName.trim(),
         lastName: lastName.trim(),        
-        publicData: {website, facebook, instagram, linkedIn, youtube, twitter, vimeo, imdb },
+        publicData: {website, facebook, instagram, linkedIn, youtube, twitter, vimeo, imdb, careerJob },
         bio,
     };
       const uploadedImage = this.props.image;
@@ -66,7 +66,7 @@ export class ProfileSettingsPageComponent extends Component {
           : profile;
 
       onUpdateProfile(updatedValues);
-      console.log(updatedValues);
+
     };
 
     const user = ensureCurrentUser(currentUser);
@@ -75,15 +75,17 @@ export class ProfileSettingsPageComponent extends Component {
     const profileImageId = user.profileImage ? user.profileImage.id : null;
     const profileImage = image || { imageId: profileImageId };
 
-    //const myJSON = JSON.stringify(newlinkedIn);
+    //const myJSON = JSON.stringify(newlinkedIn);    
+    const website = (String(newPublicData['website']) === 'undefined') ? null : String(newPublicData['website']);
     const facebook = (String(newPublicData['facebook']) === 'undefined') ? null : String(newPublicData['facebook']);
     const instagram = (String(newPublicData['instagram']) === 'undefined') ? null : String(newPublicData['instagram']);
     const linkedIn = (String(newPublicData['linkedIn']) === 'undefined') ? null : String(newPublicData['linkedIn']);
     const youtube = (String(newPublicData['youtube']) === 'undefined') ? null : String(newPublicData['youtube']);
     const twitter = (String(newPublicData['twitter']) === 'undefined') ? null : String(newPublicData['twitter']);
     const vimeo = (String(newPublicData['vimeo']) === 'undefined') ? null : String(newPublicData['vimeo']);
-    const imdb = (String(newPublicData['imdb']) === 'undefined') ? null : String(newPublicData['imdb']);
-    const website = (String(newPublicData['website']) === 'undefined') ? null : String(newPublicData['website']);
+    const imdb = (String(newPublicData['imdb']) === 'undefined') ? null : String(newPublicData['imdb']);    
+    const careerJob = (String(newPublicData['careerJob']) === 'undefined') ? null : String(newPublicData['careerJob']);
+     
 
     const profileSettingsForm = user.id ? (
       <ProfileSettingsForm
@@ -91,7 +93,9 @@ export class ProfileSettingsPageComponent extends Component {
         currentUser={currentUser}
         initialValues={{ 
           firstName, 
-          lastName, 
+          lastName,           
+          bio,           
+          profileImage: user.profileImage,
           website: website, 
           facebook: facebook, 
           instagram: instagram, 
@@ -100,8 +104,7 @@ export class ProfileSettingsPageComponent extends Component {
           twitter: twitter, 
           vimeo: vimeo, 
           imdb: imdb, 
-          bio, 
-          profileImage: user.profileImage 
+          careerJob: careerJob, 
         }}
         profileImage={profileImage}
         onImageUpload={e => onImageUploadHandler(e, onImageUpload)}
