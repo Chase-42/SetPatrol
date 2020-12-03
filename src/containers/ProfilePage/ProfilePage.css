@@ -86,36 +86,53 @@
 .bio {
   /* Preserve newlines, but collapse other whitespace */
   white-space: pre-line;
-  margin: 5px 0 24px 0;
+  margin: 5px 0 10px 0;
 
   @media (--viewportMedium) {
-    margin: 4px 0 51px 0;
+    margin: 4px 0 10px 0;
   }
   @media (--viewportLarge) {
-    margin: 0 0 56px 0;
+    margin: 0 0 10px 0;
     max-width: 600px;
   }
 }
 
 .website {
   /* Preserve newlines, but collapse other whitespace */
-  white-space: pre-line;
-  margin: 5px 0 24px 0;
+   @apply --marketplaceH3FontStyles;
+  color: var(--matterColorAnti);
+  margin-bottom: 0;
 
   @media (--viewportMedium) {
-    margin: 4px 0 51px 0;
+    margin-top: 10px;
+    margin-bottom: 8px;
   }
   @media (--viewportLarge) {
-    margin: 0 0 56px 0;
-    max-width: 600px;
+    margin-top: 10px;
+    margin-bottom: 8px;
   }
 }
 
 .website a{
-  color: #4A4A4A;
+     @apply --marketplaceH3FontStyles;
+  color: var(--matterColorAnti);
 }
+
+.headingCareerJob{
+     @apply --marketplaceH3FontStyles;
+  color: var(--matterColorAnti);
+}
+
 .website a:hover{
   text-decoration: none;
+  color: #050752;
+}
+
+.careerJob h2, p{
+  display: inline-block;
+}
+.careerJob h2{
+  padding-right: 15px;
 }
 
 .socialMediaProfile {
@@ -133,8 +150,13 @@
     max-width: 600px;
   }
 }
+
 .socialMediaProfile a{
   color: #4A4A4A;
+}
+
+.socialMediaProfile a:hover{
+  color: #050752;
 }
 
 .listingsContainer {

@@ -81,23 +81,22 @@ export class ProfilePageComponent extends Component {
     const hasBio = !!bio;    
     const newPublicData = profileUser.attributes.profile.publicData || '';
     
-    const facebookLink = String(newPublicData['facebook']);
+    const facebookLink = (String(newPublicData['facebook']) === 'undefined') ? null : String(newPublicData['facebook']);
     const hasFacebook = !!facebookLink;
-    const instagramLink = String(newPublicData['instagram']);
+    const instagramLink = (String(newPublicData['instagram']) === 'undefined') ? null : String(newPublicData['instagram']);
     const hasInstagram = !!instagramLink;
-    const linkedInLink = String(newPublicData['linkedIn']);
+    const linkedInLink = (String(newPublicData['linkedIn']) === 'undefined') ? null : String(newPublicData['linkedIn']);
     const hasLinkedIn = !!linkedInLink;
-    const youtubeLink = String(newPublicData['youtube']);
+    const youtubeLink = (String(newPublicData['youtube']) === 'undefined') ? null : String(newPublicData['youtube']);
     const hasYoutube = !!youtubeLink;
-    const twitterLink = String(newPublicData['twitter']);
+    const twitterLink = (String(newPublicData['twitter']) === 'undefined') ? null : String(newPublicData['twitter']);
     const hasTwitter = !!twitterLink;
-    const vimeoLink = String(newPublicData['vimeo']);
+    const vimeoLink = (String(newPublicData['vimeo']) === 'undefined') ? null : String(newPublicData['vimeo']);
     const hasVimeo = !!vimeoLink;
-    const imdbLink = String(newPublicData['imdb']);
+    const imdbLink = (String(newPublicData['imdb']) === 'undefined') ? null : String(newPublicData['imdb']);
     const hasImdb = !!imdbLink;
-    const website = String(newPublicData['website']);
+    const website = (String(newPublicData['website']) === 'undefined') ? null : String(newPublicData['website']);
     const hasWebsite = !!website;
-
     const careerJob = (String(newPublicData['careerJob']) === 'undefined') ? null : String(newPublicData['careerJob']);
     const hasCareerJob = !!careerJob;
     const hasListings = listings.length > 0;
@@ -220,8 +219,8 @@ export class ProfilePageComponent extends Component {
           <FormattedMessage id="ProfilePage.desktopHeading" values={{ name: displayName }} />
         </h1>
         {hasBio ? <p className={css.bio}>{bio}</p> : null}
-        {hasWebsite ? <p className={css.website}><br/><a href={website} target="blank">Website / Portfolio</a></p> : null}
-        {hasCareerJob ? <p className={css.careerJob}>Job Title<br/>{careerJob}</p> : null}
+        {hasWebsite ? <h2 className={css.website}><br/><a href={website} target="blank">Website / Portfolio</a></h2> : ''}
+        {hasCareerJob ? <div className={css.careerJob}><h2 className={css.headingCareerJob}>Job title  </h2><p>  {careerJob}</p></div> : ''}
         {hasFacebook ? <p className={css.socialMediaProfile}><a href={facebookLink} target="blank"><FaFacebook size="40px"  /></a></p> : ''}
         {hasInstagram ? <p className={css.socialMediaProfile}><a href={instagramLink} target="blank"><FaInstagram size="40px"  /></a></p> : ''}
         {hasYoutube ? <p className={css.socialMediaProfile}><a href={youtubeLink} target="blank"><FaYoutube size="40px"  /></a></p> : ''}
