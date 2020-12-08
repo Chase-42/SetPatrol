@@ -181,8 +181,6 @@ const TopbarDesktop = props => {
     </NamedLink>
   );
 
-  const switchLanguage = () => console.log('ok')
-
   return (
     <nav className={classes}>
       <NamedLink className={css.logoLink} name="LandingPage">
@@ -193,7 +191,6 @@ const TopbarDesktop = props => {
         />
       </NamedLink>
       {search}
-      <button onClick={switchLanguage}>Language</button>
       <NamedLink className={css.createListingLink} name="NewListingPage">
         <span className={css.createListing}>
           <FormattedMessage id="TopbarDesktop.createListing" />
