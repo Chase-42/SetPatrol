@@ -30,20 +30,21 @@ const EditListingPricingPanel = props => {
     errors,
   } = props;
 
-  
+  let replacementAsMoney = 0;
 
   const classes = classNames(rootClassName || css.root, className);
   const currentListing = ensureOwnListing(listing);
   const { price, publicData } = currentListing.attributes;
 const replacement =
-  publicData && publicData.replacement.amount ? publicData.replacement.amount : 0;
-const replacementAsMoney = new Money(
+(String(publicData && publicData.replacement) === 'undefined') ? 0 : publicData.replacement.amount;
+
+if (replacement !== 0 ){
+  replacementAsMoney = new Money(
   publicData.replacement.amount,
   publicData.replacement.currency
 );
+}
 const initialValues = { price, replacementAsMoney };
-console.log(replacementAsMoney);
-
 
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
   const panelTitle = isPublished ? (
