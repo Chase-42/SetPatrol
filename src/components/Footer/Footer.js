@@ -98,9 +98,10 @@ const Footer = props => {
           <div className={css.someLiksMobile}>{socialMediaLinks}</div>
           <div className={css.links}>
             <div className={css.organization} id="organization">
-              <NamedLink name="LandingPage" className={css.logoLink}>
+              {/* <NamedLink name="LandingPage" className={css.logoLink}>
                 <Logo format="desktop" className={css.logo} />
-              </NamedLink>
+              </NamedLink> */}
+              
               <div className={css.organization}>
                 <ul className={css.list}>
 
@@ -135,6 +136,10 @@ const Footer = props => {
                   </li>
                 </ul>
               </div>
+              <br/>
+              <NamedLink name="LandingPage" className={css.logoLink}>
+                <Logo format="desktop" className={css.logo} />
+              </NamedLink>
             </div>
 
 
