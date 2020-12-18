@@ -101,17 +101,26 @@ const Footer = props => {
               <NamedLink name="LandingPage" className={css.logoLink}>
                 <Logo format="desktop" className={css.logo} />
               </NamedLink>
-              <div className={css.organizationInfo}>
-                <p className={css.organizationDescription}>
-                  <FormattedMessage id="Footer.organizationDescription" />
-                </p>
-                <p className={css.organizationCopyright}>
-                  <NamedLink name="LandingPage" className={css.copyrightLink}>
-                    <FormattedMessage id="Footer.copyright" />
+              <div className={css.organization}>
+              <span className={css.listItem}>
+                  <NamedLink name="NewListingPage" className={css.link}>
+                    <FormattedMessage id="Footer.toNewListingPage" />
                   </NamedLink>
-                </p>
+                </span>
+                <br/>
+                <span className={css.listItem}>
+                  <FormattedMessage id="Insurance Policy" />
+                </span>
+                <br/>
+                <span className={css.listItem}>
+                  <NamedLink name="LandingPage" className={css.copyrightLink}>
+                    <FormattedMessage id="Get Started" />
+                  </NamedLink>
+                </span>
               </div>
             </div>
+
+
             <div className={css.infoLinks}>
               <ul className={css.list}>
                 <li className={css.listItem}>
@@ -135,19 +144,6 @@ const Footer = props => {
                   </NamedLink>
                 </li>
               </ul>
-            </div>
-
-            <div className={css.extraLinks}>
-              <div className={css.contactFooter}>
-                <p>
-                  <FaHome size="15px" style={{ marginRight: '2%', marginLeft: '-4%' }} /> Marino Mart Fairview D d02,
-                  Dublin, Ireland
-                </p>
-                <p><a href="mailto:ask@setpatrol.com">
-                  <FaEnvelope size="12px" style={{ marginRight: '2%', marginLeft: '-6%' }} /> ask@setpatrol.com
-                </a></p>
-              </div>
-              <div className={css.someLinks}>{socialMediaLinks}</div>
               <div className={css.legalMatters}>
                 <ul className={css.tosAndPrivacy}>
                   <li>
@@ -162,6 +158,33 @@ const Footer = props => {
                   </li>
                 </ul>
               </div>
+            </div>
+
+            <div className={css.extraLinks}>
+              <div className={css.contactFooter}>
+                <p>
+                  <FaHome size="15px" style={{ marginRight: '2%', marginLeft: '-4%' }} /> Marino Mart Fairview D d02,
+                  Dublin, Ireland
+                </p>
+                <p><a href="mailto:ask@setpatrol.com">
+                  <FaEnvelope size="12px" style={{ marginRight: '2%', marginLeft: '-6%' }} /> ask@setpatrol.com
+                </a></p>
+              </div>
+              <div className={css.someLinks}>{socialMediaLinks}</div>
+              {/* <div className={css.legalMatters}>
+                <ul className={css.tosAndPrivacy}>
+                  <li>
+                    <NamedLink name="TermsOfServicePage" className={css.legalLink}>
+                      <FormattedMessage id="Footer.termsOfUse" />
+                    </NamedLink>
+                  </li>
+                  <li>
+                    <NamedLink name="PrivacyPolicyPage" className={css.legalLink}>
+                      <FormattedMessage id="Footer.privacyPolicy" />
+                    </NamedLink>
+                  </li>
+                </ul>
+              </div> */}
             </div>
           </div>
           <div className={css.copyrightAndTermsMobile}>
