@@ -102,37 +102,49 @@ const Footer = props => {
                 <Logo format="desktop" className={css.logo} />
               </NamedLink>
               <div className={css.organization}>
-              <span className={css.listItem}>
-                  <NamedLink name="NewListingPage" className={css.link}>
-                    <FormattedMessage id="Footer.toNewListingPage" />
-                  </NamedLink>
-                </span>
-                <br/>
-                <span className={css.listItem}>
-                  <FormattedMessage id="Insurance Policy" />
-                </span>
-                <br/>
-                <span className={css.listItem}>
-                  <NamedLink name="LandingPage" className={css.copyrightLink}>
-                    <FormattedMessage id="Get Started" />
-                  </NamedLink>
-                </span>
+                <ul className={css.list}>
+                <li className={css.listItem}>
+                    <NamedLink name="NewListingPage" className={css.link}>
+                      <FormattedMessage id="Footer.toNewListingPage" />
+                    </NamedLink>
+                  </li>
+        
+                  <li className={css.listItem}>
+                    <FormattedMessage id="Insurance Policy" />
+                  </li>
+        
+                  <li className={css.listItem}>
+                    <NamedLink name="LandingPage" className={css.copyrightLink}>
+                      <FormattedMessage id="Get Started" />
+                    </NamedLink>
+                  </li>
+                  <li className={css.listItem}>
+                    <NamedLink name="LandingPage" className={css.copyrightLink}>
+                      <FormattedMessage id="Find Equipment" />
+                    </NamedLink>
+                  </li>
+                  <li className={css.listItem}>
+                    <NamedLink name="LandingPage" className={css.copyrightLink}>
+                      <FormattedMessage id="Blog" />
+                    </NamedLink>
+                  </li>
+                </ul>
               </div>
             </div>
 
 
             <div className={css.infoLinks}>
               <ul className={css.list}>
-                <li className={css.listItem}>
+                {/* <li className={css.listItem}>
                   <NamedLink name="NewListingPage" className={css.link}>
                     <FormattedMessage id="Footer.toNewListingPage" />
                   </NamedLink>
-                </li>
-                <li className={css.listItem}>
+                </li> */}
+                {/* <li className={css.listItem}>
                   <NamedLink name="AboutPage" className={css.link}>
                     <FormattedMessage id="Footer.toAboutPage" />
                   </NamedLink>
-                </li>
+                </li> */}
                 <li className={css.listItem}>
                   <NamedLink name="FAQPage" className={css.link}>
                     <FormattedMessage id="Footer.toFAQPage" />
