@@ -144,7 +144,7 @@ const Footer = props => {
                   Dublin, Ireland
                 </p>
                 <p><a href="mailto:ask@setpatrol.com">
-                  <FaEnvelope size="12px" style={{ marginRight: '2%', marginLeft: '-6%' }} /> ask@setpatrol.com
+                  <FaEnvelope size="12px" style={{ marginRight: '2%', marginLeft: '-6%' }}/>  ask@setpatrol.com
                 </a></p>
               </div>
               <div className={css.someLinks}>{socialMediaLinks}</div>

@@ -74,48 +74,14 @@ const TopbarDesktop = props => {
     return currentPage === page || isAccountSettingsPage ? css.currentPage : null;
   };
 
-  const profileMenu = authenticatedOnClientSide ? (
-    <Menu>
-      <MenuLabel className={css.profileMenuLabel} isOpenClassName={css.profileMenuIsOpen}>
-        <Avatar className={css.avatar} user={currentUser} disableProfileLink />
+  //non profilemenu
+  const menuNonProfile = <Menu>
+     <MenuLabel className={css.profileMenuLabel} isOpenClassName={css.profileMenuIsOpen}>
+        <Avatar className={css.avatar} disableProfileLink />
       </MenuLabel>
       <MenuContent className={css.profileMenuContent}>
 
-        <MenuItem key="ManageListingsPage">
-          <NamedLink
-            className={classNames(css.yourListingsLink, currentPageClass('ManageListingsPage'))}
-            name="ManageListingsPage"
-          >
-            <span className={css.menuItemBorder} />
-            <FormattedMessage id="TopbarDesktop.yourListingsLink" />
-          </NamedLink>
-        </MenuItem>
-
-        <MenuItem key="ProfileSettingsPage">
-          <NamedLink
-            className={classNames(css.profileSettingsLink, currentPageClass('ProfileSettingsPage'))}
-            name="ProfileSettingsPage"
-          >
-            <span className={css.menuItemBorder} />
-            <FormattedMessage id="TopbarDesktop.profileSettingsLink" />
-          </NamedLink>
-        </MenuItem>
-
-        <MenuItem key="AccountSettingsPage">
-          <NamedLink
-            className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
-            name="AccountSettingsPage"
-          >
-            <span className={css.menuItemBorder} />
-            <FormattedMessage id="TopbarDesktop.accountSettingsLink" />
-          </NamedLink>
-        </MenuItem>
-
-        <MenuItem key="AccountSettingsPage">
-        <hr></hr>
-        </MenuItem>
-
-        <MenuItem key="AccountSettingsPage">
+      <MenuItem key="AccountSettingsPage">
           <NamedLink
             className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
             name="AboutPage"
@@ -154,6 +120,86 @@ const TopbarDesktop = props => {
             <FormattedMessage id="Terms of Service"/>
           </NamedLink>
         </MenuItem>
+
+      </MenuContent>
+  </Menu>
+
+  const profileMenu = authenticatedOnClientSide ? (
+    <Menu>
+      <MenuLabel className={css.profileMenuLabel} isOpenClassName={css.profileMenuIsOpen}>
+        <Avatar className={css.avatar} user={currentUser} disableProfileLink />
+      </MenuLabel>
+      <MenuContent className={css.profileMenuContent}>
+
+        <MenuItem key="ManageListingsPage">
+          <NamedLink
+            className={classNames(css.yourListingsLink, currentPageClass('ManageListingsPage'))}
+            name="ManageListingsPage"
+          >
+            <span className={css.menuItemBorder} />
+            <FormattedMessage id="TopbarDesktop.yourListingsLink" />
+          </NamedLink>
+        </MenuItem>
+
+        <MenuItem key="ProfileSettingsPage">
+          <NamedLink
+            className={classNames(css.profileSettingsLink, currentPageClass('ProfileSettingsPage'))}
+            name="ProfileSettingsPage"
+          >
+            <span className={css.menuItemBorder} />
+            <FormattedMessage id="TopbarDesktop.profileSettingsLink" />
+          </NamedLink>
+        </MenuItem>
+
+        <MenuItem key="AccountSettingsPage">
+          <NamedLink
+            className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
+            name="AccountSettingsPage"
+          >
+            <span className={css.menuItemBorder} />
+            <FormattedMessage id="TopbarDesktop.accountSettingsLink" />
+          </NamedLink>
+        </MenuItem>
+
+        {/* <MenuItem key="AccountSettingsPage">
+          <NamedLink
+            className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
+            name="AboutPage"
+          >
+            <span className={css.menuItemBorder}/>
+            <FormattedMessage id="About Us"/>
+          </NamedLink>
+        </MenuItem>
+
+        <MenuItem key="AccountSettingsPage">
+          <NamedLink
+            className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
+            name="FAQPage"
+          >
+            <span className={css.menuItemBorder}/>
+            <FormattedMessage id="Frequently Asked Questions"/>
+          </NamedLink>
+        </MenuItem>
+
+        <MenuItem key="AccountSettingsPage">
+          <NamedLink
+            className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
+            name="CommunityRulesPage"
+          >
+            <span className={css.menuItemBorder}/>
+            <FormattedMessage id="Community Rules"/>
+          </NamedLink>
+        </MenuItem>
+
+        <MenuItem key="AccountSettingsPage">
+          <NamedLink
+            className={classNames(css.yourListingsLink, currentPageClass('AccountSettingsPage'))}
+            name="TermsOfServicePage"
+          >
+            <span className={css.menuItemBorder}/>
+            <FormattedMessage id="Terms of Service"/>
+          </NamedLink>
+        </MenuItem> */}
 
         <MenuItem key="logout">
           <InlineTextButton rootClassName={css.logoutButton} onClick={onLogout}>
@@ -198,6 +244,7 @@ const TopbarDesktop = props => {
         </span>
       </NamedLink>
       {inboxLink}
+      {menuNonProfile}
       {profileMenu}
       {signupLink}
       {loginLink}
