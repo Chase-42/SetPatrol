@@ -77,7 +77,10 @@ const TopbarDesktop = props => {
   //non profilemenu
   const menuNonProfile = <Menu>
      <MenuLabel className={css.profileMenuLabel} isOpenClassName={css.profileMenuIsOpen}>
-        <button>Learn More</button>
+     <span className={css.inbox}>
+        <FormattedMessage id="More" />
+        {notificationDot}
+      </span>
       </MenuLabel>
       <MenuContent className={css.profileMenuContent}>
 
