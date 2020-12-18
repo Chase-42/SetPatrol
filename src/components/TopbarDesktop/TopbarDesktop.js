@@ -77,7 +77,7 @@ const TopbarDesktop = props => {
   //non profilemenu
   const menuNonProfile = <Menu>
      <MenuLabel className={css.profileMenuLabel} isOpenClassName={css.profileMenuIsOpen}>
-        <Avatar className={css.avatar} disableProfileLink />
+        <button>Learn More</button>
       </MenuLabel>
       <MenuContent className={css.profileMenuContent}>
 
