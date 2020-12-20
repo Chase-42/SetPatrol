@@ -98,43 +98,88 @@ const Footer = props => {
           <div className={css.someLiksMobile}>{socialMediaLinks}</div>
           <div className={css.links}>
             <div className={css.organization} id="organization">
+              {/* <NamedLink name="LandingPage" className={css.logoLink}>
+                <Logo format="desktop" className={css.logo} />
+              </NamedLink> */}
+              
+              <div className={css.organization}>
+                <ul className={css.list}>
+
+                  <li className={css.listItem}>
+                    <NamedLink name="SearchListingsPage" className={css.link}>
+                      <FormattedMessage id="Find Equipment" />
+                    </NamedLink>
+                  </li>
+
+                  <li className={css.listItem}>
+                    <NamedLink name="NewListingPage" className={css.link}>
+                      <FormattedMessage id="Add Listing" />
+                    </NamedLink>
+                  </li>
+        
+                  <li className={css.listItem}>
+                    <NamedLink name='NewListingPage' className={css.link}>
+                      <FormattedMessage id="Insurance"/>
+                    </NamedLink>
+                  </li>
+        
+                  {/* <li className={css.listItem}>
+                    <NamedLink name="LandingPage" className={css.link}>
+                      <FormattedMessage id="Get Started" />
+                    </NamedLink>
+                  </li> */}
+                  
+                  <li className={css.listItem}>
+                    <NamedLink name="LandingPage" className={css.link}>
+                      <FormattedMessage id="Blog" />
+                    </NamedLink>
+                  </li>
+                </ul>
+              </div>
+              <br/>
               <NamedLink name="LandingPage" className={css.logoLink}>
                 <Logo format="desktop" className={css.logo} />
               </NamedLink>
-              <div className={css.organizationInfo}>
-                <p className={css.organizationDescription}>
-                  <FormattedMessage id="Footer.organizationDescription" />
-                </p>
-                <p className={css.organizationCopyright}>
-                  <NamedLink name="LandingPage" className={css.copyrightLink}>
-                    <FormattedMessage id="Footer.copyright" />
-                  </NamedLink>
-                </p>
-              </div>
             </div>
+
+
             <div className={css.infoLinks}>
               <ul className={css.list}>
-                <li className={css.listItem}>
+                {/* <li className={css.listItem}>
                   <NamedLink name="NewListingPage" className={css.link}>
                     <FormattedMessage id="Footer.toNewListingPage" />
                   </NamedLink>
-                </li>
-                <li className={css.listItem}>
+                </li> */}
+                {/* <li className={css.listItem}>
                   <NamedLink name="AboutPage" className={css.link}>
                     <FormattedMessage id="Footer.toAboutPage" />
                   </NamedLink>
-                </li>
-                <li className={css.listItem}>
-                  <NamedLink name="FAQPage" className={css.link}>
-                    <FormattedMessage id="Footer.toFAQPage" />
-                  </NamedLink>
-                </li>
+              </li> */}
                 <li className={css.listItem}>
                   <NamedLink name="CommunityRulesPage" className={css.link}>
                     <span id="Footer">Community Rules</span>
                   </NamedLink>
                 </li>
               </ul>
+              <div className={css.legalMatters}>
+                <ul className={css.tosAndPrivacy}>
+                  <li>
+                    <NamedLink name="TermsOfServicePage" className={css.link}>
+                      <FormattedMessage id="Footer.termsOfUse" />
+                    </NamedLink>
+                  </li>
+                  <li>
+                    <NamedLink name="PrivacyPolicyPage" className={css.link}>
+                      <FormattedMessage id="Footer.privacyPolicy" />
+                    </NamedLink>
+                  </li>
+                  <li className={css.listItem}>
+                  <NamedLink name="FAQPage" className={css.link}>
+                    <FormattedMessage id="Footer.toFAQPage" />
+                  </NamedLink>
+                </li>
+                </ul>
+              </div>
             </div>
 
             <div className={css.extraLinks}>
@@ -148,7 +193,7 @@ const Footer = props => {
                 </a></p>
               </div>
               <div className={css.someLinks}>{socialMediaLinks}</div>
-              <div className={css.legalMatters}>
+              {/* <div className={css.legalMatters}>
                 <ul className={css.tosAndPrivacy}>
                   <li>
                     <NamedLink name="TermsOfServicePage" className={css.legalLink}>
@@ -161,7 +206,7 @@ const Footer = props => {
                     </NamedLink>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className={css.copyrightAndTermsMobile}>
