@@ -140,12 +140,12 @@ const Footer = props => {
             <div className={css.extraLinks}>
               <div className={css.contactFooter}>
                 <p>
-                  <FaHome size="20px" style={{ marginRight: '2%' }} /> Marino Mart Fairview D d02,
+                  <FaHome size="15px" style={{ marginRight: '2%', marginLeft: '-4%' }} /> Marino Mart Fairview D d02,
                   Dublin, Ireland
                 </p>
-                <a href="mailto:ask@setpatrol.com"><p>
-                  <FaEnvelope size="17px" style={{ marginRight: '2%' }} /> ask@setpatrol.com
-                </p></a>
+                <p><a href="mailto:ask@setpatrol.com">
+                  <FaEnvelope size="12px" style={{ marginRight: '2%', marginLeft: '-6%' }}/>  ask@setpatrol.com
+                </a></p>
               </div>
               <div className={css.someLinks}>{socialMediaLinks}</div>
               <div className={css.legalMatters}>

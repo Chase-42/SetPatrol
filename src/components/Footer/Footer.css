@@ -226,7 +226,7 @@
   order: 5;
   display: none;
   flex-basis: 300px;
-  margin-right: 24px;
+  margin-right: 13px;
   margin-bottom: 24px;
 
   @media (--viewportMedium) {
