@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import config from '../../config';
-import MobileLogoImage from './setpatrol_logo-small.png';
-import DesktopLogoImage from './setpatrol_logo.png';
+import MobileLogoImage from './SP_logo_square.png';
+import DesktopLogoImage from './long_setpetrol_logo.png';
 import css from './Logo.css';
 
 const Logo = props => {
