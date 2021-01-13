@@ -30,17 +30,20 @@ const EditListingPricingPanel = props => {
     errors,
   } = props;
 
-  
+  let replacementAsMoney = 0;
 
   const classes = classNames(rootClassName || css.root, className);
   const currentListing = ensureOwnListing(listing);
   const { price, publicData } = currentListing.attributes;
 const replacement =
-  publicData && publicData.replacement ? publicData.replacement : 0;
-const replacementAsMoney = new Money(
-  replacement.amount,
-  replacement.currency
+(String(publicData && publicData.replacement) === 'undefined') ? 0 : publicData.replacement.amount;
+
+if (replacement !== 0 ){
+  replacementAsMoney = new Money(
+  publicData.replacement.amount,
+  publicData.replacement.currency
 );
+}
 const initialValues = { price, replacementAsMoney };
 
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
@@ -57,7 +60,7 @@ const initialValues = { price, replacementAsMoney };
   const form = priceCurrencyValid ? (
     <EditListingPricingForm
       className={css.form}
-      initialValues={{ price }}
+      initialValues={{ price, replacement: replacementAsMoney }}
       onSubmit={onSubmit}
       onChange={onChange}
       saveActionMsg={submitButtonText}
