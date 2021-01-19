@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import config from '../../config';
-import MobileLogoImage from './new.png'
+import MobileLogoImage from './sp_logo_rearranged-02.png'
 // import MobileLogoImage from './SP_logo_Transparent_web_M.png';
 import DesktopLogoImage from './SP_logo_horizontal_NoClearSpace.png';
 import css from './Logo.css';
